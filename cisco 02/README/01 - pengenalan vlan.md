@@ -14,3 +14,4 @@
 - port dalam mode Trunk dapat membawa lalu lintas dari beberap VLAN secara bersamaan melalui satu kabel fisik
 
 # **C. Mengkonfigurasi Vlan pada Switch**
+
