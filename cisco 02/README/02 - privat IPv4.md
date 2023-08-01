@@ -41,3 +41,4 @@
   - the last network (10.1.1.0/24) connects our gateway router (Router1) to the internet. 
 
 [![IPv4 Routing](../../notes%20cisco/image/IPv4%20-%20Routing.jpg)]()
+
