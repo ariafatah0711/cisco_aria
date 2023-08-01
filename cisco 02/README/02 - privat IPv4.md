@@ -31,7 +31,12 @@
   
 # **C. Tipe Jaringan yang dipakai Bridge / Routing**
 ## 1. Bridge
-
+- How Bridge Works : Let's look at a basic configuration example to illustrate how routing is used to forward packets between two local networks and to the Internet.
+- In this setup, we have several networks:
+  - three client networks (192.168.1.3/24, 192.168.1.4/24, and 192.168.1.5/24);
+  - one network to connect routers (192.168.1.1), usually called backbone;
+  - the last network (192.168.1.6 - 254) connects our gateway router (Router1) to the internet. 
+[![IPv4 Routing](../../notes%20cisco/image/IPv4-Bridge.jpg)]()
 
 ## 2. Routing
 - How Routing Works : Let's look at a basic configuration example to illustrate how routing is used to forward packets between two local networks and to the Internet.
@@ -41,4 +46,3 @@
   - the last network (10.1.1.0/24) connects our gateway router (Router1) to the internet. 
 
 [![IPv4 Routing](../../notes%20cisco/image/IPv4%20-%20Routing.jpg)]()
-
