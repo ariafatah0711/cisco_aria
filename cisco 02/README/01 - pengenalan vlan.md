@@ -37,8 +37,8 @@
 #show vlan
 VLAN Name                             Status    Ports
 ---- -------------------------------- --------- -------------------------------
-1    default                                active    Fa0/1, Fa1/1, Fa2/1, Fa3/1
-                                                               Fa4/1, Fa5/1
+1    default                          active    Fa0/1, Fa1/1, Fa2/1, Fa3/1
+                                                Fa4/1, Fa5/1
 10   kelompok_A                       active    
 20   kelompok_B                       active
 ```
@@ -78,7 +78,7 @@ atau
 #show vlan
 VLAN Name                             Status    Ports
 ---- -------------------------------- --------- -------------------------------
-1    default                                active    Fa3/1, Fa4/1, Fa5/1
+1    default                          active    Fa3/1, Fa4/1, Fa5/1
 10   kelompok_A                       active    Fa0/1
 20   kelompok_B                       active    Fa1/1
 ```
