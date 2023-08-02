@@ -15,6 +15,7 @@
 
 # **C. Mengkonfigurasi Vlan pada Switch**
 ```
-#vlan10
+#vlan 10
+#name kelompok a
 ```
 
