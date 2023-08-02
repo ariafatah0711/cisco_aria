@@ -18,7 +18,5 @@
 #vlan 10
 #name kelompok a
 #exit
-
-
 ```
 
