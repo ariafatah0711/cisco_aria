@@ -62,6 +62,7 @@ int fa [port_fa]
 (c-if)#switchport mode 
 ```
 
+### contoh
 ```
 (c)#int fa 0/1
 (c-if)#switchport access vlan 10
