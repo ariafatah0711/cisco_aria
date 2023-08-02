@@ -15,6 +15,7 @@
 
 # **C. Mengkonfigurasi Vlan pada Switch**
 ## 1. membuat id vlan dan menampilkan vlan yang telah dibuat
+- membuat id VLAN dan nama VLAN
 ```
 (C)#vlan [id_vlan]
 (c-v)#name [nama_vlan]
@@ -43,6 +44,7 @@ VLAN Name                             Status    Ports
 ```
 
 # **D. mengkonfigurasikan vlan pada interface**
+- mengkonfigurasi VLAN
 ```
 (c)#int fa [port_fa]
 (c-if)#switchport access vlan [id_vlan]
