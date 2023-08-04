@@ -18,7 +18,7 @@
 <h3>contoh</h3>
 
 ```
-(c)#ip router
+(c)#router rip
 (c-r)#network 192.168.1.0
 (c-r)#network 192.168.10.0
 ```
