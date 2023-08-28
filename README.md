@@ -7,7 +7,7 @@
 # **Dokumentasi:**
 <a href="cisco 01/README/00 - README.md">01 - Cisco Dasar Router</a><br>
 <a href="cisco 02/README/00 - README.md">02 - Cisco Dasar Switch</a><br>
-<a href="notes cisco/00 - README.md">10 - Perintah Pada Cisco</a><br>
+<a href="notes cisco/00 - README.md">10 - mikrotik</a><br>
 
 # **Catatan:**
 - Baca Intruksi Terlebih Dahulu, Sebelum Menjalankan alat🌸😀
