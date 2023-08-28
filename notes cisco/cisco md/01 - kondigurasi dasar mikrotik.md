@@ -1,101 +1,34 @@
 <a href="../00 - README.md">Back notes cisco..</a>
 
-# ""A. pertama kali masuk ke winbox""
-- jangan masuk ke port 1 karena itu merupakan default configurasi dan saat pertama kali masuk itu tidak dapat diubah konfignya
-- saat masuk klik mac addreass jangan di ip addres
-- lalu klik conect
-- setelah masuk biasanya akan ada router defualt configuration dan anda dapat menghapusnya karena kita akan membuat ulang
-- lalu saat masuk konfig akan dari 0
-- dan kita dapat menggunakan port 1 karena port 1 yang sebelumnya konfignya sudah di hapus
-- namun disarankan untuk tidak menggunakan port 1 karena itu  biasanya digunakan untuk menghubungkan kke jaringan
+# Konfigurasi Dasar MikroTik dengan Studi Kasus
 
-# ""B. configuration mikrotik""
-- mengubah nama mikrotik
-```
-klik system
-pilih identity
-dan ubah namanya
-```
+## A. Pertama Kali Masuk ke Winbox
 
-- mengubah user menggunakan password agar lebih aman
-```
-klik system
-pilih users
+- Disarankan untuk menghindari penggunaan port 1, karena itu adalah konfigurasi default yang tidak dapat diubah. Penggunaan MAC address untuk koneksi pertama adalah pendekatan yang umum untuk menghindari masalah dengan IP address yang mungkin sudah digunakan.
+- Saat masuk, sebaiknya klik opsi "Connect To" dengan MAC address perangkat yang dimaksudkan, bukan menggunakan IP address.
+- Setelah masuk, ada kemungkinan akan ada konfigurasi default dari router. Jika demikian, konfigurasi ini dapat dihapus karena kita akan membuat konfigurasi baru.
+- Setelah masuk, konfigurasi dasar dimulai dari awal, sehingga Anda dapat mulai mengatur ulang perangkat.
+- Saat konfigurasi dimulai, sebaiknya menggunakan port 1, namun dianjurkan untuk tidak menggunakan port 1 karena biasanya port tersebut digunakan untuk menghubungkan perangkat ke jaringan.
 
-klik tanda tambah
-mengubah nama user dan group untuk mengubah apakah user ini hanya bisa read(membaca), write(mengubah), atau full(semua fungsi)
-lalu tambahkan password
-klik aply dan ok
+## B. Konfigurasi MikroTik
 
-jika ingin agar tidak ada yang bisa masuk selain user ini 
-pilih user admim/user yang ingin di nonaktifkan
-lalu klik x untuk menonaktifkan
-klik centang untuk mengaktifkan
-```
+1. **Mengubah Nama MikroTik**
+   - Untuk mengganti nama MikroTik, buka menu "System" dan pilih "Identity." Kemudian ubah nama sesuai keinginan.
 
-- konfigurasi bridge agar saat salah satu ethernet/port rusak
-```
-klik bridge
-klik tambah
+2. **Mengubah User dan Menambahkan Password**
+   - Untuk meningkatkan keamanan, perlu mengubah pengaturan default. Pergi ke menu "System" dan pilih "Users." Tambahkan user baru, pilih level akses (read, write, atau full), dan tambahkan password yang kuat. Setelah itu, nonaktifkan user admin jika diperlukan.
 
-ubah nama misal bridge-WAN
+3. **Konfigurasi Bridge untuk Keamanan**
+   - Buat bridge baru untuk menghubungkan interface secara fisik. Ini membantu mempertahankan konektivitas jika salah satu interface rusak.
 
-lalu klik ports, tambah
-dan pilih bridge: bridge-WAN dan interface ether1
+4. **Konfigurasi DHCP Client**
+   - Di menu "IP," pilih "DHCP Client." Tambahkan DHCP client untuk mendapatkan IP dari provider. Verifikasi statusnya menjadi "Bound" yang menandakan pengambilan informasi DHCP berhasil.
 
-jika etherface 1 rusak issp nya saja yang dipindahikan
-```
+5. **Verifikasi Koneksi dan Routing**
+   - Verifikasi koneksi dengan memastikan interface DHCP terhubung ke IP default router (biasanya 10.10.10.1). Kemudian, periksa rute default dengan memastikan rute ke 10.10.10.1 ada.
 
-- DHCP client
-```
-klik ip
-pilih DHCP client
+6. **Mengubah DNS untuk Akses Internet**
+   - Konfigurasi DNS di menu "IP" > "DNS." Ubah server ke IP DNS provider, seperti 10.10.10.1. Aktifkan juga opsi "Allow Remote Request" untuk mengaktifkan router sebagai server DNS.
 
-klik tambah pilih DHCP
-pilih interface dari bridge tadi dan pilih ok
-di status bridge dhcp itu teksnya bound yang artinya kita dapat ip dari provider
-
-jika pengen liat
-klik ip 
-pilih addreas
-dan tampilanya akan ada interfae bridge wan
-# dan anda akan dapat mengeping ke 10.10.10.1
-
-jika pengen liat sudah conect apa belum bisa
-klik ip pilih routes
-dan tampilanya akan ada 10.10.10.1
-# dan dapat melakukan ping ke 8.8.8.8 atau koneksikan ke internet
-```
-
-- jika dhcp clientnya dinonaktifkan maka
-```
-di ip, address
-addres DHCP tadi tidak ada dan jika ingin ditambahkan harus dibuat secara manual
-addreas : 10.10.10.200/24
-interface : bridge-WAN
-
-dan hasilnya baru akan sama seperti tadi
-# dan dapat melakukan ping ke 10.10.10.1
-```
-
-- ip route
-```
-klik ip, route 
-klik tambah
-adres jangan diubah
-gateway: 10.10.10.1
-aply dan ok
-# dan anda dapat menkoneksikan ke internet dengan ping 8.8.8.1
-```
-
-- namun meski sudah dapat koneksikan ke internet tapi masih bisa belum browsing, goggle, faebook, game karena DNS nya belum di ubah
-```
-klik ip, DNS
-ubah serverya pakai ip ispi : 10.10.10.1
-dan bisa lebih dari 1
-
-jangan lupa aktifkan allow remote request untuk agar router nya jadi dns server untuk melayani
-dan ok
-
-#  dan sekarang dapat di ping dan bisa koneksikan ke internet serta dapat browsingan
-```
+7. **Mengaktifkan Akses Internet Penuh**
+   - Setelah langkah-langkah di atas, Anda seharusnya sudah bisa mengakses internet dan melakukan browsing.
