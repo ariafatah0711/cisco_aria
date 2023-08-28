@@ -46,4 +46,4 @@
   - one network to connect routers (172.16.1.0/30), usually called backbone;
   - the last network (10.1.1.0/24) connects our gateway router (Router1) to the internet. 
 
-[![IPv4 Routing](../../notes%20cisco/image/IPv4%20-%20Routing.jpg)](../../notes%20cisco/image/IPv4-Bridge.jpg)
+[![IPv4 Routing](../../notes%20cisco/image/IPv4%20-%20Routing.jpg)](../../notes%20cisco/image/IPv4%20-%20Routing.jpg)
