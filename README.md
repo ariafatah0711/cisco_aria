@@ -7,6 +7,7 @@
 # **Dokumentasi:**
 <a href="cisco 01/README/00 - README.md">01 - Cisco Dasar Router</a><br>
 <a href="cisco 02/README/00 - README.md">02 - Cisco Dasar Switch</a><br>
+<a href="cisco 03/README/00 - README.md">03 - Cisco Dasar Phone</a><br>
 <a href="notes cisco/00 - README.md">10 - mikrotik</a><br>
 
 # **Catatan:**
