@@ -52,6 +52,12 @@ Switch(config)#int range fa0/2-3
 Switch(config-if-range)#switchport mode access
 Switch(config-if-range)#switchport voice vlan 1
 
+Router(config)#ephone-dn 1
+Router(config-ephone-dn)#%LINK-3-UPDOWN: Interface ephone_dsp DN 1.1, changed state to up
+Router(config-ephone-dn)#number 0001
+Router(config-ephone-dn)#ex
+Router(config)#
+Router(config)#ephone-dn 2
 Router(config-ephone-dn)#%LINK-3-UPDOWN: Interface ephone_dsp DN 2.1, changed state to up
 Router(config-ephone-dn)#number 0002
 Router(config-ephone-dn)#ex
