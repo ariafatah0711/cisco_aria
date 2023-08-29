@@ -48,3 +48,10 @@ phone yang aktif
 membuat pengalamatan berdasarkan sumber local (Router)
 
 4. **setting voice vlan 1 di switch**
+Switch(config)#int range fa0/2-3
+Switch(config-if-range)#switchport mode access
+Switch(config-if-range)#switchport voice vlan 1
+
+Router(config-ephone-dn)#%LINK-3-UPDOWN: Interface ephone_dsp DN 2.1, changed state to up
+Router(config-ephone-dn)#number 0002
+Router(config-ephone-dn)#ex
