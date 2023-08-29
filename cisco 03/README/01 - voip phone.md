@@ -38,7 +38,6 @@ Router(config-telephony)#max-dn 3
 Router(config-telephony)#max-ephones 3
 Router(config-telephony)#ip source-address 192.168.19.1 port 2000
 Router(config-telephony)#auto assign 1 to 5
-Router(config-telephony)#ex
 ```
 
 - **max-dn** merupakan perintah untuk menentukan jumlah maksimal dial number
@@ -48,16 +47,21 @@ phone yang aktif
 membuat pengalamatan berdasarkan sumber local (Router)
 
 4. **setting voice vlan 1 di switch**
+```
 Switch(config)#int range fa0/2-3
 Switch(config-if-range)#switchport mode access
 Switch(config-if-range)#switchport voice vlan 1
+```
 
+5. **setting dial number pada phone**
+- ephone 1
+```
 Router(config)#ephone-dn 1
-Router(config-ephone-dn)#%LINK-3-UPDOWN: Interface ephone_dsp DN 1.1, changed state to up
 Router(config-ephone-dn)#number 0001
-Router(config-ephone-dn)#ex
-Router(config)#
+```
+
+- ephone 2
+```
 Router(config)#ephone-dn 2
-Router(config-ephone-dn)#%LINK-3-UPDOWN: Interface ephone_dsp DN 2.1, changed state to up
 Router(config-ephone-dn)#number 0002
-Router(config-ephone-dn)#ex
+```
