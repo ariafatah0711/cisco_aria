@@ -59,7 +59,7 @@ atau
 
 ```
 int fa [port_fa]
-(c-if)#switchport mode 
+(c-if)#switchport mode trunk
 ```
 
 ### contoh
@@ -73,7 +73,7 @@ int fa [port_fa]
 (c)#int fa 2/1
 (c-if)#switchport mode access
 atau
-(c-if)#switchport mode 
+(c-if)#switchport mode trunk
 
 #show vlan
 VLAN Name                             Status    Ports
