@@ -1,19 +1,30 @@
 <a href="00 - README.md">Back cisco..</a>
 
-# Konfigurasi vtp
+# Konfigurasi VTP
 
 ## 1. **Pengenalan VTP**
 
+    - Virtual LAN Trunking Protocol (VTP) adalah protokol yang digunakan untuk mengelola informasi VLAN di jaringan Cisco.
 
-## 2. **konfigurasi VTP server**
-vtp mode server 
-vtp domain example.com
-vtp password 123
+## 2. **Konfigurasi VTP Server**
 
-trunk in switch
+    - Pada switch yang akan dijadikan server VTP:
+        ```
+        vtp mode server
+        vtp domain example.com
+        vtp password 123
+        ```
 
-vtp mode client 
-vtp domain example.com
-vtp password 123
+    - Pastikan port trunk pada switch ini sudah di Konfigurasi.
+    
+    - Pada switch yang akan dijadikan client VTP:
+        ```
+        vtp mode client
+        vtp domain example.com
+        vtp password 123
+        ```
 
-## 3. **konfigurasi VTP pada switch client**
+## 3. **Konfigurasi VTP pada Switch Client**
+
+    - Pada switch yang akan dijadikan client VTP, Anda hanya perlu mengatur mode VTP menjadi "client" dan mengonfigurasi domain serta password yang sesuai.
+- setelah itu hanya perlu menyambungkan ke port yang ingin di hubungkan vlan
