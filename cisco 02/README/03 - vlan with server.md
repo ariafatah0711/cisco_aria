@@ -1,8 +1,8 @@
-<a href="../00 - README.md">Back cisco..</a>
+<a href="00 - README.md">Back cisco..</a>
 
 # Konfigurasi vlan with server
 
-1. **Setting vlan di switch**
+## 1. **Setting vlan di switch**
 - mengelompokan beberapa antarmuka fastEthernet menggunakan range agar lebih evesien
 ```
 (c)#interface range fastEthernet 0/1-10
@@ -33,6 +33,7 @@ interface FastEthernet0/6 // switch 2
 ```
 
 - konfigurasi switch 2
+```
 interface FastEthernet0/1 // server vlan 20
  switchport access vlan 20
 !
@@ -51,12 +52,13 @@ interface FastEthernet0/5
 interface FastEthernet0/6 // switch 1
  switchport mode trunk
 !
+```
 
 - jangan lupa di port fa 0/6 tiap switch aktifkan mode trunk agar switch dapat saling terhubung
 - topologi
 [![vlan-server](../../notes%20cisco/image/vlan-server.png)](../../notes%20cisco/image/vlan-server.png)
 
-2. **Setting DNS pada server**
+## 2. **Setting DNS pada server**
 - DNS merupakan Domain Name System
 - yang fungsinya untuk menerjemahkan suatu alamat ip numerik menjadi domain
 - contoh: "www.example.com" alih alih harus mengingat alamat ip numerik yang rumit seperti "192.168.1.1" atau "203.0.113.45"
