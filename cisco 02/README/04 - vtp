@@ -2,10 +2,18 @@
 
 # Konfigurasi vtp
 
-1. **Pengenalan VTP**
+## 1. **Pengenalan VTP**
 
 
-2. **konfigurasi VTP server**
+## 2. **konfigurasi VTP server**
+vtp mode server 
+vtp domain example.com
+vtp password 123
 
+trunk in switch
 
-3. **konfigurasi VTP pada switch client**
+vtp mode client 
+vtp domain example.com
+vtp password 123
+
+## 3. **konfigurasi VTP pada switch client**
