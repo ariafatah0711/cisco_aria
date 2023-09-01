@@ -56,7 +56,7 @@ interface FastEthernet0/6 // switch 1
 
 - jangan lupa di port fa 0/6 tiap switch aktifkan mode trunk agar switch dapat saling terhubung
 - topologi
-<img src="../../notes cisco/image/vlan-server.png" height="200" width="300">
+<img src="../../notes cisco/image/vlan-server.png">
 
 ## 2. **Setting DNS pada server**
 - DNS merupakan Domain Name System
