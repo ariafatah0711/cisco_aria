@@ -37,6 +37,7 @@
   - one network to connect routers (192.168.1.1), usually called backbone;
   - the last network (192.168.1.6 - 254) connects our gateway router (Router1) to the internet.
 
+<img src="../../notes cisco/image/IPv4-Bridge.jpg" height="200" width="300">
 [![IPv4 Routing](../../notes%20cisco/image/IPv4-Bridge.jpg)](../../notes%20cisco/image/IPv4-Bridge.jpg)
 
 ## 2. Routing
@@ -45,5 +46,7 @@
   - two client networks (192.168.2.0/24 and 192.168.1.0/24);
   - one network to connect routers (172.16.1.0/30), usually called backbone;
   - the last network (10.1.1.0/24) connects our gateway router (Router1) to the internet. 
+
+<img src="../../notes cisco/image/IPv4 - Routing.jpg" height="200" width="300">
 
 [![IPv4 Routing](../../notes%20cisco/image/IPv4%20-%20Routing.jpg)](../../notes%20cisco/image/IPv4%20-%20Routing.jpg)
