@@ -34,6 +34,10 @@
 ```
 
 - Pastikan port trunk pada switch ini sudah di Konfigurasi.
+
+## 3. **Konfigurasi VTP pada Switch Client**
+- Pada switch yang akan dijadikan client VTP, Anda hanya perlu mengatur mode VTP menjadi "client" dan mengonfigurasi domain serta password yang sesuai.
+
 - Pada switch yang akan dijadikan client VTP:
 ```
 (c)#vtp mode client
@@ -41,8 +45,6 @@
 (c)#vtp password 123
 ```
 
-## 3. **Konfigurasi VTP pada Switch Client**
-- Pada switch yang akan dijadikan client VTP, Anda hanya perlu mengatur mode VTP menjadi "client" dan mengonfigurasi domain serta password yang sesuai.
 - setelah itu hanya perlu menyambungkan ke port yang ingin di hubungkan vlan
 
-<img src="../../notes cisco/image/vtp.png" height="200" width="300">
+<img src="../../notes cisco/image/vtp.png">
