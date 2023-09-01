@@ -1,4 +1,4 @@
-<a href="00 - README.md">Back cisco..</a>
+<a href="00 - README.md">Back README.md..</a>
 
 # Konfigurasi vlan with server
 
@@ -63,19 +63,18 @@ interface FastEthernet0/6 // switch 1
 - yang fungsinya untuk menerjemahkan suatu alamat ip numerik menjadi domain
 - contoh: "www.example.com" alih alih harus mengingat alamat ip numerik yang rumit seperti "192.168.1.1" atau "203.0.113.45"
 
-```
 // langkah pertama menyeting ip server yang bertujuan untuk menjadi domain servernya
+```
 ip server: 192.168.1.100
 ```
 
-```
 // lalu klik services dan pilih DNS lalu centang tanda DNS service
 // masukan nama domain dan ip addreasnya
+```
 name: www.facebook.com
 address: 192.168.1.100 (ip server)
 ```
 
-```
+// klik http pada server dan edit file html yang ingin tampil nanti
 // jika sudah masukan dns pada pc yang ingin terhubung
 // untuk menampilkan web hanya perlu pilih PC dan klik web browser
-```
