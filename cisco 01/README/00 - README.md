@@ -1,4 +1,4 @@
-<a href="../../README.md">Back README.md..</a>
+<a href="../../README.md#dokumentasi">Back README.md..</a>
 
 <a href="01 - pengenalan cisco.md">01 - pengenalan cisco</a><br>
 <a href="02 - configuration terminal.md">02 - configuration terminal</a><br>
