@@ -1,4 +1,4 @@
-<a href="00 - README.md">Back README.md..</a>
+<a href="../../README.md#back">Back README.md...</a>
 
 # **A. interface, default gateway**
 ## Pengertian Interface
