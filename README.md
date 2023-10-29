@@ -39,6 +39,27 @@ This file is what I studied while learning Cisco and networking, and it contains
     - Launch Cisco Packet Tracer from your applications menu
 </details>
 
+<details open>
+  <summary><b>Dokumentasi</b></summary>
+
+  - <a href="./cisco 01/README/01 - pengenalan cisco.md"></a>
+  - <a href="./cisco 01/README/02 - configuration terminal.md"></a>
+  - <a href="./cisco 01/README/03 - interface mode.md"></a>
+  - <a href="./cisco 01/README/04 - static routing.md"></a>
+  - <a href="./cisco 01/README/05 - dynamic routing.md"></a>
+  ---
+  - <a href="./cisco 02/README/01 - pengenalan vlan.md"></a>
+  - <a href="./cisco 02/README/02 - privat IPv4.md"></a>
+  - <a href="./cisco 02/README/03 - vlan with server.md"></a>
+  - <a href="./cisco 02/README/04 - vtp vlan.md"></a>
+  - <a href="./cisco 02/README/05 - ether chanel - LACP & PAGP.md"></a>
+  - <a href="./cisco 02/README/06 - ether chanel - 3 switch.md"></a>
+  ---
+  - <a href="./cisco 03/README/01 - voip phone.md"></a>
+  ---
+  - <a href="./winbox/01 - konfigurasi dasar mikrotik.md"></a>
+</details>
+
 <p id="download"></p>
 
 ## 🔨 download
