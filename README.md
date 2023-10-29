@@ -41,23 +41,23 @@ This file is what I studied while learning Cisco and networking, and it contains
 
 <details id="back" open>
   <summary><b>Dokumentasi</b></summary>
-
-  - <a href="./cisco 01/README/01 - pengenalan cisco.md">01 - pengenalan cisco</a>
-  - <a href="./cisco 01/README/02 - configuration terminal.md">02 - configuration terminal</a>
-  - <a href="./cisco 01/README/03 - interface mode.md">03 - interface mode</a>
-  - <a href="./cisco 01/README/04 - static routing.md">04 - static routing</a>
-  - <a href="./cisco 01/README/05 - dynamic routing.md">05 - dynamic routing</a>
-  ---
-  - <a href="./cisco 02/README/01 - pengenalan vlan.md">01 - pengenalan vlan</a>
-  - <a href="./cisco 02/README/02 - privat IPv4.md">02 - privat IPv4.md</a>
-  - <a href="./cisco 02/README/03 - vlan with server.md">03 - vlan with server</a>
-  - <a href="./cisco 02/README/04 - vtp vlan.md">04 - vtp vlan</a>
-  - <a href="./cisco 02/README/05 - ether chanel - LACP & PAGP.md">05 - ether chanel - LACP & PAGP</a>
-  - <a href="./cisco 02/README/06 - ether chanel - 3 switch.md">06 - ether chanel - 3 switch</a>
-  ---
-  - <a href="./cisco 03/README/01 - voip phone.md">01 - voip phone</a>
-  ---
-  - <a href="./winbox/README/01 - konfigurasi dasar mikrotik.md">01 - konfigurasi dasar mikrotik</a>
+  - router
+    - <a href="./cisco 01/README/01 - pengenalan cisco.md">01 - pengenalan cisco</a>
+    - <a href="./cisco 01/README/02 - configuration terminal.md">02 - configuration terminal</a>
+    - <a href="./cisco 01/README/03 - interface mode.md">03 - interface mode</a>
+    - <a href="./cisco 01/README/04 - static routing.md">04 - static routing</a>
+    - <a href="./cisco 01/README/05 - dynamic routing.md">05 - dynamic routing</a>
+  - switch
+    - <a href="./cisco 02/README/01 - pengenalan vlan.md">01 - pengenalan vlan</a>
+    - <a href="./cisco 02/README/02 - privat IPv4.md">02 - privat IPv4.md</a>
+    - <a href="./cisco 02/README/03 - vlan with server.md">03 - vlan with server</a>
+    - <a href="./cisco 02/README/04 - vtp vlan.md">04 - vtp vlan</a>
+    - <a href="./cisco 02/README/05 - ether chanel - LACP & PAGP.md">05 - ether chanel - LACP & PAGP</a>
+    - <a href="./cisco 02/README/06 - ether chanel - 3 switch.md">06 - ether chanel - 3 switch</a>
+  - phone
+    - <a href="./cisco 03/README/01 - voip phone.md">01 - voip phone</a>
+  - mikrotik
+    - <a href="./winbox/README/01 - konfigurasi dasar mikrotik.md">01 - konfigurasi dasar mikrotik</a>
 </details>
 
 <p id="download"></p>
