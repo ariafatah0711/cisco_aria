@@ -27,16 +27,16 @@ This file is what I studied while learning Cisco and networking, and it contains
   <summary><b>Installing Cisco Packet Tracer</b></summary>
 
   1. **Download Cisco Packet Tracer**
-    - Go to the [Cisco Networking Academy](https://www.netacad.com/) website.
-    - Log in or create an account if you don't have one.
-    - Once logged in, navigate to the Cisco Packet Tracer download page.
-    - Download the appropriate version of Cisco Packet Tracer for your operating system (Linux, Windows, or macOS).
+     - Go to the [Cisco Networking Academy](https://www.netacad.com/) website.
+     - Log in or create an account if you don't have one.
+     - Once logged in, navigate to the Cisco Packet Tracer download page.
+     - Download the appropriate version of Cisco Packet Tracer for your operating system (Linux, Windows, or macOS).
   2. **Install Cisco Packet Tracer**
-    - Double-click the downloaded Cisco Packet Tracer installer (exe) file.
-    - Follow the installation wizard, accepting the license agreement and specifying the installation location.
-    - Click "Install" to begin the installation process.
+     - Double-click the downloaded Cisco Packet Tracer installer (exe) file.
+     - Follow the installation wizard, accepting the license agreement and specifying the installation location.
+     - Click "Install" to begin the installation process.
   3. **Launch Cisco Packet Tracer**
-    - Launch Cisco Packet Tracer from your applications menu
+     - Launch Cisco Packet Tracer from your applications menu
 </details>
 
 <details id="back" open>
