@@ -4,7 +4,7 @@
 
 ## 1. **perangkat**
 - topologi
-<img src="../../notes cisco/image/vlan-server.png">
+<img src="../../notes cisco/image/4_1.png">
 
 ## 2. **konfigurasi intervlan di switch**
 - konfigurasi vlan di setiap int
