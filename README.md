@@ -62,6 +62,9 @@ This file is what I studied while learning Cisco and networking, and it contains
     - <a href="./cisco 03/README/01 - voip phone.md">01 - voip phone</a>
     - <a href="./cisco 03/README/02 - ip dhcp.md">02 - ip dhcp</a>
     
+  - Switch Router <br>
+    - <a href="./cisco 04/README/01 - intervlan - static router.md">01 - intervlan - static router</a>
+  
   - Winbox <br>
     - <a href="./winbox/README/01 - konfigurasi dasar mikrotik.md">01 - konfigurasi dasar mikrotik</a>
 </details>

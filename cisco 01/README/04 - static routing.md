@@ -13,7 +13,7 @@
 # **B. menggunakan static router**
 ```
 #show ip route (untuk melihat routing table)
-#(c)ip route [network tujuan] [subnet mask] [antarmuka keluar atau melalui jaringan tsb]
+#(c)ip route <network tujuan> <subnet mask> <antarmuka keluar atau melalui jaringan tsb>
 ```
 
 - contoh sebelum menggunakan router static :

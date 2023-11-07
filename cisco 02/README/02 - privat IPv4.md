@@ -37,7 +37,7 @@
   - one network to connect routers (192.168.1.1), usually called backbone;
   - the last network (192.168.1.6 - 254) connects our gateway router (Router1) to the internet.
 
-<img src="../../notes cisco/image/IPv4-Bridge.jpg">
+<img src="../../notes cisco/image/2_1-1.jpg">
 
 ## 2. Routing
 - How Routing Works : Let's look at a basic configuration example to illustrate how routing is used to forward packets between two local networks and to the Internet.
@@ -46,4 +46,4 @@
   - one network to connect routers (172.16.1.0/30), usually called backbone;
   - the last network (10.1.1.0/24) connects our gateway router (Router1) to the internet. 
 
-<img src="../../notes cisco/image/IPv4 - Routing.jpg">
+<img src="../../notes cisco/image/2_1-2.jpg">

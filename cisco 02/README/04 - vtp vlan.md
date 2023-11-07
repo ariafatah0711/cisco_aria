@@ -47,4 +47,4 @@
 
 - setelah itu hanya perlu menyambungkan ke port yang ingin di hubungkan vlan
 
-<img src="../../notes cisco/image/vtp.png">
+<img src="../../notes cisco/image/2_4.png">
