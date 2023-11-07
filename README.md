@@ -56,9 +56,11 @@ This file is what I studied while learning Cisco and networking, and it contains
     - <a href="./cisco 02/README/04 - vtp vlan.md">04 - vtp vlan</a>
     - <a href="./cisco 02/README/05 - ether chanel - LACP & PAGP.md">05 - ether chanel - LACP & PAGP</a>
     - <a href="./cisco 02/README/06 - ether chanel - 3 switch.md">06 - ether chanel - 3 switch</a>
+    - <a href="./cisco 02/README/07 - inter vlan.md">07 - inter vlan</a>
     
   - Phone <br>
     - <a href="./cisco 03/README/01 - voip phone.md">01 - voip phone</a>
+    - <a href="./cisco 03/README/02 - ip dhcp.md">02 - ip dhcp</a>
     
   - Winbox <br>
     - <a href="./winbox/README/01 - konfigurasi dasar mikrotik.md">01 - konfigurasi dasar mikrotik</a>
