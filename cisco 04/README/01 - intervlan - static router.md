@@ -7,7 +7,7 @@
 <img src="../../notes cisco/image/4_1.png">
 
 ## 2. **konfigurasi intervlan di switch**
-- konfigurasi vlan di setiap int
+- konfigurasi vlan di setiap interface
 - konfigurasi di fa 0/1 => agar switch dan router dapat terhubung di trunk
 ```
 (c)# int fa 0/1
@@ -21,7 +21,7 @@
 ```
 (c)# int gig 0/1.30
 (c)# enca dot1Q 30
-(c)# ip add 30.30.30.1 # membuat ip add di setiap vlan
+(c)# ip add 30.30.30.1 255.255.255.0 # membuat ip add di setiap vlan
 ```
 
 ## 3. **konfigurasi router port gig 0/0 (antar router)**
@@ -29,12 +29,12 @@
 ```
 route 1
 (c)# int gig 0/0
-(c)# ip add 192.168.88.1
+(c)# ip add 192.168.88.1 255.255.255.0
 (c)# no sh
 
 route 2
 (c)# int gig 0/0
-(c)# ip add 192.168.88.2
+(c)# ip add 192.168.88.2 255.255.255.0
 (c)# no sh
 ```
 
