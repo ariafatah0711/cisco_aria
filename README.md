@@ -42,6 +42,9 @@ This file is what I studied while learning Cisco and networking, and it contains
 <details id="back" open>
   <summary><b>Dokumentasi</b></summary>
 
+  - Subneting
+    - <a href="./notes cisco/README/01 - subneting.md">01 - subnetting</a>
+
   - Router <br>
     - <a href="./cisco 01/README/01 - pengenalan cisco.md">01 - pengenalan cisco</a>
     - <a href="./cisco 01/README/02 - configuration terminal.md">02 - configuration terminal</a>
