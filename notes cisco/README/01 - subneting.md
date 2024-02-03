@@ -11,13 +11,16 @@
 ```
 
 - subnetmask digunakan untuk membaca bagaimana kita membagi network dan hostnya
-| class | oktet pertama | subnetmask default | private address |
-| a | 1 - 127 | 255.0.0.0 | 10.0.0.0 - 10.255.255.255 |
-| b | 128 - 191 | 255.255.0.0 | 127.16.0.0 - 127.31.255.255 |
-| c | 192 - 223 | 255.255.255.0 | 192.168.0.0 - 192.168.255.255 |
+
+
+class | oktet pertama | subnetmask default | private address
+----- | ------------- | ------------------ | ---------------
+a | 1 - 127 | 255.0.0.0 | 10.0.0.0 - 10.255.255.255
+b | 128 - 191 | 255.255.0.0 | 127.16.0.0 - 127.31.255.255
+c | 192 - 223 | 255.255.255.0 | 192.168.0.0 - 192.168.255.255
 
 ```
-yang 255.255.255 dia diguanakan sebagai network
+yang 255.255.255 dia digunakan sebagai network
 dan yang .0 dia digunakan sebagai host yang dapat digunakan
 
 jadi misal kita gunakan class a lalu network nya kita atur menjadi 20
