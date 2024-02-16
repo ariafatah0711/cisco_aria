@@ -9,36 +9,36 @@
 - PC, laptop
  
 ## osi layer
-7. Application Layer (END User Layer)
+- 7> Application Layer (END User Layer)
     - Application layer pada OSI adalah pusat terjadinya suatu interaksi antara user dengan aplikasi yang bekerja menggunakan fungsionalitas sebuah jaringan. Lapisan ini menjadi layer paling atas dari model OSI
         - Menyajikan interface antara aplikasi dengan jaringan
         - Mengatur bagaimana sebuah aplikasi mampu untuk mengakses jaringan
     - example port: **HTTP, FTP, SMTP, IRC, DNS, dll**
-6. Presentation Layer
+- 6> Presentation Layer
     - Lapisan Presentation berfungsi untuk mengidentifikasi sintaks yang di pakai suatu host jaringan untuk berkomunikasi. Layer ini perlu memberi enkripsi serta deskripsi data yang nantinya akan di pakai dalam layer application.
         - Pada layer presentation, data akan ter-enkripsi dan dekripsi otomatis melalui sistem.
     - example port: **SSH, MIME, TLS, SSL, dll**
-5. Session Layer (Synch, send to port)
+- 4> Session Layer (Synch, send to port)
     - Layer session memiliki fungsi untuk mengendalikan dialog maupun melakukan pengelolaan terhadap koneksi suatu komputer. Bahkan layer ini juga bisa melakukan pemutusan koneksi internet pada suatu komputer.
     - example port: **API`s Sockets, NFS, RTP, SMB, dll**
-4. Transport Layer
+- 4> Transport Layer
     - Transport layer mempunyai fungsi untuk memecah data menjadi paket-paket data, serta memberikan nomor urut untuk setiap paketnya. Sehingga, nantinya dapat disusun kembali saat sampai pada tujuan.
         - Protokol tersebut akan mengirimkan paket data, sekaligus memastikan bahwa setiap paket telah diterima dengan sukses dan tepat sasaran. Selain itu, juga dapat mentransmisikan ulang terhadap paket yang hilang atau rusak ketika proses pengiriman.
         - Transport layer data dapat menyediakan transfer yang transparan dan reliable antara kedua titik akhir. Lapisan ini juga menyediakan proses multiplexing, kendali aliran (flow control), serta proses pemeriksaan error dan perbaikannya.
     - example port: **TCP, UDP**
-3. Network Layer (packets)
+- 3> Network Layer (packets)
     - Layer network pada OSI ini bertugas untuk mendefinisikan alamat IP sehingga setiap komputer dapat saling terkoneksi dalam satu jaringan. Fungsi lainnya adalah melaksanakan proses routing dan membuat header untuk setiap paket data yang ada.
         - Membuat header pada paket – paket data
         - Melakukan proses routing (membuat routing table)
     - example: **IP, ICMP, IPSec, IGMP**
     - device : **ROUTER**
-2. Data Link Layer (frames)
+- 2> Data Link Layer (frames)
     - Pada data-link layer memiliki tugas untuk menentukan setiap bit data dikelompokkan menjadi format yang disebut dengan frame. Pada level ini juga terjadi koreksi kesalahan, flow control, pengalamatan hardware atau perangkat keras (seperti halnya pada MAC Address (Media Access Control Address)). 
         - Serta, menentukan bagaimana perangkat jaringan seperti hub, repeater, bridge, dan switch pada layer 2 dapat beroperasi. Untuk spesifikasi IEEE 802, dapat membagi tingkatan menjadi 2 level, yaitu lapisan Media Access Control (MAC) dan lapisan Logical Link Control (LLC).
         - membuat arp table (address resolution protocol)
     - example: **MAC ADDRESS, ARP**
     - device : **router, switch**
-1. Physical Layer
+- 1> Physical Layer
     - Fungsinya adalah untuk mendefinisikan media transmisi jaringan, sinkronisasi bit, metode pensinyalan, serta membangun arsitektur jaringan seperti Ethernet, pengkabelan, dan topologi jaringan.
         - Pada tahapan atau level ini juga mendefinisikan mengenai bagaimana sebuah NIC (Network Interface Card) dapat berinteraksi secara langsung dengan media kabel dan perangkat radio. Untuk setiap pengiriman data melalui tiap layer, dapat dianalogikan seperti anda mengirim surat.
         - example: **fiber, coax, wireless, HUB, Repeaters**
@@ -55,17 +55,26 @@
     - UDP hampir tidak mengoreksi kesalahan pengiriman dan tidak peduli apabila paket hilang.
 
 ## port
-- http (80)
-- https (443)
+- http (80, 443) => web server
 - dns (53)
 - ftp (21)
 - ssh (22)
-- ISMP (25)
-- POP ()
-- IMAP ()
+- SMTP (Simple Mail Transfer Protocol.) => just process send, receiver server
+    - port **25, 465(ssl)**
+    - protokol standar yang ada di mail server dan mempunyai fungsi utama untuk mengirimkan email dari local email dan diteruskan ke server melalui internet. Proses pengiriman email yang dilakukan oleh SMTP ini akan dikontrol dengan MTA.
+    - MTA atau dikenal dengan Mail Transfer Agent berada didalam server email. Tugas utamanya adalah untuk mengatur pengiriman email dari lokal email menuju server.
+- POP (Post Office Protocol) => not save in server: wa
+    - port **110, 995(ssl)**
+    - protokol standar yang ada di mail server dan mempunyai fungsi utama untuk menerima email dari server dan diteruskan ke email lokal. Proses kerjanya dimulai dari POP3 akan menerima pesan yang telah diunduh oleh penyimpanan lokal.
+    - jadi, email tersebut akan terhapus otomatis dari server mail.
+- IMAP (Internet Massage Acsess Protocol) => save in server: email
+    - port **143, 993(ssl)**
+    - protokol standar yang ada di mail server dan mempunyai fungsi utama untuk mencegah tersimpannya pesan pada lokal device sehingga pesan bisa tersimpan pada server.
 
 ## cabel
 - UTP
+    - straight(diference device) = po - o - ph - b - pb - h - pc - c
+    - cross(same device) = ph - h - po - b - pb - o - pc - c
 - coaxial
 - fiber optic
 
@@ -103,7 +112,7 @@
 
 ### experimental ip
 - ip setelah class D
-    - 240.x.x.x - ...
+    - 240.x.x.x - x.x.x.x
     - 240.2.6.255
 
 ## ipv6
