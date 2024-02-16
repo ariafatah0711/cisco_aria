@@ -1,111 +1,87 @@
 <a href="../../README.md#back">Back README.md...</a>
 
-# **A. mode pada cisco**
-- **User EXEC mode** : Mode standar saat login, yang hanya dapat memberikan hak akses terbatas.<br>
-  ```router>```
-- **Privileged EXEC Mode** : mode kedua setelah memasukan kata sandi, dan memberikan hak akses lebih tinggi.<br>
-  ```router#```
-- **Global Configuration Mode** : mode configurasi perangkat secara keseluruhan dapat mengatur parameter dasar.<br>
-  ```router(config)#```
-- **Interface Configuration Mode** : mode configurasi untuk mengatur parameter khusus interface tertentu.<br>
-  ```router(config-if)#```
+# cli(command line interface) cisco
+## mode cisco
+- **User EXEC mode**
+  - ```router>```
+  - Mode standar saat login, yang hanya dapat memberikan hak akses terbatas.
+- **Privileged EXEC Mode**
+  - ```router#```
+  - mode kedua setelah memasukan kata sandi, dan memberikan hak akses lebih tinggi.
+- **Global Configuration Mode**
+  - ```router(config)#```
+  - mode configurasi perangkat secara keseluruhan dapat mengatur parameter dasar.
 
-# **B. cara berpindah mode lewat cli**
-- **CLI (command line interface)** merupakan lingkungan antarmuka baris perintah yang digunakan untuk berinteraksi dan mengkonfigurasikan perangkat jaringan terutama router dan switch.
-- untuk masuk ke mode cli anda dapat mengklik router dan mengklik cli
-```
->enable (untuk menuju Privileged EXEC Mode)
+## change mode cisco
+- masukan di cli router atau switch cisco
+  ```
+  router>enable
+  router#configure terminal
+  router(config)#
+  ```
+  atau
+  ```
+  router>en
+  router#conf t
+  router(config)#
+  ```
 
-#configure terminal (untuk menuju Global Configuration Mode)
+# Priveleged EXEC mode
+- bisa di ketika di mode Priveleged EXEC dengan ```show```
+- atau dengan ```do show``` pada global configuration mode
 
-(c)#interface GigabitEthernet0/1
-```
-
-# **c. configuration**
 ## running-config
 - merupakan configurasi berjalan yang saat ini sedang diterapkan pada perangkat.
-  saat perangkat router dimatikan maka konfigurasi akan di restart / 
-  hanya berfungsi selama perangkat aktif dan hilang saat dimatikan atau direstart
+  - saat perangkat router dimatikan maka konfigurasi akan di restart atau hanya berfungsi selama perangkat aktif dan hilang saat dimatikan atau direstart
+- show run config
+  ```
+  # show running-config
+  # sh run
+  # sh r 
+  ```
 
 ## startup-config
-- merupakan configurasi awal yang disimpen di memory perangkat permanen (NVRAM) 
-  dan akan dimuat saat perangkat dinyalakan atau di restart
+- merupakan configurasi awal yang disimpen di memory perangkat permanen (NVRAM) dan akan dimuat saat perangkat dinyalakan atau di restart
+- show startup conf
+  ```
+  # show startup-config
+  # sh start
+  # sh s
+  ```
 
-# **D. menampilkan data config lewat cli**
-- untuk menampilkan config lewat cli harus masuk ke privilage mode EXEC terlebih dahulu
-```
-#show running-config (menampilkan running config)
-#show startup-config (menampilkan startup config)
-```
-- atau disingkat menjadi
-```
-#sh run atau #sh start
-```
+## save/remove file configuration
+- write
+  ```
+  # write memory
+  # copy running-config startup-config
+  # cp run start
+  ```
+- remove
+  ```
+  # write erase
+  ``
 
-- untuk menyimpan configurasi/menghapus configurasi anda dapat melakukan
-```
-#write memory (mengcopy configurasi running ke configurasi startup)
-#copy running-config startup-config (sama sama menyalin config)
-
-#write erase (menghapus semua konfigurasi yang ada di konfig startup)
-```
-
-- contoh hasil dari config yang dikeluarkan
-```
-Router_B#show startup-config 
-Using 1492 bytes
-!
-version 12.2
-no service timestamps log datetime msec
-no service timestamps debug datetime msec
-no service password-encryption
-!
-hostname Router_B
-!
-!
-!
-enable secret 5 $1$mERr$day4dRsvDbEV2fGaIdHyk1
-!
-!
-!
-!
-!
-!
-no ip cef
-no ipv6 cef
-!
-!
-
-Router_B#
-```
-
-# **E. mengubah configuration**
-- mengubah nama perangkat router<br>
-```
-(c)#hostname [nama_perangkat]
-```
-
-- membuat password pada user<br>
-```
-(c)#line console 0
-(c)#password [password_console_0]
-(c)#login
-```
-
-- membuat password pada Privileged EXEC Mode<br>
-```
-(c)#enable password [password] (password tanpa terekripsi)
-(c)#enable secret [password] (password yang telah terenkripsi)
-
-# output pada running-config akan ditampilkan seperti ini
-enable secret 5 $1$mERr$day4dRsvDbEV2fGaIdHyk1
-enable password aria123
-```
-
-- membuat MOTD(message of the day) pesan yang ditampilkan saat login<br>
-```
-(c)#banner motd &[text yang akan ditampilkan]&
-(c)#banner motd !{enter} [dan ketikan text yang akan ditampilkan] !
-
-# dapat menggunakan text apapun selama text itu tidak diikuti text yang dibuat(&,!,~,dll)
-```
+# global configuration mode
+- mengubah hostname
+  ```(c)# hostname <nama_perangkat>```
+- membuat password pada user
+  ```
+  (c)# line console 0
+  (c)# password <password_console_0>
+  (c)# login
+  ```
+- membuat password pada Privileged EXEC mode
+  ```
+  (c)# enable password <password>
+  (c)# enable secret <password_terenkripsi>
+  ```
+- membuat MOTD(message of the day)
+  - pesan yang ditampilkan saat login
+  ```
+  (c)# banner motd &<teks_yang_akan_ditampilkan>&
+  (c)# banner motd ![enter]
+  (c)# <teks yang akan ditampilkan>
+  (c)# <teks yang akan ditampilkan>
+  (c)# ![enter]
+  ```
+  - dapat menggunakan text apapun selama text itu tidak diikuti text yang dibuat(&,!,~,dll)

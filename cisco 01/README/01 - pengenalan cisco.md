@@ -79,7 +79,6 @@
 - fiber optic
 
 # ip address
-
 ## ipv4
 -  versi IP address yang menggunakan 32 bit. Ia terdiri dari 4 kumpulan angka / octet 
 
