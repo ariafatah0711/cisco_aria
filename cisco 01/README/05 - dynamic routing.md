@@ -2,14 +2,23 @@
 
 # **A. dynamic router**
 ## Pengertian Dynamic Router
+- Dynamic Routing atau Routing Dinamis adalah teknik routing yang mampu membuat tabel routing secara otomatis dan real-time berdasarkan lalu lintas jaringan dan beberapa router yang saling terhubung. Routing Dinamis mengijinkan router untuk saling berbagi informasi network, dan mengijinkan router-router tersebut untuk memilih jalur terbaik ke tujuan/destination.
 - dynamic router adalah jenis router yang dapat memutuskan rute jaringan berdasarkan informasi yang diperoleh secara dinamis dari lingkup jaringan.
 - ini berarti router dapat mengubah jaluratau rute yang digunakan untuk mengirimkan data sesuai perubahan kondisi jaringan
+
+## jenis
+- RIP -> Routing Information Protokol
+- OSPF -> Open Shortest Path First
+- IGRP -> Internal Gateway Routing Protokol
+- EIGRP -> Enhanced Interior Gateway Routing Protocol
+- BGP -> Border Gateway Protokol
+- IS-IS -> Intermediate System to Intermediate System
 
 # **B. perbedaan static router dan dynamic router**
 - **S** = menambahkan alamat jaringan pada routing table secara manual
 - **D** = mendata alamat jaringan mana yang akan disertakan dalam proses pertukaran informasi antar router
 
-# **C. menggunakan dynamic router**
+# rip
 ```
 (c)#router rip
 (c-r)#network [ip yang ingin dpt terhubung]
