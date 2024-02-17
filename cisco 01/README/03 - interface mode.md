@@ -33,26 +33,28 @@
     ```
   - menonaktifkan interface
     ```
-    (c)# sh
+    (c)# shutdown
     (c)# sh
     ```
 
-## mngatur ip address PC
+## mengatur ip address PC
 - PC 0
   - ip address        : <ip_address>
-  - subnetmask        : 255.255.255.0
+  - subnetmask        : <subnet_mask_yang_digunakan>
   - default-gateway   : <ip_interface_router_tadi>
 
 - contoh
   - PC 0
-    ip address      : 192.168.1.1
-    subnetmask      : 255.255.255.0
-    default-gateway : 192.168.1.254
+    - ip address      : 192.168.1.1
+    - subnetmask      : 255.255.255.0
+    - default-gateway : 192.168.1.254
   - router
-    fa 0/0          : 192.168.1.254
+    - fa 0/0          : 192.168.1.254
 
-## menampilkan interface yang terhubung
-- ```# show ip interface brief```
+- menampilkan interface yang terhubung
+  ```
+  # show ip interface brief
+  ```
 
 # kesipulan
 ## jaringan

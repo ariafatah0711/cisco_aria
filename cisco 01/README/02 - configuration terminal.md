@@ -59,11 +59,13 @@
 - remove
   ```
   # write erase
-  ``
+  ```
 
 # global configuration mode
 - mengubah hostname
-  ```(c)# hostname <nama_perangkat>```
+  ```
+  (c)# hostname <nama_perangkat>
+  ```
 - membuat password pada user
   ```
   (c)# line console 0

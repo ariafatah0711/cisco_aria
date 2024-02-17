@@ -37,7 +37,9 @@
   (c)# sw mode trunk
   ```
 - menampilkan configuration etherchanel
-  ```# show etherchannel port-channel```
+  ```
+  # show etherchannel port-channel
+  ```
   
 ## contoh
 - switch A

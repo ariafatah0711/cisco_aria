@@ -13,9 +13,13 @@
 # configuration
 ## ip route
 - menambahkan network secara static
-  ```(c)# ip route <network_tujuan> <subnet_mask> <next_hope / antarmuka_keluar>```
+  ```
+  (c)# ip route <network_tujuan> <subnet_mask> <next_hope / antarmuka_keluar>
+  ```
 - menampilkan tabel ip route
-  ```# show ip route```
+  ```
+  # show ip route
+  ```
 
 ## contoh
 ```

@@ -41,7 +41,9 @@
     (c)# network <network>
     ```
   - menghapus rip
-    ```no network <network>```
+    ```
+    no network <network>
+    ```
 ## contoh
   - router 1 : fa 0/1 : 192.168.1.1
   - router 2 : fa 0/0 : 192.168.10.1

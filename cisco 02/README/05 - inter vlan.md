@@ -70,7 +70,9 @@
   (c)# ip add <ip_address> <subnet_mask>
   ```
 - mengaktifkan intervlan di multi layer switch
-  ```(c)# ip routing```
+  ```
+  (c)# ip routing
+  ```
 
 ## contoh
 ## configuration
@@ -82,4 +84,6 @@
   (c)# ip add 10.10.10.1 255.255.255.0
   ```
 - mengaktifkan intervlan di multi layer switch
-  ```(c)# ip routing```
+  ```
+  (c)# ip routing
+  ```

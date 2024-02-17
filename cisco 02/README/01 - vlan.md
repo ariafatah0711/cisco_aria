@@ -42,9 +42,13 @@
 - setelah mengkonfigurasi setiap port PC, anda dapat menghubungkan switch ke switch dengan mode "access" untuk koneksikan perangkat end-point, atau "trunk" untuk mengizinkan lalu lintas VLAN yang lebih kompleks dan fleksibel.
 
 - menghubugnkan vlan switch ke switch
-  ```(c)# switchport mode trunk```
+  ```
+  (c)# switchport mode trunk
+  ```
   atau
-  ```(c)# switchport mode access```
+  ```
+  (c)# switchport mode access
+  ```
 
 ## contoh
 - membuat vlan
