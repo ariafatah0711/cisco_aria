@@ -20,6 +20,12 @@
     (c)# interface fastEthernet <port>
     (c)# ip address <ip_address> <subnet_mask>
     ```
+  - mengelompokan ip address
+    ```
+    (c)# interface range fastEthernet <port>
+    (c)# ip address <ip_address> <subnet_mask>
+    ```
+    
   - menonaktifkan interface
     ```
     (c)# no shutdown

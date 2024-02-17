@@ -71,7 +71,7 @@
     - port **143, 993(ssl)**
     - protokol standar yang ada di mail server dan mempunyai fungsi utama untuk mencegah tersimpannya pesan pada lokal device sehingga pesan bisa tersimpan pada server.
 
-## cabel
+## kabel
 - UTP
     - straight(diference device) = po - o - ph - b - pb - h - pc - c
     - cross(same device) = ph - h - po - b - pb - o - pc - c

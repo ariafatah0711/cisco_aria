@@ -47,7 +47,7 @@
   - router 2 : fa 0/0 : 192.168.10.1
   - configuration
     ```
-    (c)#router rip
+    (c)# router rip
     (c)# network 192.168.1.0
     (c)# network 192.168.10.0
 

@@ -42,33 +42,34 @@ This file is what I studied while learning Cisco and networking, and it contains
 <details id="back" open>
   <summary><b>Dokumentasi</b></summary>
 
-  - Subneting
+  - network
     - <a href="./notes cisco/README/01 - subneting.md">01 - subnetting</a>
+    - <a href="./notes cisco/README/02 - ipv4.md">02 - ipv4</a>
 
-  - Router <br>
+  - Router
     - <a href="./cisco 01/README/01 - pengenalan cisco.md">01 - pengenalan cisco</a>
     - <a href="./cisco 01/README/02 - configuration terminal.md">02 - configuration terminal</a>
     - <a href="./cisco 01/README/03 - interface mode.md">03 - interface mode</a>
     - <a href="./cisco 01/README/04 - static routing.md">04 - static routing</a>
-    - <a href="./cisco 01/README/05 - dynamic routing.md">05 - dynamic routing</a>
+    - <a href="./cisco 01/README/05 - rip dynamic routing.md">05 - rip dynamic routing</a>
+    - <a href="./cisco 01/README/06 - ospf dynamic routing.md">06 - ospf dynamic routing</a>
   
-  - Switch <br>
-    - <a href="./cisco 02/README/01 - pengenalan vlan.md">01 - pengenalan vlan</a>
-    - <a href="./cisco 02/README/02 - privat IPv4.md">02 - privat IPv4.md</a>
-    - <a href="./cisco 02/README/03 - vlan with server.md">03 - vlan with server</a>
-    - <a href="./cisco 02/README/04 - vtp vlan.md">04 - vtp vlan</a>
-    - <a href="./cisco 02/README/05 - ether chanel - LACP & PAGP.md">05 - ether chanel - LACP & PAGP</a>
-    - <a href="./cisco 02/README/06 - ether chanel - 3 switch.md">06 - ether chanel - 3 switch</a>
-    - <a href="./cisco 02/README/07 - inter vlan.md">07 - inter vlan</a>
+  - Switch
+    - <a href="./cisco 02/README/01 - vlan.md">01 - vlan</a>
+    - <a href="./cisco 02/README/02 - vtp vlan.md">02 - vtp vlan</a>
+    - <a href="./cisco 02/README/03 - server.md">03 - server</a>
+    - <a href="./cisco 02/README/04 - etherchanel.md">04 - etherchanel.md</a>
+    - <a href="./cisco 02/README/05 - inter vlan.md">05 - inter vlan</a>
     
-  - Phone <br>
-    - <a href="./cisco 03/README/01 - voip phone.md">01 - voip phone</a>
-    - <a href="./cisco 03/README/02 - ip dhcp.md">02 - ip dhcp</a>
+  - Phone
+    - <a href="./cisco 03/README/01 - dhcp.md">01 - dhcp</a>
+    - <a href="./cisco 03/README/02 - voip phone.md">02 - voip phone</a>
     
-  - Switch Router <br>
-    - <a href="./cisco 04/README/01 - intervlan - static router.md">01 - intervlan - static router</a>
+  - both
+    - <a href="./cisco 04/README/01 - etherchanel - vtp.md">01 - etherchanel - vtp</a>
+    - <a href="./cisco 04/README/02 - intervlan - static router.md">02 - intervlan - static router</a>
   
-  - Winbox <br>
+  - Winbox
     - <a href="./winbox/README/01 - konfigurasi dasar mikrotik.md">01 - konfigurasi dasar mikrotik</a>
 </details>
 
