@@ -76,4 +76,10 @@
   - akan menghubungkan ke semua dial numbere yang diawali 2..
   - contoh 201, 202, 250, 289, dll
 - session target ipv4:192.168.1.1
-  - menghubungkan dial-peer ke next hope
+  - menghubungkan dial-peer ke router yang menyrdiakan ip phone
+    ```
+    ex: r1 -> r2 -> r3
+        ip          ip
+        phone       phone
+    ```
+    maka r1 harus session target ipv4: ke alamat interface r3
