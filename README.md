@@ -45,6 +45,7 @@ This file is what I studied while learning Cisco and networking, and it contains
   - network
     - <a href="./notes cisco/README/01 - subneting.md">01 - subnetting</a>
     - <a href="./notes cisco/README/02 - ipv4.md">02 - ipv4</a>
+    - <a href="./notes cisco/README/03 - desimal, hexadesimal.md">03 - desimal, hexadesimal</a>
 
   - Router
     - <a href="./cisco 01/README/01 - pengenalan cisco.md">01 - pengenalan cisco</a>

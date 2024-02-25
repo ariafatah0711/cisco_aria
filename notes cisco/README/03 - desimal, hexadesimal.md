@@ -17,12 +17,14 @@ hexadesimal (base 16)
   - E = 14
   - F = 15
 
-225 = 11100001 (desimal)
-225 = 1110 | 0001
+- 225 = 11100001 (desimal)
+- 225 = 1110 | 0001
+  ```
     = 8 4 2 1 | 8 4 2 1
     = 1 1 1 0 | 0 0 0 1
     = ------------------
     = 8 4 2 0 | 0 0 0 1
     = 14 | 1
-res = E1 (hexadesimal)
+  res = E1 (hexadesimal)
+  ``` 
 <img src="../image/notes_3.2.png">
