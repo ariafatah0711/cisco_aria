@@ -64,6 +64,7 @@ This file is what I studied while learning Cisco and networking, and it contains
   - Phone
     - <a href="./cisco 03/README/01 - dhcp.md">01 - dhcp</a>
     - <a href="./cisco 03/README/02 - voip phone.md">02 - voip phone</a>
+    - <a href="./cisco 03/README/03 - pbx phone.md">03 - pbx</a>
     
   - both
     - <a href="./cisco 04/README/01 - etherchanel - vtp.md">01 - etherchanel - vtp</a>
