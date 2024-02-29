@@ -164,3 +164,30 @@
 - Apabila suatu pelayanan menggunakan beberapa IP address yang berbeda, kemudian apabila ada pengirim mengirimkan data menuju ke pelayanan tersebut maka akan diteruskan ke salah satu alamat IP tersebut, mode pengiriman ini disebut Anycast.
     - Contoh: Apabila ada 5 server dengan aplikasi FTP yang sama, maka apabila ada user mengakses pelayanan FTP tersebut akan diarahkan ke salah satu dari 5 server tersebut.
     - Anycast merupakan sebuah metode transmisi (pengiriman) data Point-to-Point-Nearest. Bisa dibilang untuk mekanisme dari anycast ini gabungan antara unicast dengan multicast. Di dalam transmisi Anycast antara si-pengirim dan si-penerima mempunyai alamat yang jelas, namun untuk menuju ke penerima akan menggunakan titik (point) sebuah group yang memiliki jalur terdekat.
+
+# format dns
+```
+A - Alamat IPv4 perangkat akhir
+NS - Server nama otoritatif
+AAAA - Alamat IPv6 perangkat akhir (diucapkan quad-A)
+MX - Catatan pertukaran email
+```
+
+# tcp protokol
+- jabat tangan tiga arah
+```
+syn => synchron ke server
+sync ack => server synchronus dan acknowledge
+ack => client acknowledge
+```
+
+- jabat tangan dua arah tapi 4 proses
+```
+fin ack => client finsih/terminate server
+ack => server menerima permintaan finish
+
+fin
+ack
+fin
+ack
+```
