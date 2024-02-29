@@ -87,3 +87,39 @@
   (c)# ![enter]
   ```
   - dapat menggunakan text apapun selama text itu tidak diikuti text yang dibuat(&,!,~,dll)
+
+# IOS
+- enable => mode user to mode privilage
+- disable => mode privilege to mode user
+- configure terminal => mode privilage to mode config
+- exit => back 1 mode ex: config-if to config, mode config to mode privilage
+- end => mode sub configuration to mode privilage
+- Ctrl + Z\C => mode sub configuration to mode privilage
+- line console 0 => to interface console
+- line vty 0 15 => terminal virtual
+- interface vlan 1
+
+# shorcut ios
+| key | description |
+| --- | --- |
+| Tab | menyelesaikan entri nama perintah |
+| backsapace | menghapus karakter di sebelah kiri |
+| Ctrl + D | menghapus satu karakter di kursor |
+| Ctrl + K | menghpaus karakter dari kursor kiri ke kanan |
+| Ctrl + U/X | menghapus karakter dari kursor kanan ke kiri |
+| Ctrl + W | menghapus karakter di sebelah kiri kursor |
+| Ctrl + A | memindahkan kursor ke awal baris |
+| Ctrl + E | memindahkan kursor ke akhir baris |
+| Ctrl + Z/C | mode apapun menjadi mode privilage |
+| Ctrl + R | jika tiba tiba ada teks yang menggagu gitu |
+| Ctrl + Shift + 6 | exit *Translating "test"...domain server (255.255.255.255)* |
+| Esc + D | menghapus semua karakter hingga akhir kata |
+
+# show
+- show running-config => show running config
+- show interfaces => show interface
+- show ip interface => show layer 3 ip interface
+- show arp => show arp mac address
+- show ip route => show ip route
+- show protocols => protokol
+- show version => show versi
