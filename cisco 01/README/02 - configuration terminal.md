@@ -88,6 +88,10 @@
   ```
   - dapat menggunakan text apapun selama text itu tidak diikuti text yang dibuat(&,!,~,dll)
 
+
+<hr>
+
+# cisco academy
 # IOS
 - enable => mode user to mode privilage
 - disable => mode privilege to mode user
@@ -123,3 +127,44 @@
 - show ip route => show ip route
 - show protocols => protokol
 - show version => show versi
+
+# konfigurasi switch dasar
+- line console 0
+  - password 123
+  - login
+- line vty 0 15
+  - password 123
+  - login
+- service password-encryption
+- benner motd #test#
+
+# vlan ip switch
+- int vlan 1
+- ip add 192.168.1.1 255.255.255.0
+- no sh
+
+# konfigurasi router dasar
+- hostname R1
+- enable secret password
+- line console 0
+  - password 123
+  - login
+- line vty 0 4
+  - password 123
+  - login
+  - transport input {ssh | telnet | none | all}
+- service password-encryption
+- benner motd #test#
+
+# security
+- sh ip ssh
+- ip domain-name cisco.com
+- crypto key generate rsa
+  - 1024
+- username admin secret ccna
+- line vty 0 15
+  - transport input ssh
+  - login local
+- ip ssh version 2
+- sh ip ssh
+- sh ssh
