@@ -138,7 +138,7 @@
 - service password-encryption
 - benner motd #test#
 
-# vlan ip switch
+# vlan ip switch svi(seitch vlan interface)
 - int vlan 1
 - ip add 192.168.1.1 255.255.255.0
 - no sh
@@ -168,3 +168,7 @@
 - ip ssh version 2
 - sh ip ssh
 - sh ssh
+
+# default gateway
+- ip default-gateway 192.168.10.1
+- 
