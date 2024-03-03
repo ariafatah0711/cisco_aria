@@ -51,9 +51,10 @@ This file is what I studied while learning Cisco and networking, and it contains
     - <a href="./cisco 01/README/01 - pengenalan cisco.md">01 - pengenalan cisco</a>
     - <a href="./cisco 01/README/02 - configuration terminal.md">02 - configuration terminal</a>
     - <a href="./cisco 01/README/03 - interface mode.md">03 - interface mode</a>
-    - <a href="./cisco 01/README/04 - static routing.md">04 - static routing</a>
-    - <a href="./cisco 01/README/05 - rip dynamic routing.md">05 - rip dynamic routing</a>
-    - <a href="./cisco 01/README/06 - ospf dynamic routing.md">06 - ospf dynamic routing</a>
+    - <a href="./cisco 01/README/04 - remote.md">04 - remote</a>
+    - <a href="./cisco 01/README/05 - static routing.md">05 - static routing</a>
+    - <a href="./cisco 01/README/06 - rip dynamic routing.md">06 - rip dynamic routing</a>
+    - <a href="./cisco 01/README/07 - ospf dynamic routing.md">07 - ospf dynamic routing</a>
   
   - Switch
     - <a href="./cisco 02/README/01 - vlan.md">01 - vlan</a>
@@ -66,7 +67,6 @@ This file is what I studied while learning Cisco and networking, and it contains
     - <a href="./cisco 03/README/01 - dhcp.md">01 - dhcp</a>
     - <a href="./cisco 03/README/02 - voip phone.md">02 - voip phone</a>
     - <a href="./cisco 03/README/03 - pbx phone.md">03 - pbx</a>
-    - <a href="./cisco 03/README/04 - remote.md">04 - remote</a>
     
   - both
     - <a href="./cisco 04/README/01 - etherchanel - vtp.md">01 - etherchanel - vtp</a>
@@ -74,6 +74,10 @@ This file is what I studied while learning Cisco and networking, and it contains
   
   - Winbox
     - <a href="./winbox/README/01 - konfigurasi dasar mikrotik.md">01 - konfigurasi dasar mikrotik</a>
+  
+  - cisco
+    - <a href="./cisco_academy/readme.md">cisco_academy</a>
+
 </details>
 
 <p id="download"></p>

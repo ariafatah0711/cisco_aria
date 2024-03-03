@@ -1,3 +1,5 @@
+<a href="../README.md">Back README.md...</a>
+
 # cisco academy
 # IOS
 - enable => mode user to mode privilage
@@ -92,4 +94,3 @@
   - akan muncul sejalan dengan pertanyaan pada kuis, ujian modul, atau jenis penilaian bertingkat lainnya. Anda meluncurkan file .pkt atau .pka langsung dari dalam penilaian. 
 - PTSA() => 
   - di titik tengah dalam kursus atau di akhir kursus. PTSA adalah penilaian keterampilan sumatif di mana Anda menunjukkan keterampilan Anda dengan menerapkan teknologi yang telah Anda pelajari. PTSA adalah penilaian mandiri, memiliki mesin penilaian sendiri, dan hasilnya dicatat dalam buku nilai kursus, jika ada. Setelah menyelesaikan PTSA, Anda menerima umpan balik tingkat item untuk setiap komponen yang dinilai.
-
