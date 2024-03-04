@@ -1,6 +1,6 @@
 <a href="../../README.md#back">Back README.md...</a>
 
-# svi(seitch vlan interface)
+# svi(switch vlan interface)
 ## pengenalan
 - Switch virtual interface (SVI), merupakan istilah khusus yang digunakan pada perangkat Cisco. Istilah ini mengacu pada sebuah virtual interface layer tiga pada sebuah switch. Istilah ini juga biasa dikenal dengan istilah VLAN. Secara default, SVI pada perangkat Cisco adalah VLAN 1. 
 
