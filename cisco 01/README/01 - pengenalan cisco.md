@@ -191,3 +191,40 @@ ack
 fin
 ack
 ```
+
+- Enkapsulasi data adalah proses di mana beberapa informasi tambahan ditambahkan ke item data untuk menambahkan beberapa fitur ke dalamnya.
+    - Kita menggunakan model OSI atau TCP/IP di jaringan, dan transmisi data terjadi melalui berbagai lapisan dalam model ini.
+    - Enkapsulasi data menambahkan informasi protokol ke data sehingga transmisi data dapat berlangsung dengan cara yang benar. Informasi ini dapat ditambahkan di header atau footer data.
+    - Data dienkapsulasi di sisi pengirim, mulai dari lapisan application layer hingga physical layer. Setiap lapisan mengambil data yang dienkapsulasi dari lapisan sebelumnya dan menambahkan beberapa informasi lagi untuk merangkumnya dan beberapa fungsi lagi dengan data.
+
+- arp(address resolution protocol) => ARP digunakan untuk memetakan alamat IP ke alamat fisik (MAC).
+    - Fungsionalitas: 
+        - Ketika pengirim mengetahui alamat IP dari perangkat jaringan tetapi tidak mengetahui alamat MAC-nya, pengirim melakukan siaran IP dan meminta alamat MAC yang sesuai 
+        - Server merespons dengan memberikan alamat MAC yang tepat.
+    - Penggunaan Umum:
+        - ARP banyak digunakan dalam jaringan modern untuk mengonversi alamat IP menjadi alamat MAC.
+    - Alur Protokol:
+        - Pengirim melakukan siaran alamat IP.
+        - Server merespons dengan memberikan alamat MAC yang sesuai.
+    - Manajemen Tabel:
+        - Tabel ARP dikelola oleh host lokal.
+
+- rarp(reverse address resolution protocol) => RARP digunakan untuk memetakan alamat fisik (MAC) ke alamat IP.
+    - Fungsionalitas:
+        - Ketika pengirim mengetahui alamat MAC dari perangkat jaringan tetapi tidak mengetahui alamat IP-nya, pengirim melakukan siaran alamat MAC dan meminta alamat IP yang sesuai.
+        - Server merespons dengan memberikan alamat IP yang tepat.
+    - Penggunaan Umum:
+        - RARP jarang digunakan dalam jaringan modern, terutama karena sebagian besar perangkat sekarang memiliki alamat IP yang telah ditetapkan sebelumnya.
+    - Alur Protokol:
+        - Pengirim melakukan siaran alamat MAC.
+        - Server merespons dengan memberikan alamat IP yang sesuai.
+    - Manajemen Tabel:
+        - Tabel RARP dikelola oleh server RARP.
+
+
+- Ringkasan:
+    - ARP memetakan alamat IP ke alamat MAC.
+    - RARP memetakan alamat MAC ke alamat IP.
+    - ARP menggunakan alamat MAC siaran, sedangkan RARP menggunakan alamat IP siaran.
+    - ARP lebih umum digunakan dalam jaringan modern, sementara RARP terutama digunakan oleh pengguna dengan fasilitas terbatas.
+    - Ingatlah bahwa ARP membantu perangkat berkomunikasi dalam jaringan dengan menerjemahkan alamat IP logis menjadi alamat MAC fisik, sedangkan RARP membantu komputer tanpa disk yang boot tanpa alamat IP.
