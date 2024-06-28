@@ -19,6 +19,14 @@
 - Port yang dikonfigurasi dalam mode voice sering dihubungkan ke perangkat telepon IP.
 - VLAN voice dapat digunakan untuk memisahkan lalu lintas suara dari data lainnya, meningkatkan kinerja dan manajemen jaringan.
 
+## native vlan
+
+## no negoitation
+
+## dyanmic vlan
+### desirable
+
+### auto
 
 # configuration
 ## vlan
@@ -90,3 +98,16 @@
   10   kelompok_A                       active    Fa0/1
   20   kelompok_B                       active    Fa1/1
   ```
+
+# dynamic vlan
+## desirable (trunk)
+```
+int fa 0/1
+sw mode dynamic desirable
+```
+
+## auto
+```
+int fa 0/1
+sw mode dynamic auto
+```
