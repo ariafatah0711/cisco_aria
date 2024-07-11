@@ -69,8 +69,7 @@ This file is what I studied while learning Cisco and networking, and it contains
     - <a href="./cisco 03/README/03 - pbx phone.md">03 - pbx</a>
     
   - both
-    - <a href="./cisco 04/README/01 - etherchanel - vtp.md">01 - etherchanel - vtp</a>
-    - <a href="./cisco 04/README/02 - intervlan - static router.md">02 - intervlan - static router</a>
+    - <a href="./cisco 04/README.md/01 - static nat.md">01 - static nat</a>
   
   - Winbox
     - <a href="./winbox/README/01 - konfigurasi dasar mikrotik.md">01 - konfigurasi dasar mikrotik</a>
