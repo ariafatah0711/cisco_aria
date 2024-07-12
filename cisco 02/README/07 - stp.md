@@ -58,6 +58,8 @@ VLAN0001
  Root ID Priority 32769 # default nya adalah 32769
 
 spanning-tree vlan 1 priority 0 # merubah root bridge nya
+spanning-tree vlan 1 priority 4096 # ketika merubah priority harus kelipatan 4096
+# saat kita merubah priority nantinya id root bridge nya akan bertambah 1
 
 int f0/1
 speed 10 # memindahkan blocking port dari fa0/2 ke fa 0/1
