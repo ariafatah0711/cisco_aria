@@ -23,6 +23,18 @@
         - Untuk langsung ke forward tanpa melalui listening dan learning maka digunakan portfast. Portfast cocok digunakan untuk port yang mengarah ke end host
     - Untuk port yang mengarah ke switch, maka tidak direkomendasikan karena akan mematikan fungsi STP dalam mencegah looping.
 
+## diference
+Base/Critrea | STP | PVST | RSTP | RPVST | MSTP
+--- | --- | --- | --- | --- | --- |
+Developer/creator | IEEE | Cisco | IEEE	| Cisco | IEEE
+Standard | Open-Standard | Proprietary | Open-Standard | Proprietary | Open-Standard
+Support VLAN | No | Yes | No | Yes | Yes
+Instance | One per switch | One Per VLAN | One per switch | One Per VLAN | One Per VLAN
+Support PortFast | No | Yes | No | Yes | No
+Support EtherChannel | No | Yes | No | Yes | No
+Runs on | All switches | Only on Cisco switches | All switches | Only on Cisco switches | All switches
+Convergence	| Slow | moderate | fast | Fast | Fast | Fast
+
 ## jenis stp
 - Open Standard : STP (802.1D), Rapid STP (802.1W), Multiple Spanning Tree MST (802.1S)
 - Cisco Proprietary : PVST (Per Vlan Spanning Tree), PVST+, Rapid PVST.

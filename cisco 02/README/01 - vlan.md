@@ -52,6 +52,7 @@
 - menghubugnkan vlan switch ke switch
   ```
   (c)# switchport mode trunk
+  (c)# switchport trunk allowed vlan 1-4
   ```
   atau
   ```
