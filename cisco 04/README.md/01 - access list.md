@@ -77,10 +77,21 @@ access-list 10 permit any
 int fa0/1
 ip access-group 1 out
 
+# access list extend
 access-list 100 deny icmp 192.168.1.0 0.0.0.255 host 20.20.20.2 echo
 access-list 100 permit ip any any
 int fa0/1
 ip access-group 100 out
+
+# cant www can ftp
+access-list 101 deny tcp 192.168.1.0 0.0.0.255 host 20.20.20.1 eq www # eq itu untuk po
+access-list 101 permit tcp host 192.168.10.1 host 20.20.20.1 eq ftp
+access-list 101 deny tcp host 192.168.10.2 host 20.20.20.1 eq ftp
+access-list 101 permit tcp host 192.168.10.2 host 20.20.20.1 eq www
+access-list 101 permit ip any any # selain ip disana bisa mengakses
+
+int fa 0/0
+ip access-group 101 in
 ```
 
 ## show

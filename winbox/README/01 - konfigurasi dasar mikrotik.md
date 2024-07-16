@@ -3,7 +3,6 @@
 # Konfigurasi Dasar MikroTik dengan Studi Kasus
 
 ## A. Pertama Kali Masuk ke Winbox
-
 - Disarankan untuk menghindari penggunaan port 1, karena itu adalah konfigurasi default yang tidak dapat diubah. Penggunaan MAC address untuk koneksi pertama adalah pendekatan yang umum untuk menghindari masalah dengan IP address yang mungkin sudah digunakan.
 - Saat masuk, sebaiknya klik opsi "Connect To" dengan MAC address perangkat yang dimaksudkan, bukan menggunakan IP address.
 - Setelah masuk, ada kemungkinan akan ada konfigurasi default dari router. Jika demikian, konfigurasi ini dapat dihapus karena kita akan membuat konfigurasi baru.
