@@ -23,10 +23,22 @@
 # configuration
 ## GLBP
 ```bash
-```
+int fa 0/0
+glbp 1 ip 192.168.1.1
+gblp 1 priority 110
 
-## contoh
-```bash
+glbp 1 load-balancing host-dependent # akan selalu menggunakan 1 host / 1 router mac
+glbp l load-balancing round-robin # ganti gantian yang jadi mac tujuanya
+
+glbp 1 load-balancing weigthed # perbandinga jika r1 prio 100 dan r2 50 maka nantinya paket akan dikirim ke mac r1 sebanyak 2 kali dan 1 kali ke r2
+
+glbp 1 weighting 100 upper 90
+glbp 1 weighting 100 lowwer 70
+glbp 1 weigthing track 1 decr 20
+# pada intinya untuk weighting 100 itu nanti tiap bbrp packet akan di decrement (kurangi) sebanyak 20 hingga menjaadi dibawah 70 maka nanti akan berhenti menjaadi avf
+
+ex
+track 1 int fa 0/1 line-protocol
 ```
 
 ## show
