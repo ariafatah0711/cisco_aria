@@ -20,13 +20,24 @@
 # configuration
 ## bgp
 ```
-Router(config)#router bgp (AS 1-65535)
-Router(config-bgp)#neighbor (IP-Address) remote-as (AS)
+Router(config)#router bgp<AS 1-65535>
+Router(config-bgp)#neighbor <ip_nexthope> remote-as <AS>
+Router(config-bgp)#neighbor (ip_nexhope_lo1) remote-as <AS>
+Router(config-bgp)#neighbor <ip_loppback> update-source Loopback1
+Router(config-bgp)#default-information originate
 Router(config-bgp)#redistribute connected
+Router(config-bgp)#redistribute ospf 10
+
+Router(config)#router ospf 10
+Router(config-ospf)#redistribute connected
+Router(config-ospf)#redistribute ospf 10
 ``` 
 - router bgp (AS 1-65535) -> untuk menetapkan router ke dalam proses BGP dengan nomor AS sekian
 - neighbor (IP-Address) remote-as (AS)-> untuk menetapkan router lain sebagai tetangga BGP
 - redistribute connected-> untuk memberitahu router tetangga BGP tentang semua jaringan yang terhubung
+- redistirbute ospf 10 / bgp 10 => distribusi network yang dimiliki ospf  / bgp ke bgp / ospf
+- defaultl-informate originate
+- neighbor <ip> update-source lo1 => jika ingin mendapatkan network yang ada pada nexhope dengan ip lo1
 
 ## show bgp
 ```
