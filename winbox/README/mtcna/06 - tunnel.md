@@ -18,8 +18,8 @@
 - PPTP => PPTP melakukan membentuk tunnel PPP antar IP mengunakan protocol TCP dan GRE (Generic Routing Encapsulation).
 - L2TP => Layer 2 Tunneling Protocol (L2TP) adalah jenis tunneling & encapsulation lain untuk protocol PPP.
 - PPPoE => PPPoE adalah untuk enkapsulasi frame Point-to-Point Protocol(PPP) di dalam frame Ethernet
-- SSTP 
-- OpenVPN
+- SSTP => Secure Socket Tunneling Protocol
+- OpenVPN => ovpn 
 
 - PPP => (Point to Point Protocol) adalah protocol layer 2 yang digunakan untuk komunikasi secara serial
 

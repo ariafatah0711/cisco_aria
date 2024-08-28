@@ -46,6 +46,7 @@
   ```
   (c)# int ra fa 0/1-3
   (c)# channel-group 1 mode active
+  (c)# channel-protocol lacp
   (c)# int port-channel 1
   (c)# sw mode trunk
   ```
@@ -53,6 +54,7 @@
   ```
   (c)# int ra fa 0/1-3
   (c)# channel-group 1 mode active
+  (c)# channel-protocol lacp
   (c)# int port-channel 1
   (c)# sw mode trunk
   #show etherchannel port-channel

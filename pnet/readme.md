@@ -24,9 +24,9 @@ save # save configuration to startup
 - /opt/unetlab/addons/qemu
 - make folder mikrotik-version
 - add add file
-- lalu ubah namanya jadi .qcow2
+- lalu ubah namanya jadi hda.qcow2
 
 ```
-/opt/unitlab/wraappers/iol_wrapper -a permissions
-/opt/unitlab/wraappers/un1_wrapper -a fixpermissions
+/opt/unetlab/wraappers/iol_wrapper -a permissions
+/opt/unetlab/wraappers/un1_wrapper -a fixpermissions
 ```
