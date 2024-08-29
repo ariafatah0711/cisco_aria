@@ -17,15 +17,32 @@
 ### bgp update
 - Router BGP bertukar pesan “update” untuk menginformasikan satu sama lain tentang jalur ke berbagai tujuan. Pesan update mengandung informasi seperti prefix (blok alamat IP), nomor AS yang bertanggung jawab, dan atribut jalur lainnya.
 
+## BGP Neighbor Adjacency
+- Idle
+    - Router akan melakukan pengencekan tabel routing untuk mencari jalur neighbornya
+- Connect
+    - Router telah terkoneksi dengan neighbor dan melakukan TCP 3WHS
+- Active
+    - Router menggunakan TCp untuk peer dengan neighbor, jika gagal conectet, ada Retry reset dan BGP akan kembali connect state
+- Open Sent
+    - Router akan mengirimkan pesan yang berisi parameter BGP untuk terkoneksi dengan neighbo
+- Open Confirm
+    - Router menerima konfirmasi dari neighbor untuk memulai BGP session
+- Established
+    - Siap bertukar prefix
+
 # configuration
 ## bgp
 ```
 Router(config)#router bgp<AS 1-65535>
+Router(config-bgp)#bgp router-id 20.20.20.1
 Router(config-bgp)#neighbor <ip_nexthope> remote-as <AS>
 Router(config-bgp)#neighbor <ip_nexhope_lo1> remote-as <AS>
 Router(config-bgp)#neighbor <ip_loppback> update-source Loopback1
+Router(config-bgp)#neighbor <ip_loppback> ebgp-multihope 3
 Router(config-bgp)#neighbor <ip_nexthope> next-hop-self
 Router(config-bgp)#default-information originate
+
 Router(config-bgp)#redistribute connected
 Router(config-bgp)#redistribute ospf 10
 
@@ -35,10 +52,14 @@ Router(config-ospf)#redistribute ospf 10
 ``` 
 - router bgp (AS 1-65535) -> untuk menetapkan router ke dalam proses BGP dengan nomor AS sekian
 - neighbor (IP-Address) remote-as (AS)-> untuk menetapkan router lain sebagai tetangga BGP
-- redistribute connected-> untuk memberitahu router tetangga BGP tentang semua jaringan yang terhubung
-- redistirbute ospf 10 / bgp 10 => distribusi network yang dimiliki ospf  / bgp ke bgp / ospf
 - defaultl-informate originate
 - neighbor <ip> update-source lo1 => jika ingin mendapatkan network yang ada pada nexhope dengan ip lo1
+- ebgp-multihope ==> Berfungsi untuk mengubah nilai eBGP TTL supaya mendukung multihop
+
+
+## adversting network
+- redistribute connected-> untuk memberitahu router tetangga BGP tentang semua jaringan yang terhubung
+- redistirbute ospf 10 / bgp 10 => distribusi network yang dimiliki ospf  / bgp ke bgp / ospf
 
 ## show bgp
 ```
