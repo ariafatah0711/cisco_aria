@@ -79,6 +79,18 @@ This file is what I studied while learning Cisco and networking, and it contains
 
 </details>
 
+<details id="back" close>
+  <summary><b>show</b></summary>
+
+  - show
+    ```
+    sh run | sec int
+    sh run | s r o
+    sh run | s r b
+    sh run | s r
+    ```
+</details>
+
 <p id="download"></p>
 
 ## 🔨 download
