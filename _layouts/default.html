@@ -22,8 +22,11 @@
             <header>
                 <!-- <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1> -->
                 <!-- <h1>{{ page.url | split: '/' | last | replace: '%20', ' ' | replace: '.html', '' }}</h1> -->
-                <h1>
+                <!-- <h1>
                     {{ page.url | split: '/' | reverse | slice: 0, 2 | reverse | join: '/' }}
+                </h1> -->
+                <h1>
+                    {{ page.url | split: '/' | reverse | slice: 0, 2 | reverse | join: '/' | replace: '%20', ' ' }}
                 </h1>
 
                 <h2>{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
