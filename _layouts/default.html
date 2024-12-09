@@ -20,12 +20,6 @@
         <div class="inner">
 
             <header>
-                <!-- <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1> -->
-                <!-- <h1>{{ page.url | split: '/' | last | replace: '%20', ' ' | replace: '.html', '' }}</h1> -->
-                <!-- <h1>
-                    {{ page.url | split: '/' | reverse | slice: 0, 2 | reverse | join: '/' }}
-                </h1> -->
-
                 <h2>{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
                 <!-- <h3 style="text-decoration: none; color: inherit;">
                     {{ page.url | split: '/' | reverse | slice: 0, 2 | reverse | join: '/' | replace: '%20', ' ' }}
@@ -33,8 +27,8 @@
                 <h4>
                     <a href=" {{ site.url }}">{{ site.url | replace_first: 'https://', '' }}/</a><a
                         href="{{ site.url }}/{{ site.repo }}">{{
-                        site.repo }}</a><a href="#">
-                        {{ page.url | split: '/' | reverse | slice: 0, 2 | reverse | join: '/' | replace: '%20', ' ' }}
+                        site.repo }}</a><a href="#">/{{ page.url | split: '/' | reverse | slice: 0, 2 | reverse | join:
+                        '/' | replace: '%20', ' ' }}
                     </a>
                 </h4>
             </header>
