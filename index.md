@@ -26,104 +26,64 @@ This file is what I studied while learning Cisco and networking, and it contains
 ## 📋 Table of Contents
 <details>
   <summary><b>Installing Cisco Packet Tracer</b></summary>
+
   <ol>
-    <li><b>Download Cisco Packet Tracer</b>
-      <ul>
-        <li>Go to the <a href="https://www.netacad.com/" target="_blank">Cisco Networking Academy</a> website.</li>
-        <li>Log in or create an account if you don't have one.</li>
-        <li>Once logged in, navigate to the Cisco Packet Tracer download page.</li>
-        <li>Download the appropriate version of Cisco Packet Tracer for your operating system (Linux, Windows, or macOS).</li>
-      </ul>
-    </li>
-    <li><b>Install Cisco Packet Tracer</b>
-      <ul>
-        <li>Double-click the downloaded Cisco Packet Tracer installer (exe) file.</li>
-        <li>Follow the installation wizard, accepting the license agreement and specifying the installation location.</li>
-        <li>Click "Install" to begin the installation process.</li>
-      </ul>
-    </li>
-    <li><b>Launch Cisco Packet Tracer</b>
-      <ul>
-        <li>Launch Cisco Packet Tracer from your applications menu.</li>
-      </ul>
-    </li>
+    <li>Go to the <a href="https://www.netacad.com/" target="_blank">Cisco Networking Academy</a> website, log in or create an account, and navigate to the Cisco Packet Tracer download page. Download the appropriate version for your operating system (Linux, Windows, or macOS).</li>
+    <li>Double-click the downloaded installer file, follow the installation wizard, accept the license agreement, and specify the installation location. Click "Install" to begin the process.</li>
+    <li>Launch Cisco Packet Tracer from your applications menu.</li>
   </ol>
 </details>
 
 <p id="file-list"></p>
 
 # 📄 File List
-<details>
-<summary><b>cisco_docs\01_dasar</b></summary>
+<ul><li><b>01_dasar</b>
 <ul>
- <li><a href='cisco_docs/01_dasar/01%20-%20pengenalan.html'>01 - pengenalan</a></li>
- <li><a href='cisco_docs/01_dasar/02%20-%20configuration%20terminal.html'>02 - configuration terminal</a></li>
- <li><a href='cisco_docs/01_dasar/03%20-%20interface%20mode.html'>03 - interface mode</a></li>
- <li><a href='cisco_docs/01_dasar/04%20-%20remote.html'>04 - remote</a></li>
- <li><a href='cisco_docs/01_dasar/05%20-%20dhcp.html'>05 - dhcp</a></li>
- <li><a href='cisco_docs/01_dasar/06%20-%20ipv6%20un.html'>06 - ipv6 un</a></li>
-</ul>
-
-</details>
-
-<details>
-<summary><b>cisco_docs\02_routing</b></summary>
+   <li><a href='cisco_docs/01_dasar/01 - pengenalan.html'>01 - pengenalan</a></li>
+   <li><a href='cisco_docs/01_dasar/02 - configuration terminal.html'>02 - configuration terminal</a></li>
+   <li><a href='cisco_docs/01_dasar/03 - interface mode.html'>03 - interface mode</a></li>
+   <li><a href='cisco_docs/01_dasar/04 - remote.html'>04 - remote</a></li>
+   <li><a href='cisco_docs/01_dasar/05 - dhcp.html'>05 - dhcp</a></li>
+   <li><a href='cisco_docs/01_dasar/06 - ipv6 un.html'>06 - ipv6 un</a></li>
+</ul></li></ul>
+<ul><li><b>02_routing</b>
 <ul>
- <li><a href='cisco_docs/02_routing/01%20-%20static%20routing.html'>01 - static routing</a></li>
- <li><a href='cisco_docs/02_routing/02%20-%20rip.html'>02 - rip</a></li>
- <li><a href='cisco_docs/02_routing/03%20-%20ospf.html'>03 - ospf</a></li>
- <li><a href='cisco_docs/02_routing/04%20-%20bgp.html'>04 - bgp</a></li>
- <li><a href='cisco_docs/02_routing/05%20-%20ibgp%20un.html'>05 - ibgp un</a></li>
- <li><a href='cisco_docs/02_routing/06%20-%20eigrp.html'>06 - eigrp</a></li>
-</ul>
-
-</details>
-
-<details>
-<summary><b>cisco_docs\03_switching</b></summary>
+   <li><a href='cisco_docs/02_routing/01 - static routing.html'>01 - static routing</a></li>
+   <li><a href='cisco_docs/02_routing/02 - rip.html'>02 - rip</a></li>
+   <li><a href='cisco_docs/02_routing/03 - ospf.html'>03 - ospf</a></li>
+   <li><a href='cisco_docs/02_routing/04 - bgp.html'>04 - bgp</a></li>
+   <li><a href='cisco_docs/02_routing/05 - ibgp un.html'>05 - ibgp un</a></li>
+   <li><a href='cisco_docs/02_routing/06 - eigrp.html'>06 - eigrp</a></li>
+</ul></li></ul>
+<ul><li><b>03_switching</b>
 <ul>
- <li><a href='cisco_docs/03_switching/01%20-%20vlan.html'>01 - vlan</a></li>
- <li><a href='cisco_docs/03_switching/02%20-%20vtp%20vlan.html'>02 - vtp vlan</a></li>
- <li><a href='cisco_docs/03_switching/03%20-%20server.html'>03 - server</a></li>
- <li><a href='cisco_docs/03_switching/04%20-%20etherchanel.html'>04 - etherchanel</a></li>
- <li><a href='cisco_docs/03_switching/05%20-%20inter%20vlan.html'>05 - inter vlan</a></li>
- <li><a href='cisco_docs/03_switching/06%20-%20port%20security.html'>06 - port security</a></li>
- <li><a href='cisco_docs/03_switching/07%20-%20stp.html'>07 - stp</a></li>
- <li><a href='cisco_docs/03_switching/08%20-%20pvst%20rpvst.html'>08 - pvst rpvst</a></li>
-</ul>
-
-</details>
-
-<details>
-<summary><b>cisco_docs\04_phone</b></summary>
+   <li><a href='cisco_docs/03_switching/01 - vlan.html'>01 - vlan</a></li>
+   <li><a href='cisco_docs/03_switching/02 - vtp vlan.html'>02 - vtp vlan</a></li>
+   <li><a href='cisco_docs/03_switching/03 - server.html'>03 - server</a></li>
+   <li><a href='cisco_docs/03_switching/04 - etherchanel.html'>04 - etherchanel</a></li>
+   <li><a href='cisco_docs/03_switching/05 - inter vlan.html'>05 - inter vlan</a></li>
+   <li><a href='cisco_docs/03_switching/06 - port security.html'>06 - port security</a></li>
+   <li><a href='cisco_docs/03_switching/07 - stp.html'>07 - stp</a></li>
+   <li><a href='cisco_docs/03_switching/08 - pvst rpvst.html'>08 - pvst rpvst</a></li>
+</ul></li></ul>
+<ul><li><b>04_phone</b>
 <ul>
- <li><a href='cisco_docs/04_phone/01%20-%20voip.html'>01 - voip</a></li>
- <li><a href='cisco_docs/04_phone/02%20-%20pbx%20un.html'>02 - pbx un</a></li>
-</ul>
-
-</details>
-
-<details>
-<summary><b>cisco_docs\05_firewall</b></summary>
+   <li><a href='cisco_docs/04_phone/01 - voip.html'>01 - voip</a></li>
+   <li><a href='cisco_docs/04_phone/02 - pbx un.html'>02 - pbx un</a></li>
+</ul></li></ul>
+<ul><li><b>05_firewall</b>
 <ul>
- <li><a href='cisco_docs/05_firewall/01%20-%20acl.html'>01 - acl</a></li>
- <li><a href='cisco_docs/05_firewall/02%20-%20static%20nat.html'>02 - static nat</a></li>
- <li><a href='cisco_docs/05_firewall/03%20-%20dynamic%20nat.html'>03 - dynamic nat</a></li>
- <li><a href='cisco_docs/05_firewall/04%20-%20pat.html'>04 - pat</a></li>
-</ul>
-
-</details>
-
-<details>
-<summary><b>cisco_docs\06_routing_advance</b></summary>
+   <li><a href='cisco_docs/05_firewall/01 - acl.html'>01 - acl</a></li>
+   <li><a href='cisco_docs/05_firewall/02 - static nat.html'>02 - static nat</a></li>
+   <li><a href='cisco_docs/05_firewall/03 - dynamic nat.html'>03 - dynamic nat</a></li>
+   <li><a href='cisco_docs/05_firewall/04 - pat.html'>04 - pat</a></li>
+</ul></li></ul>
+<ul><li><b>06_routing_advance</b>
 <ul>
- <li><a href='cisco_docs/06_routing_advance/01%20-%20hsrp.html'>01 - hsrp</a></li>
- <li><a href='cisco_docs/06_routing_advance/02%20-%20vrrp.html'>02 - vrrp</a></li>
- <li><a href='cisco_docs/06_routing_advance/03%20-%20glbp.html'>03 - glbp</a></li>
-</ul>
-
-</details>
-
+   <li><a href='cisco_docs/06_routing_advance/01 - hsrp.html'>01 - hsrp</a></li>
+   <li><a href='cisco_docs/06_routing_advance/02 - vrrp.html'>02 - vrrp</a></li>
+   <li><a href='cisco_docs/06_routing_advance/03 - glbp.html'>03 - glbp</a></li>
+</ul></li></ul>
 <p id="download"></p>
 
 ## 🔨 download

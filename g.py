@@ -64,46 +64,87 @@ git clone https://github.com/ariafatah0711/cisco_aria.git
 <a href="https://github.com/ariafatah0711/ariafatah0711/blob/main/LICENSE" alt="LICENSE"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=LICENSE&message=MIT&color=000000"></a>
 """
 
-def generate_file_list(path, type="md"):
+# def generate_file_list_simple(path, type="md"):
+#     output = ""
+#     exclude_dirs = {"tmp", ".git"}
+    
+#     for dirpath, dirnames, filenames in os.walk(path):
+#         dirnames[:] = [d for d in dirnames if d not in exclude_dirs] # exclaude
+        
+#         if dirpath == path:
+#             continue
+
+#         # print(dirpath)
+#         markdown_files = sorted([f for f in filenames if f.endswith('.md')])
+#         if markdown_files:
+#             relative_path = os.path.relpath(dirpath, root_path)
+#             folder_name = os.path.basename(relative_path)
+
+#             # output += f"<details>\n<summary><b>{relative_path}</b></summary>\n\n"
+#             output += f"<details>\n<summary><b>{relative_path}</b></summary>\n<ul>\n"            
+
+#             for file in markdown_files:
+#                 # Ganti spasi dengan %20 untuk URL
+#                 if type == "md":
+#                   file_path = os.path.join(relative_path, file).replace("\\", "/").replace(" ", "%20")
+#                 if type == "html":
+#                   # file_path = os.path.join(relative_path, file).replace("\\", "/").replace(" ", "%20").replace(".md", ".html")
+#                   file_path = os.path.join(relative_path, file).replace("\\", "/").replace(".md", ".html")
+
+#                 file = os.path.splitext(file)[0]
+#                 # output += f"- [{file}]({file_path})\n"
+#                 output += f" <li><a href='{file_path}'>{file}</a></li>\n"
+              
+#             output += "</ul>\n"
+#             output += "\n</details>\n\n"
+#     return output
+
+def generate_file_list_simple(path, output_type="md"):
     output = ""
     exclude_dirs = {"tmp", ".git"}
-    
+
     for dirpath, dirnames, filenames in os.walk(path):
-        dirnames[:] = [d for d in dirnames if d not in exclude_dirs] # exclaude
-        
+        dirnames[:] = [d for d in dirnames if d not in exclude_dirs]  # Exclude directories
+
         if dirpath == path:
             continue
 
-        # print(dirpath)
         markdown_files = sorted([f for f in filenames if f.endswith('.md')])
         if markdown_files:
-            relative_path = os.path.relpath(dirpath, root_path)
+            relative_path = os.path.relpath(dirpath, path)
             folder_name = os.path.basename(relative_path)
 
-            # output += f"<details>\n<summary><b>{relative_path}</b></summary>\n\n"
-            output += f"<details>\n<summary><b>{relative_path}</b></summary>\n<ul>\n"            
+            if output_type == "md":
+                # Tambahkan folder ke output Markdown
+                output += f"- {folder_name}\n"
+            elif output_type == "html":
+                # Tambahkan folder ke output HTML
+                output += f"<ul><li><b>{folder_name}</b>\n<ul>\n"
 
             for file in markdown_files:
-                # Ganti spasi dengan %20 untuk URL
-                if type == "md":
-                  file_path = os.path.join(relative_path, file).replace("\\", "/").replace(" ", "%20")
-                if type == "html":
-                  file_path = os.path.join(relative_path, file).replace("\\", "/").replace(" ", "%20").replace(".md", ".html")
+                if output_type == "md":
+                    # Format Markdown
+                    file_name = os.path.splitext(file)[0]
+                    file_path = os.path.join(relative_path, file).replace("\\", "/")
+                    output += f"   - [{file_name}]({file_path})\n"
+                elif output_type == "html":
+                    # Format HTML
+                    file_name = os.path.splitext(file)[0]
+                    file_path = os.path.join(relative_path, file).replace("\\", "/").replace(".md", ".html")
+                    output += f"   <li><a href='{file_path}'>{file_name}</a></li>\n"
 
-                file = os.path.splitext(file)[0]
-                # output += f"- [{file}]({file_path})\n"
-                output += f" <li><a href='{file_path}'>{file}</a></li>\n"
-              
-            output += "</ul>\n"
-            output += "\n</details>\n\n"
+            if output_type == "html":
+                # Tutup tag HTML
+                output += "</ul></li></ul>\n"
+
     return output
 
 root_path = "."
 # md
-file_list_content_md = generate_file_list(root_path, "md")
+file_list_content_md = generate_file_list_simple(root_path, "md")
 markdown_content_md = header + file_list_content_md + footer
 # html
-file_list_content_html = generate_file_list(root_path, "html")
+file_list_content_html = generate_file_list_simple(root_path, "html")
 markdown_content_html = header + file_list_content_html + footer
 
 # write
