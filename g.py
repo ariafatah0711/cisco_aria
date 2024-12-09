@@ -125,7 +125,7 @@ def generate_file_list_simple(path, output_type="md"):
                 if output_type == "md":
                     # Format Markdown
                     file_name = os.path.splitext(file)[0]
-                    file_path = os.path.join(relative_path, file).replace("\\", "/")
+                    file_path = os.path.join(relative_path, file).replace("\\", "/").replace(" ", "%20")
                     output += f"   - [{file_name}]({file_path})\n"
                 elif output_type == "html":
                     # Format HTML
