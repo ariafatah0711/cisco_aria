@@ -11,3 +11,5 @@ include:
   - "*.md"
 
 theme: jekyll-theme-tactile
+
+repo: "cisco_aria"

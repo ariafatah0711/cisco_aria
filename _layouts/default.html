@@ -26,12 +26,12 @@
                     {{ page.url | split: '/' | reverse | slice: 0, 2 | reverse | join: '/' }}
                 </h1> -->
                 <h3>
-                    <a href="{{ site.url }}" style="text-decoration: none; color: inherit;">
+                    <a href="{{ site.url }}/{{ site.repo }}" style="text-decoration: none; color: inherit;">
                         {{ page.url | split: '/' | reverse | slice: 0, 2 | reverse | join: '/' | replace: '%20', ' ' }}
                     </a>
                 </h3>
 
-                <h2>{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+                <!-- <h2>{{ page.description | default: site.description | default: site.github.project_tagline }}</h2> -->
             </header>
             <section id="downloads" class="clearfix">
                 {% if site.show_downloads %}
