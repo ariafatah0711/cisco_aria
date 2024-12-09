@@ -25,9 +25,9 @@
                 <!-- <h1>
                     {{ page.url | split: '/' | reverse | slice: 0, 2 | reverse | join: '/' }}
                 </h1> -->
-                <h1>
+                <h3>
                     {{ page.url | split: '/' | reverse | slice: 0, 2 | reverse | join: '/' | replace: '%20', ' ' }}
-                </h1>
+                </h3>
 
                 <h2>{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
             </header>
