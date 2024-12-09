@@ -26,17 +26,18 @@
                     {{ page.url | split: '/' | reverse | slice: 0, 2 | reverse | join: '/' }}
                 </h1> -->
 
-                <h2>{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+                <!-- <h2>{{ page.description | default: site.description | default: site.github.project_tagline }}</h2> -->
+                <h2>{{ <page class="title"></page> | default: site.description | default: site.github.project_tagline }}
+                </h2>
                 <!-- <h3 style="text-decoration: none; color: inherit;">
                     {{ page.url | split: '/' | reverse | slice: 0, 2 | reverse | join: '/' | replace: '%20', ' ' }}
                 </h3> -->
                 <h4>
                     <a href=" {{ site.url }}">{{ site.url | replace_first: 'https://', '' }}/</a><a
                         href="{{ site.url }}/{{ site.repo }}">{{
-                        site.repo }}</a>
-                    <p style="text-decoration: none; color: inherit;">
+                        site.repo }}</a><a href="#" style="text-decoration: none; color: inherit;">
                         {{ page.url | split: '/' | reverse | slice: 0, 2 | reverse | join: '/' | replace: '%20', ' ' }}
-                    </p>
+                    </a>
                 </h4>
             </header>
             <section id=" downloads" class="clearfix">
