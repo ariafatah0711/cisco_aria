@@ -27,21 +27,22 @@
                 </h1> -->
 
                 <h2>{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-                <h3>
+                <!-- <h3 style="text-decoration: none; color: inherit;">
                     {{ page.url | split: '/' | reverse | slice: 0, 2 | reverse | join: '/' | replace: '%20', ' ' }}
-                </h3>
+                </h3> -->
                 <h4>
-                    <a href="{{ site.url }}" style="text-decoration: none; color: inherit;">
-                        {{ site.url | replace_first: 'https://', '' }}/
-                    </a>
-                    <a href="{{ site.url }}/{{ site.repo }}" style="text-decoration: none; color: inherit;">
-                        {{ site.repo }}
-                    </a>
+                    <a href=" {{ site.url }}">{{ site.url | replace_first: 'https://', '' }}/</a><a
+                        href="{{ site.url }}/{{ site.repo }}">{{
+                        site.repo }}</a>
+                    <p style="text-decoration: none; color: inherit;">
+                        {{ page.url | split: '/' | reverse | slice: 0, 2 | reverse | join: '/' | replace: '%20', ' ' }}
+                    </p>
                 </h4>
             </header>
-            <section id="downloads" class="clearfix">
+            <section id=" downloads" class="clearfix">
                 {% if site.show_downloads %}
-                <a href="{{ site.github.zip_url }}" id="download-zip" class="button"><span>Download .zip</span></a>
+                <a href="{{ site.github.zip_url }}" id="download-zip" class="button"><span>Download
+                        .zip</span></a>
                 <a href="{{ site.github.tar_url }}" id="download-tar-gz" class="button"><span>Download
                         .tar.gz</span></a>
                 {% endif %}
@@ -50,7 +51,8 @@
                 <a href="{{ site.github.repository_url }}" id="view-on-github" class="button"><span>View on
                         GitHub</span></a>
                 {% else %}
-                <a href="{{ site.github.owner_url }}" id="view-on-github" class="button"><span>View on GitHub</span></a>
+                <a href="{{ site.github.owner_url }}" id="view-on-github" class="button"><span>View on
+                        GitHub</span></a>
                 {% endif %}
                 {% endif %}
             </section>
