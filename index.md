@@ -56,12 +56,12 @@ This file is what I studied while learning Cisco and networking, and it contains
 <details>
 <summary><b>cisco_docs\01_dasar</b></summary>
 <ul>
- <li><a href='cisco_docs/01_dasar/01%20-%20pengenalan.md'>01 - pengenalan</a></li>
- <li><a href='cisco_docs/01_dasar/02%20-%20configuration%20terminal.md'>02 - configuration terminal</a></li>
- <li><a href='cisco_docs/01_dasar/03%20-%20interface%20mode.md'>03 - interface mode</a></li>
- <li><a href='cisco_docs/01_dasar/04%20-%20remote.md'>04 - remote</a></li>
- <li><a href='cisco_docs/01_dasar/05%20-%20dhcp.md'>05 - dhcp</a></li>
- <li><a href='cisco_docs/01_dasar/06%20-%20ipv6%20un.md'>06 - ipv6 un</a></li>
+ <li><a href='cisco_docs/01_dasar/01%20-%20pengenalan.html'>01 - pengenalan</a></li>
+ <li><a href='cisco_docs/01_dasar/02%20-%20configuration%20terminal.html'>02 - configuration terminal</a></li>
+ <li><a href='cisco_docs/01_dasar/03%20-%20interface%20mode.html'>03 - interface mode</a></li>
+ <li><a href='cisco_docs/01_dasar/04%20-%20remote.html'>04 - remote</a></li>
+ <li><a href='cisco_docs/01_dasar/05%20-%20dhcp.html'>05 - dhcp</a></li>
+ <li><a href='cisco_docs/01_dasar/06%20-%20ipv6%20un.html'>06 - ipv6 un</a></li>
 </ul>
 
 </details>
@@ -69,12 +69,12 @@ This file is what I studied while learning Cisco and networking, and it contains
 <details>
 <summary><b>cisco_docs\02_routing</b></summary>
 <ul>
- <li><a href='cisco_docs/02_routing/01%20-%20static%20routing.md'>01 - static routing</a></li>
- <li><a href='cisco_docs/02_routing/02%20-%20rip.md'>02 - rip</a></li>
- <li><a href='cisco_docs/02_routing/03%20-%20ospf.md'>03 - ospf</a></li>
- <li><a href='cisco_docs/02_routing/04%20-%20bgp.md'>04 - bgp</a></li>
- <li><a href='cisco_docs/02_routing/05%20-%20ibgp%20un.md'>05 - ibgp un</a></li>
- <li><a href='cisco_docs/02_routing/06%20-%20eigrp.md'>06 - eigrp</a></li>
+ <li><a href='cisco_docs/02_routing/01%20-%20static%20routing.html'>01 - static routing</a></li>
+ <li><a href='cisco_docs/02_routing/02%20-%20rip.html'>02 - rip</a></li>
+ <li><a href='cisco_docs/02_routing/03%20-%20ospf.html'>03 - ospf</a></li>
+ <li><a href='cisco_docs/02_routing/04%20-%20bgp.html'>04 - bgp</a></li>
+ <li><a href='cisco_docs/02_routing/05%20-%20ibgp%20un.html'>05 - ibgp un</a></li>
+ <li><a href='cisco_docs/02_routing/06%20-%20eigrp.html'>06 - eigrp</a></li>
 </ul>
 
 </details>
@@ -82,14 +82,14 @@ This file is what I studied while learning Cisco and networking, and it contains
 <details>
 <summary><b>cisco_docs\03_switching</b></summary>
 <ul>
- <li><a href='cisco_docs/03_switching/01%20-%20vlan.md'>01 - vlan</a></li>
- <li><a href='cisco_docs/03_switching/02%20-%20vtp%20vlan.md'>02 - vtp vlan</a></li>
- <li><a href='cisco_docs/03_switching/03%20-%20server.md'>03 - server</a></li>
- <li><a href='cisco_docs/03_switching/04%20-%20etherchanel.md'>04 - etherchanel</a></li>
- <li><a href='cisco_docs/03_switching/05%20-%20inter%20vlan.md'>05 - inter vlan</a></li>
- <li><a href='cisco_docs/03_switching/06%20-%20port%20security.md'>06 - port security</a></li>
- <li><a href='cisco_docs/03_switching/07%20-%20stp.md'>07 - stp</a></li>
- <li><a href='cisco_docs/03_switching/08%20-%20pvst%20rpvst.md'>08 - pvst rpvst</a></li>
+ <li><a href='cisco_docs/03_switching/01%20-%20vlan.html'>01 - vlan</a></li>
+ <li><a href='cisco_docs/03_switching/02%20-%20vtp%20vlan.html'>02 - vtp vlan</a></li>
+ <li><a href='cisco_docs/03_switching/03%20-%20server.html'>03 - server</a></li>
+ <li><a href='cisco_docs/03_switching/04%20-%20etherchanel.html'>04 - etherchanel</a></li>
+ <li><a href='cisco_docs/03_switching/05%20-%20inter%20vlan.html'>05 - inter vlan</a></li>
+ <li><a href='cisco_docs/03_switching/06%20-%20port%20security.html'>06 - port security</a></li>
+ <li><a href='cisco_docs/03_switching/07%20-%20stp.html'>07 - stp</a></li>
+ <li><a href='cisco_docs/03_switching/08%20-%20pvst%20rpvst.html'>08 - pvst rpvst</a></li>
 </ul>
 
 </details>
@@ -97,8 +97,8 @@ This file is what I studied while learning Cisco and networking, and it contains
 <details>
 <summary><b>cisco_docs\04_phone</b></summary>
 <ul>
- <li><a href='cisco_docs/04_phone/01%20-%20voip.md'>01 - voip</a></li>
- <li><a href='cisco_docs/04_phone/02%20-%20pbx%20un.md'>02 - pbx un</a></li>
+ <li><a href='cisco_docs/04_phone/01%20-%20voip.html'>01 - voip</a></li>
+ <li><a href='cisco_docs/04_phone/02%20-%20pbx%20un.html'>02 - pbx un</a></li>
 </ul>
 
 </details>
@@ -106,10 +106,10 @@ This file is what I studied while learning Cisco and networking, and it contains
 <details>
 <summary><b>cisco_docs\05_firewall</b></summary>
 <ul>
- <li><a href='cisco_docs/05_firewall/01%20-%20acl.md'>01 - acl</a></li>
- <li><a href='cisco_docs/05_firewall/02%20-%20static%20nat.md'>02 - static nat</a></li>
- <li><a href='cisco_docs/05_firewall/03%20-%20dynamic%20nat.md'>03 - dynamic nat</a></li>
- <li><a href='cisco_docs/05_firewall/04%20-%20pat.md'>04 - pat</a></li>
+ <li><a href='cisco_docs/05_firewall/01%20-%20acl.html'>01 - acl</a></li>
+ <li><a href='cisco_docs/05_firewall/02%20-%20static%20nat.html'>02 - static nat</a></li>
+ <li><a href='cisco_docs/05_firewall/03%20-%20dynamic%20nat.html'>03 - dynamic nat</a></li>
+ <li><a href='cisco_docs/05_firewall/04%20-%20pat.html'>04 - pat</a></li>
 </ul>
 
 </details>
@@ -117,9 +117,9 @@ This file is what I studied while learning Cisco and networking, and it contains
 <details>
 <summary><b>cisco_docs\06_routing_advance</b></summary>
 <ul>
- <li><a href='cisco_docs/06_routing_advance/01%20-%20hsrp.md'>01 - hsrp</a></li>
- <li><a href='cisco_docs/06_routing_advance/02%20-%20vrrp.md'>02 - vrrp</a></li>
- <li><a href='cisco_docs/06_routing_advance/03%20-%20glbp.md'>03 - glbp</a></li>
+ <li><a href='cisco_docs/06_routing_advance/01%20-%20hsrp.html'>01 - hsrp</a></li>
+ <li><a href='cisco_docs/06_routing_advance/02%20-%20vrrp.html'>02 - vrrp</a></li>
+ <li><a href='cisco_docs/06_routing_advance/03%20-%20glbp.html'>03 - glbp</a></li>
 </ul>
 
 </details>

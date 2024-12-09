@@ -1,4 +1,7 @@
-# cisco_aria
+# by chat gpt
+import os
+
+header = """# cisco_aria
 
 This file is what I studied while learning Cisco and networking, and it contains documentation and some information for configuration. The file includes rich references and basic information.
 
@@ -53,78 +56,9 @@ This file is what I studied while learning Cisco and networking, and it contains
 <p id="file-list"></p>
 
 # 📄 File List
-<details>
-<summary><b>cisco_docs\01_dasar</b></summary>
-<ul>
- <li><a href='cisco_docs/01_dasar/01%20-%20pengenalan.md'>01 - pengenalan</a></li>
- <li><a href='cisco_docs/01_dasar/02%20-%20configuration%20terminal.md'>02 - configuration terminal</a></li>
- <li><a href='cisco_docs/01_dasar/03%20-%20interface%20mode.md'>03 - interface mode</a></li>
- <li><a href='cisco_docs/01_dasar/04%20-%20remote.md'>04 - remote</a></li>
- <li><a href='cisco_docs/01_dasar/05%20-%20dhcp.md'>05 - dhcp</a></li>
- <li><a href='cisco_docs/01_dasar/06%20-%20ipv6%20un.md'>06 - ipv6 un</a></li>
-</ul>
+"""
 
-</details>
-
-<details>
-<summary><b>cisco_docs\02_routing</b></summary>
-<ul>
- <li><a href='cisco_docs/02_routing/01%20-%20static%20routing.md'>01 - static routing</a></li>
- <li><a href='cisco_docs/02_routing/02%20-%20rip.md'>02 - rip</a></li>
- <li><a href='cisco_docs/02_routing/03%20-%20ospf.md'>03 - ospf</a></li>
- <li><a href='cisco_docs/02_routing/04%20-%20bgp.md'>04 - bgp</a></li>
- <li><a href='cisco_docs/02_routing/05%20-%20ibgp%20un.md'>05 - ibgp un</a></li>
- <li><a href='cisco_docs/02_routing/06%20-%20eigrp.md'>06 - eigrp</a></li>
-</ul>
-
-</details>
-
-<details>
-<summary><b>cisco_docs\03_switching</b></summary>
-<ul>
- <li><a href='cisco_docs/03_switching/01%20-%20vlan.md'>01 - vlan</a></li>
- <li><a href='cisco_docs/03_switching/02%20-%20vtp%20vlan.md'>02 - vtp vlan</a></li>
- <li><a href='cisco_docs/03_switching/03%20-%20server.md'>03 - server</a></li>
- <li><a href='cisco_docs/03_switching/04%20-%20etherchanel.md'>04 - etherchanel</a></li>
- <li><a href='cisco_docs/03_switching/05%20-%20inter%20vlan.md'>05 - inter vlan</a></li>
- <li><a href='cisco_docs/03_switching/06%20-%20port%20security.md'>06 - port security</a></li>
- <li><a href='cisco_docs/03_switching/07%20-%20stp.md'>07 - stp</a></li>
- <li><a href='cisco_docs/03_switching/08%20-%20pvst%20rpvst.md'>08 - pvst rpvst</a></li>
-</ul>
-
-</details>
-
-<details>
-<summary><b>cisco_docs\04_phone</b></summary>
-<ul>
- <li><a href='cisco_docs/04_phone/01%20-%20voip.md'>01 - voip</a></li>
- <li><a href='cisco_docs/04_phone/02%20-%20pbx%20un.md'>02 - pbx un</a></li>
-</ul>
-
-</details>
-
-<details>
-<summary><b>cisco_docs\05_firewall</b></summary>
-<ul>
- <li><a href='cisco_docs/05_firewall/01%20-%20acl.md'>01 - acl</a></li>
- <li><a href='cisco_docs/05_firewall/02%20-%20static%20nat.md'>02 - static nat</a></li>
- <li><a href='cisco_docs/05_firewall/03%20-%20dynamic%20nat.md'>03 - dynamic nat</a></li>
- <li><a href='cisco_docs/05_firewall/04%20-%20pat.md'>04 - pat</a></li>
-</ul>
-
-</details>
-
-<details>
-<summary><b>cisco_docs\06_routing_advance</b></summary>
-<ul>
- <li><a href='cisco_docs/06_routing_advance/01%20-%20hsrp.md'>01 - hsrp</a></li>
- <li><a href='cisco_docs/06_routing_advance/02%20-%20vrrp.md'>02 - vrrp</a></li>
- <li><a href='cisco_docs/06_routing_advance/03%20-%20glbp.md'>03 - glbp</a></li>
-</ul>
-
-</details>
-
-<p id="download"></p>
+footer = """<p id="download"></p>
 
 ## 🔨 download
 
@@ -144,3 +78,55 @@ git clone https://github.com/ariafatah0711/cisco_aria.git
 ## ©️ license
 <a href="https://github.com/ariafatah0711" alt="CREATED"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=CREATED%20BY&message=ariafatah0711&color=000000"></a>
 <a href="https://github.com/ariafatah0711/ariafatah0711/blob/main/LICENSE" alt="LICENSE"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=LICENSE&message=MIT&color=000000"></a>
+"""
+
+def generate_file_list(path, type="md"):
+    output = ""
+    exclude_dirs = {"tmp", ".git"}
+    
+    for dirpath, dirnames, filenames in os.walk(path):
+        dirnames[:] = [d for d in dirnames if d not in exclude_dirs] # exclaude
+        
+        if dirpath == path:
+            continue
+
+        # print(dirpath)
+        markdown_files = sorted([f for f in filenames if f.endswith('.md')])
+        if markdown_files:
+            relative_path = os.path.relpath(dirpath, root_path)
+            folder_name = os.path.basename(relative_path)
+
+            # output += f"<details>\n<summary><b>{relative_path}</b></summary>\n\n"
+            output += f"<details>\n<summary><b>{relative_path}</b></summary>\n<ul>\n"            
+
+            for file in markdown_files:
+                # Ganti spasi dengan %20 untuk URL
+                if type == "md":
+                  file_path = os.path.join(relative_path, file).replace("\\", "/").replace(" ", "%20")
+                if type == "html":
+                  file_path = os.path.join(relative_path, file).replace("\\", "/").replace(" ", "%20").replace(".md", ".html")
+
+                file = os.path.splitext(file)[0]
+                # output += f"- [{file}]({file_path})\n"
+                output += f" <li><a href='{file_path}'>{file}</a></li>\n"
+              
+            output += "</ul>\n"
+            output += "\n</details>\n\n"
+    return output
+
+root_path = "."
+# md
+file_list_content_md = generate_file_list(root_path, "md")
+markdown_content_md = header + file_list_content_md + footer
+# html
+file_list_content_html = generate_file_list(root_path, "html")
+markdown_content_html = header + file_list_content_html + footer
+
+# write
+with open("README.md", "w", encoding='utf-8') as readme:
+    readme.write(markdown_content_md)
+
+with open("index.md", "w", encoding='utf-8') as readme:
+    readme.write(markdown_content_html)
+
+print("README.md updated successfully!")
