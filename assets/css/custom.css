@@ -12,3 +12,11 @@
 .content {
     max-width: 100%;
 }
+
+.inner {
+    width: 1000px !important;
+}
+
+body {
+    background-color: red !important;
+}
