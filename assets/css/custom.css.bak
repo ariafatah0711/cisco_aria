@@ -1,4 +1,4 @@
-/* custom css */
+custom css
 /* .inner {
     width: 1000px !important;
 } */
@@ -9,10 +9,11 @@
     box-sizing: border-box;
     outline: none;
     text-decoration: none;
-    /* border: none; */
-    list-style-type: none;
+    border: none;
+    /* list-style-type: none; */
 }
 
+/* summary */
 /* summary */
 summary,
 summary::-webkit-details-marker {
@@ -40,13 +41,7 @@ details[open]>summary::before {
     content: "🔽 ";
 }
 
-/* ul li */
-ul,
-ol {
-    margin: 0;
-    padding: 0;
-}
-
+/* li */
 li,
 p,
 h1,
@@ -64,10 +59,10 @@ a {
     margin-bottom: 8px;
 }
 
-li {
-    line-height: 1.4;
+ul li {
     margin: 0;
-    padding: 0;
+    line-height: 1.4;
+    padding-left: 1px;
     /* list-style: none; */
 }
 
