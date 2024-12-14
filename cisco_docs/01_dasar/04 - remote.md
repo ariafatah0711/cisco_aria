@@ -53,12 +53,10 @@ Dengan memberikan ip pada interface SVI kita dapat memonitor perangkat menggunak
     (c)# service password-encryption
     ```
   - connect with console
-    ```
     - connect pc and device(router, switch, etc) with console
         - pc: rs 232 
         - device: console
     - and go to desktop>terminal>ok
-    ```
 
 ## ssh
 - remote with ssh

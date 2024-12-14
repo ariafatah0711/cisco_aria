@@ -80,7 +80,7 @@ Router#show ip bgp summary
 - topologi
 ![alt text](img/4.1.png)
 
-- config
+## config
 ```
 Router1(config)#int fa0/0
 Router1(config-if)#ip add 12.12.12.1 255.255.255.0
@@ -214,7 +214,7 @@ oleh router merk lain yang menjalankan BGP
 - toplogi
 ![alt text](img/4.2.png)
 
-- config weight
+## config weight
 ```
 R1(config)#router bgp 123
 R1(config-if)#neighbor 12.12.12.2 remote-as 123
@@ -244,5 +244,3 @@ R2(config-route-map)#set weight 200
 R2(config)#router bgp 123
 R2(config-if)#neighbor 23.23.23.2 route-map WEIGHT in
 ```
-
-- config 

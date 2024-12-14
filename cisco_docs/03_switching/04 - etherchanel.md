@@ -19,11 +19,11 @@
 
 ## tabel LACP
 | switch a | switch b | negotiation result |
-| --- | --- | --- |
-| active | active | negotiation successfull |
-| active | passive | negotiation successfull |
-| passive | passive | no negatiation |
-| passive | on | no negatiation |
+|----------|----------|---------------------|
+| active   | active   | negotiation successful |
+| active   | passive  | negotiation successful |
+| passive  | passive  | no negotiation       |
+| passive  | on       | no negotiation       |
 
 # configuration
 ## LACP
