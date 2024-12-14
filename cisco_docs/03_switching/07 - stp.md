@@ -32,7 +32,7 @@ Instance | One per switch | One Per VLAN | One per switch | One Per VLAN | One P
 Support PortFast | No | Yes | No | Yes | No
 Support EtherChannel | No | Yes | No | Yes | No
 Runs on | All switches | Only on Cisco switches | All switches | Only on Cisco switches | All switches
-Convergence	| Slow | moderate | fast | Fast | Fast | Fast
+Convergence	| Slow | moderate | fast | Fast | Fast
 
 ## jenis stp
 - Open Standard : STP (802.1D), Rapid STP (802.1W), Multiple Spanning Tree MST (802.1S)

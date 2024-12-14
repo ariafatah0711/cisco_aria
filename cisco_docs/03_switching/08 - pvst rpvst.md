@@ -26,7 +26,7 @@ Instance | One per switch | One Per VLAN | One per switch | One Per VLAN | One P
 Support PortFast | No | Yes | No | Yes | No
 Support EtherChannel | No | Yes | No | Yes | No
 Runs on | All switches | Only on Cisco switches | All switches | Only on Cisco switches | All switches
-Convergence	| Slow | moderate | fast | Fast | Fast | Fast
+Convergence	| Slow | moderate | fast | Fast | Fast
 
 ## kesimpulan
 - PVST cocok untuk jaringan yang memerlukan topologi spanning tree yang terpisah untuk setiap VLAN dan tidak terlalu mempermasalahkan waktu konvergensi.
