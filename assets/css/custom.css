@@ -1,22 +1,19 @@
-/* Lebarkan kontainer utama */
-.container {
+/* .container {
     max-width: 1200px;
-    /* Ubah ukuran lebar sesuai kebutuhan */
     width: 90%;
-    /* Lebar responsif */
     margin: 0 auto;
-    /* Pusatkan kontainer */
-}
+} */
 
-/* Lebarkan konten */
-.content {
+/* .content {
     max-width: 100%;
-}
+} */
 
-.inner {
+/* custom css */
+/* .inner {
     width: 1000px !important;
-}
+} */
 
-body {
-    background-color: red !important;
+ul {
+    list-style: none !important;
+    padding-left: 1em !important;
 }

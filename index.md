@@ -86,6 +86,25 @@ This file is what I studied while learning Cisco and networking, and it contains
 </ul></li></ul>
 <p id="download"></p>
 
+<details>
+<summary><b>overthewire\krypton</b></summary>
+<ul>
+ <li><a href='overthewire/krypton/level 01.html'>level 01</a></li>
+ <li><a href='overthewire/krypton/level 02.html'>level 02</a></li>
+ <li><a href='overthewire/krypton/level 03.html'>level 03</a></li>
+ <li><a href='overthewire/krypton/level 04 un.html'>level 04 un</a></li>
+ <li><a href='overthewire/krypton/level 05 un.html'>level 05 un</a></li>
+</ul>
+
+</details>
+
+<details>
+<summary><b>overthewire\leviathan</b></summary>
+<ul>
+ <li><a href='overthewire/leviathan/level 01.html'>level 01</a></li>
+ <li><a href='overthewire/leviathan/level 02 un.html'>level 02 un</a></li>
+</ul>
+
 ## 🔨 download
 
 1. Open a terminal or command prompt on your computer.
