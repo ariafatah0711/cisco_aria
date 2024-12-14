@@ -87,8 +87,8 @@ table {
 
 th,
 td {
-    border: 1px solid #ddd;
-    /* Tambahkan border */
+    border: 1px solid #000;
+    /* Warna border hitam */
     padding: 8px;
     /* Berikan padding agar teks tidak terlalu mepet */
     text-align: left;
