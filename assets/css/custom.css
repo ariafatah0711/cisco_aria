@@ -14,25 +14,24 @@
 }
 
 /* summary */
+/* summary */
 summary,
 summary::-webkit-details-marker {
     cursor: pointer;
     list-style: none;
 }
 
-ul,
-ol {
+details ul,
+details ol {
     list-style: none !important;
     padding-left: 2em !important;
 }
 
-li,
-p {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    margin-bottom: 8px;
+details ul,
+details li {
+    margin: 0;
+    padding-left: 1px;
 }
-
 
 details>summary::before {
     content: "▶️ ";
@@ -64,7 +63,7 @@ ul li {
     margin: 0;
     line-height: 1.4;
     padding-left: 1px;
-    list-style: none;
+    /* list-style: none; */
 }
 
 li li {
