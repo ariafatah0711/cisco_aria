@@ -10,9 +10,10 @@
     outline: none;
     text-decoration: none;
     border: none;
-    list-style-type: none;
+    /* list-style-type: none; */
 }
 
+/* summary */
 summary,
 summary::-webkit-details-marker {
     cursor: pointer;
@@ -32,12 +33,6 @@ p {
     margin-bottom: 8px;
 }
 
-ul li {
-    margin: 0;
-    line-height: 1;
-    padding-left: 1px;
-    list-style: none;
-}
 
 details>summary::before {
     content: "▶️ ";
@@ -45,4 +40,33 @@ details>summary::before {
 
 details[open]>summary::before {
     content: "🔽 ";
+}
+
+/* li */
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+span,
+a {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+ul li {
+    margin: 0;
+    line-height: 1.4;
+    padding-left: 1px;
+    list-style: none;
+}
+
+li li {
+    list-style-type: none;
 }
