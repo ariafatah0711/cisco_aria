@@ -18,6 +18,7 @@
   - auto : otomatis
 
 ## tabel LACP
+
 | switch a | switch b | negotiation result |
 |----------|----------|---------------------|
 | active   | active   | negotiation successful |
