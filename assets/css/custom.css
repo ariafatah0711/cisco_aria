@@ -1,31 +1,26 @@
-/* .container {
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
-} */
-
-/* .content {
-    max-width: 100%;
-} */
-
 /* custom css */
 /* .inner {
     width: 1000px !important;
 } */
 
-summary {
+summary,
+summary::-webkit-details-marker {
     cursor: pointer;
     list-style: none;
 }
 
-summary::-webkit-details-marker {
-    /* Untuk browser berbasis WebKit (Chrome, Safari) */
-    display: none;
-}
-
-ul {
+ul,
+ol {
     list-style: none !important;
     padding-left: 2em !important;
+}
+
+li,
+p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    margin-bottom: 8px;
 }
 
 details>summary::before {
