@@ -3,6 +3,16 @@
     width: 1000px !important;
 } */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    list-style-type: none;
+}
+
 summary,
 summary::-webkit-details-marker {
     cursor: pointer;
@@ -19,19 +29,14 @@ li,
 p {
     word-wrap: break-word;
     overflow-wrap: break-word;
-    line-height: 1.5;
     margin-bottom: 8px;
 }
 
 ul li {
     margin: 0;
-    line-height: 1.4;
+    line-height: 1;
     padding-left: 1px;
     list-style: none;
-}
-
-li {
-    line-height: 1;
 }
 
 details>summary::before {
