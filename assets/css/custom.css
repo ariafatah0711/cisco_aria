@@ -1,0 +1,14 @@
+/* Lebarkan kontainer utama */
+.container {
+    max-width: 1200px;
+    /* Ubah ukuran lebar sesuai kebutuhan */
+    width: 90%;
+    /* Lebar responsif */
+    margin: 0 auto;
+    /* Pusatkan kontainer */
+}
+
+/* Lebarkan konten */
+.content {
+    max-width: 100%;
+}
