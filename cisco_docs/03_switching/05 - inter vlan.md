@@ -29,6 +29,7 @@
 ## contoh topologi
 - topologi
   - 2 pc kanan kiri lalu tengahnya switch dan atasnya router
+
 - switch
   ```
   (c)# vlan 10
@@ -40,6 +41,7 @@
   (c)# int fa 0/10
   (c)# sw mode trunk
   ```
+
 - router
   ```
   (c)# int fa 0/0
@@ -52,7 +54,7 @@
   (c)# int fa 0/0.20
   (c)# encapsulation dot1Q 20
   (c)# ip add 192.168.20.1 255.255.255.0
-  ...
+  ```
 
 # multilayer switch
 ## pengenalan

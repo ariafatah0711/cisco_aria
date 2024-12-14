@@ -30,6 +30,7 @@
 - hello hold 10 detik
 
 ## perbedaan
+
 | Basis of Comparison | VRRP | HSRP | GLBP |
 |:---:|:---:|:---:|:---:|
 | Standard   | Open IEEE Standard | Cisco’s Proprietary Protocol | Cisco’s Proprietary Protocol |

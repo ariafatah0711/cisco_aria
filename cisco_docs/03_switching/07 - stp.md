@@ -22,6 +22,7 @@
     - Untuk port yang mengarah ke switch, maka tidak direkomendasikan karena akan mematikan fungsi STP dalam mencegah looping.
 
 ## diference
+
 Base/Critrea | STP | PVST | RSTP | RPVST | MSTP
 --- | --- | --- | --- | --- | --- |
 Developer/creator | IEEE | Cisco | IEEE	| Cisco | IEEE

@@ -16,6 +16,7 @@
         - Load Balancing: Sama seperti PVST, RPVST memungkinkan load balancing melalui VLAN yang berbeda.
 
 ## diference
+
 Base/Critrea | STP | PVST | RSTP | RPVST | MSTP
 --- | --- | --- | --- | --- | --- |
 Developer/creator | IEEE | Cisco | IEEE	| Cisco | IEEE

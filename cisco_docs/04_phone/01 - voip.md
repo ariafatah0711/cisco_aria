@@ -6,8 +6,6 @@
 ## router
 ### dhcp pool
 - interface
-  ```
-  ```
 - setting ip dhcp pool
   ```
   (c)# ip dhcp pool <nama_dhcp>

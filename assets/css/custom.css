@@ -75,3 +75,32 @@ li li {
     list-style-type: none !important;
     list-style: none !important;
 }
+
+/* border */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Gabungkan border agar rapi */
+    margin: 20px 0;
+    /* Tambahkan margin jika perlu */
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    /* Tambahkan border */
+    padding: 8px;
+    /* Berikan padding agar teks tidak terlalu mepet */
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    /* Warna latar belakang header tabel */
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Alternating row color untuk estetika */
+}

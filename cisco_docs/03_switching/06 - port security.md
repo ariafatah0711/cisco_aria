@@ -22,7 +22,6 @@ digunakan kecuali untuk PC dengan MAC Address tertentu.
     - port akan dishutdown secara otomatis, utk mengembalikannya maka harus di no shut dengan console switch atau telnet.
 
 # configuration
-## 
 ```bash
 int fa 0/1
 sw mode acc
