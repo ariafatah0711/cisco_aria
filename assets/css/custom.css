@@ -23,6 +23,17 @@ p {
     margin-bottom: 8px;
 }
 
+ul li {
+    margin: 0;
+    line-height: 1.4;
+    padding-left: 1px;
+    list-style: none;
+}
+
+li {
+    line-height: 1;
+}
+
 details>summary::before {
     content: "▶️ ";
 }
