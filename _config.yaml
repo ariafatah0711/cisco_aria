@@ -1,5 +1,6 @@
 plugins:
   - jekyll-relative-links
+  - jekyll-remote-theme
 relative_links:
   enabled: true
   collections: true
@@ -10,6 +11,7 @@ exclude:
 include:
   - "*.md"
 
-theme: jekyll-theme-tactile
+# theme: jekyll-theme-tactile
+remote_theme: pages-themes/midnight@v0.2.0
 
 repo: "cisco_aria"
