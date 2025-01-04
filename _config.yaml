@@ -1,18 +1,21 @@
+# theme: jekyll-theme-tactile
+# remote_theme: pages-themes/midnight@v0.2.0
+remote_theme: ariafatah0711/midnight_aria
+
+# =============================================
+# plugin
 plugins:
   - jekyll-relative-links
   - jekyll-remote-theme
+
 relative_links:
   enabled: true
   collections: true
 
+# =============================================
+# exclaude and include
 exclude:
   - README.md
 
 include:
   - "*.md"
-
-# theme: jekyll-theme-tactile
-# remote_theme: pages-themes/midnight@v0.2.0
-remote_theme: ariafatah0711/midnight_aria
-
-repo: "cisco_aria"
