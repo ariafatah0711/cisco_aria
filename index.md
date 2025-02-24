@@ -65,6 +65,7 @@ This file is what I studied while learning Cisco and networking, and it contains
    <li><a href='cisco_docs/03_switching/06 - port security.html'>06 - port security</a></li>
    <li><a href='cisco_docs/03_switching/07 - stp.html'>07 - stp</a></li>
    <li><a href='cisco_docs/03_switching/08 - pvst rpvst.html'>08 - pvst rpvst</a></li>
+   <li><a href='cisco_docs/03_switching/09 - svi.html'>09 - svi</a></li>
 </ul></li></ul>
 <ul><li><b>04_phone</b>
 <ul>

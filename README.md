@@ -60,6 +60,7 @@ This file is what I studied while learning Cisco and networking, and it contains
    - [06 - port security](cisco_docs/03_switching/06%20-%20port%20security.md)
    - [07 - stp](cisco_docs/03_switching/07%20-%20stp.md)
    - [08 - pvst rpvst](cisco_docs/03_switching/08%20-%20pvst%20rpvst.md)
+   - [09 - svi](cisco_docs/03_switching/09%20-%20svi.md)
 - 04_phone
    - [01 - voip](cisco_docs/04_phone/01%20-%20voip.md)
    - [02 - pbx un](cisco_docs/04_phone/02%20-%20pbx%20un.md)
