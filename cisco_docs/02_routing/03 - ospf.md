@@ -36,3 +36,9 @@ wildcard /24    : /24 = 255.255.255.0
 (c)# network 20.20.20.0 0.0.0.255 area 0
 (c)# network 1.1.1.0 0.0.0.3 area 0
 ```
+
+
+## virtual link, area, dll
+```bash
+
+```
