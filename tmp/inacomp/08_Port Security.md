@@ -27,7 +27,7 @@ Fitur keamanan pada switch Cisco yang:
 
 > 🔸 Default mode: Shutdown
 
-### 🛠️ Contoh Konfigurasi
+### 🛠️ Contoh Konfigurasi Port Security
 
 #### 🔹 Fa0/1 – Sticky + Protect
 
@@ -62,13 +62,42 @@ interface FastEthernet0/3
  switchport port-security violation shutdown
 ```
 
-### 🔍 Perintah Verifikasi
+### ⏳ Port Security Aging
 
-| Perintah                             | Fungsi                             |
-| ------------------------------------ | ---------------------------------- |
-| `show port-security`                 | Ringkasan semua port.              |
-| `show port-security interface Fa0/x` | Status port tertentu.              |
-| `show mac address-table`             | Lihat MAC address yang terdeteksi. |
+Port security aging digunakan untuk mengatur kapan MAC address akan kedaluwarsa dari port tertentu. Ini berguna untuk lingkungan yang perangkatnya sering berganti.
+
+#### 🔧 Mode Aging
+
+| Tipe       | Penjelasan                                                   |
+| ---------- | ------------------------------------------------------------ |
+| Absolute   | Hapus MAC setelah waktu tertentu, apapun yang terjadi.       |
+| Inactivity | Hapus MAC hanya jika tidak ada trafik selama waktu tertentu. |
+
+#### 🔹 Contoh Konfigurasi Aging
+
+```bash
+interface FastEthernet0/4
+ switchport mode access
+ switchport port-security
+ switchport port-security maximum 1
+ switchport port-security mac-address sticky
+ switchport port-security aging time 5
+ switchport port-security aging type inactivity
+```
+
+🎯 Di atas: Sticky MAC akan dihapus setelah 5 menit tidak aktif.
+
+### 🔍 Perintah Verifikasi & Recovery
+
+| Perintah                                    | Fungsi                                                     |
+| ------------------------------------------- | ---------------------------------------------------------- |
+| show mac address-table secure               | Menampilkan MAC yang dianggap "secure"                     |
+| show port-security                          | Ringkasan status semua port                                |
+| show port-security interface Fa0/x          | Detail port tertentu                                       |
+| show mac address-table                      | Lihat MAC address yang terdeteksi                          |
+| show errdisable recovery                    | Melihat pengaturan auto-recovery untuk err-disabled        |
+| errdisable recovery cause psecure-violation | Aktifkan recovery otomatis untuk pelanggaran port-security |
+| errdisable recovery interval <detik>        | Set waktu tunggu recovery otomatis                         |
 
 ### 💡 Tips Praktis
 
@@ -86,4 +115,4 @@ interface Fa0/x
  no shutdown
 ```
 
-* Jika port digunakan untuk IP Phone + PC, set `maximum 2`.
+* Jika port digunakan untuk IP Phone + PC, set maximum 2.

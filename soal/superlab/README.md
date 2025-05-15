@@ -1,6 +1,7 @@
 # Superlab
 ## Superlab 1
 - [Blog](https://coretanbocahit.blogspot.com/2017/03/soal-superlab-1.html)
+- [jawaban](https://konfigurasiospfdanacltkjangkatan6.blogspot.com/2019/01/superlab-cisco.html)
 - [Link soal](https://drive.google.com/file/d/0B_e88Um0i6YPUTkyQkVjdGpIemM/view?resourcekey=0-XRTlDXWn5F-_j0Lx7M5_NA)
 
 ### topology
