@@ -42,3 +42,8 @@ wildcard /24    : /24 = 255.255.255.0
 ```bash
 
 ```
+
+## redistribute
+```bash
+
+```

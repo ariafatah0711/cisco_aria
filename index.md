@@ -37,6 +37,15 @@ This file is what I studied while learning Cisco and networking, and it contains
 <p id="file-list"></p>
 
 # 📄 File List
+<ul><li><b>2</b>
+<ul>
+   <li><a href='CCNA_learn/2/20 - stp.html'>20 - stp</a></li>
+   <li><a href='CCNA_learn/2/21 - stp toolkit_portfast.html'>21 - stp toolkit_portfast</a></li>
+</ul></li></ul>
+<ul><li><b>cisco_academy</b>
+<ul>
+   <li><a href='cisco_academy/readme.html'>readme</a></li>
+</ul></li></ul>
 <ul><li><b>01_dasar</b>
 <ul>
    <li><a href='cisco_docs/01_dasar/01 - pengenalan.html'>01 - pengenalan</a></li>
@@ -45,6 +54,7 @@ This file is what I studied while learning Cisco and networking, and it contains
    <li><a href='cisco_docs/01_dasar/04 - remote.html'>04 - remote</a></li>
    <li><a href='cisco_docs/01_dasar/05 - dhcp.html'>05 - dhcp</a></li>
    <li><a href='cisco_docs/01_dasar/06 - ipv6 un.html'>06 - ipv6 un</a></li>
+   <li><a href='cisco_docs/01_dasar/07 - dhcp relay.html'>07 - dhcp relay</a></li>
 </ul></li></ul>
 <ul><li><b>02_routing</b>
 <ul>
@@ -84,6 +94,18 @@ This file is what I studied while learning Cisco and networking, and it contains
    <li><a href='cisco_docs/06_routing_advance/01 - hsrp.html'>01 - hsrp</a></li>
    <li><a href='cisco_docs/06_routing_advance/02 - vrrp.html'>02 - vrrp</a></li>
    <li><a href='cisco_docs/06_routing_advance/03 - glbp.html'>03 - glbp</a></li>
+</ul></li></ul>
+<ul><li><b>jarvis</b>
+<ul>
+   <li><a href='soal/jarvis/readme.html'>readme</a></li>
+</ul></li></ul>
+<ul><li><b>1</b>
+<ul>
+   <li><a href='soal/jarvis/TUGAS-JARVIS/1/solve_UTS A 2025_version2.html'>solve_UTS A 2025_version2</a></li>
+</ul></li></ul>
+<ul><li><b>superlab</b>
+<ul>
+   <li><a href='soal/superlab/README.html'>README</a></li>
 </ul></li></ul>
 <p id="download"></p>
 

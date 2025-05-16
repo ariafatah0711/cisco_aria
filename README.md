@@ -37,6 +37,11 @@ This file is what I studied while learning Cisco and networking, and it contains
 <p id="file-list"></p>
 
 # 📄 File List
+- 2
+   - [20 - stp](CCNA_learn/2/20%20-%20stp.md)
+   - [21 - stp toolkit_portfast](CCNA_learn/2/21%20-%20stp%20toolkit_portfast.md)
+- cisco_academy
+   - [readme](cisco_academy/readme.md)
 - 01_dasar
    - [01 - pengenalan](cisco_docs/01_dasar/01%20-%20pengenalan.md)
    - [02 - configuration terminal](cisco_docs/01_dasar/02%20-%20configuration%20terminal.md)
@@ -44,6 +49,7 @@ This file is what I studied while learning Cisco and networking, and it contains
    - [04 - remote](cisco_docs/01_dasar/04%20-%20remote.md)
    - [05 - dhcp](cisco_docs/01_dasar/05%20-%20dhcp.md)
    - [06 - ipv6 un](cisco_docs/01_dasar/06%20-%20ipv6%20un.md)
+   - [07 - dhcp relay](cisco_docs/01_dasar/07%20-%20dhcp%20relay.md)
 - 02_routing
    - [01 - static routing](cisco_docs/02_routing/01%20-%20static%20routing.md)
    - [02 - rip](cisco_docs/02_routing/02%20-%20rip.md)
@@ -73,6 +79,12 @@ This file is what I studied while learning Cisco and networking, and it contains
    - [01 - hsrp](cisco_docs/06_routing_advance/01%20-%20hsrp.md)
    - [02 - vrrp](cisco_docs/06_routing_advance/02%20-%20vrrp.md)
    - [03 - glbp](cisco_docs/06_routing_advance/03%20-%20glbp.md)
+- jarvis
+   - [readme](soal/jarvis/readme.md)
+- 1
+   - [solve_UTS A 2025_version2](soal/jarvis/TUGAS-JARVIS/1/solve_UTS%20A%202025_version2.md)
+- superlab
+   - [README](soal/superlab/README.md)
 <p id="download"></p>
 
 ## 🔨 download
