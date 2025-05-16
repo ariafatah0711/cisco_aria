@@ -157,6 +157,7 @@ router ospf <process-id>
 ```bash
 router ospf <process-id>
  redistribute <protocol> subnets
+ default-information originate # default route 
 ```
 
 **Virtual Link**
@@ -242,6 +243,7 @@ Virtual Link digunakan untuk area yang tidak memiliki koneksi fisik langsung ke 
 ```bash
 router eigrp <autonomous-system>
  network <network> [<wildcard-mask>]
+ network <network> # without wildcard juga bisa
  no auto-summary    ! untuk menonaktifkan summarization otomatis
 ```
 
@@ -250,6 +252,7 @@ router eigrp <autonomous-system>
 ```bash
 router eigrp <AS>
  redistribute <protocol> metric <bandwidth> <delay> <reliability> <load> <mtu>
+ redistribute static # for static routes and default route
 ```
 
 **Passive Interface**
