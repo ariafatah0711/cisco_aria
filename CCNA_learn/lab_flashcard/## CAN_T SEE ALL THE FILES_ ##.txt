@@ -1,0 +1,9 @@
+Hello!
+
+I sometimes get messages saying "Where are the rest of the files? I can only see up to Day 28". 
+All of the lab files are in this Drive, but if you're having trouble seeing them, try this:
+1) Open the Drive in another browser
+and/or
+2) Log in to Google (if you aren't logged in)
+
+That should allow you to see all of the files!

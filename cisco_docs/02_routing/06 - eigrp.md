@@ -8,8 +8,8 @@
 ## eigrp
 ```js
 (c)# router eigrp <id> # id nya sama dengan id routing sebelah
-(c)# network <network address>
-(c)# network <network address>
+(c)# network <network address> # jika tidak ingin menggunakan wildcard
+(c)# network <network address> <wildcard>
 
 # eigrp with loopback ip
 (c)# int lo1
