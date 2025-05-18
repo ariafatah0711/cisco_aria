@@ -1,0 +1,38 @@
+#EDGE ROUTER
+en
+conf t
+hostname R1
+enable secret jonsitlab
+username cisco secret ccna
+line console 0
+login local
+logging synchronous
+exec-timeout 30 0
+do write
+exit
+
+#CORE & DISTRIBUTION LAYER SWITCHES (CHANGE HOSTNAME TO MATCH DEVICE!)
+en
+conf t
+hostname *
+enable algorithm-type scrypt secret jonsitlab
+username cisco algorithm-type scrypt secret ccna
+line console 0
+login local
+logging synchronous
+exec-timeout 30 0
+do write
+exit
+
+#ACCESS LAYER SWITCH (CHANGE HOSTNAME TO MATCH DEVICE!)
+en
+conf t
+hostname ASW-*
+enable secret jonsitlab
+username cisco secret ccna
+line console 0
+login local
+logging synchronous
+exec-timeout 30 0
+do write
+exit
