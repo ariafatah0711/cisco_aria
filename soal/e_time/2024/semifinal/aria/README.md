@@ -55,10 +55,23 @@ interface GigabitEthernet1/1
  nameif outside
  security-level 0
  ip address 202.162.200.242 255.255.255.252
+ no shutdown
 ```
 
 ### Ticket 3
-#### 
+####  Di R2 (Router-ID: 172.16.0.1)
+```bash
+do show ip ospf # untuk melihat route id
+do show ip ospf nei # untuk melihat neigboard
+router ospf 10
+ area 10 virtual-link 172.16.0.2
+```
+
+#### Di R4 (Router-ID: 172.16.0.2)
+```bash
+router ospf 10
+ area 10 virtual-link 172.16.0.1
+```
 
 ### Ticket 4
 #### Router R5
@@ -70,8 +83,35 @@ router ospf 10
 ```
 
 ### Ticket 5
-#### 
+#### Router 1
 ```bash
+do ping 202.162.200.242
+ip route 0.0.0.0 0.0.0.0 202.162.200.242
+router ospf 10
+ default-information originate
+```
+
+### Ticket 6
+#### SW2
+```bash
+int ra fa 0/1-2
+channel-group 1 mode active
+do sh eth sum
+```
+
+#### S2
+```bash
+do sh eth sum
+```
+
+#### SW 1, SW2 check udh mode trt apa blm
+```bash
+belum mode tr
+```
+
+#### S1-S4
+```bash
+belum mode tr
 ```
 
 ### Ticket 8
