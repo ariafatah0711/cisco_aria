@@ -1,4 +1,4 @@
-**Perbandingan Routing: Distance Vector vs. Link State (Versi Ringkas & Sederhana)**
+# **Perbandingan Routing: Distance Vector vs. Link State (Versi Ringkas & Sederhana)**
 
 Routing adalah proses memilih jalur agar data bisa sampai ke tujuannya dalam jaringan komputer. Ada dua pendekatan utama dalam **routing dinamis**:
 
