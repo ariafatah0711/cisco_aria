@@ -41,6 +41,12 @@ router ospf 10
  network 10.10.10.20 0.0.0.3 area 0
 ```
 
+#### ip address pada interface gig 0/1 salah
+```
+interface GigabitEthernet0/1
+ ip address 10.10.10.14 255.255.255.252
+```
+
 #### ✅ Ticket 2 - DNS Server Tidak Bisa Diakses
 
 **Masalah:** Ping ke 192.168.200.200 timeout
@@ -91,11 +97,6 @@ ephone-dn 1
 ephone-dn 2
  number 1002
 !
-ephone 1
- mac-address 0030.A3D2.9E77
-!
-ephone 2
- mac-address 0006.2A62.7CCA
 ```
 
 #### ✅ Ticket 6 - Komunikasi VoIP HQ dan BRANCH
@@ -106,15 +107,15 @@ ephone 2
 #### Router HQ
 ```
 dial-peer voice 1 voip
- destination-pattern 2002
- session target ipv4:20.20.20.5
+ destination-pattern 200*
+ session target ipv4:192.168.20.1
 ```
 
 #### Router Branch
 ```
-dial-peer voice 2 voip
- destination-pattern 1001
- session target ipv4:20.20.20.1
+dial-peer voice 1 voip
+ destination-pattern 100*
+ session target ipv4:192.168.10.1
 ```
 
 #### ✅ Ticket 7 - Buatkan Akun Email untuk NISA
