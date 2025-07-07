@@ -97,6 +97,9 @@ ephone-dn 1
 ephone-dn 2
  number 1002
 !
+ephone-dn 3
+ number 1003
+!
 ```
 
 #### ✅ Ticket 6 - Komunikasi VoIP HQ dan BRANCH
