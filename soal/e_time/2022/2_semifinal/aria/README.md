@@ -1,7 +1,9 @@
-## E-Time Network Competition - Troubleshooting Challenge
+## E-Time Network Competition 2022 semifinal - Troubleshooting Challenge
 ### Topology
 ![alt text](images/README/image.png)
 Anda sebagai network engineer ditugaskan untuk membenahi permasalahan jaringan yang terdapat pada soal troubleshooting ini. Setiap permasalahan sudah dituangkan dalam bentuk laporan ticket. Berusahalah memperbaiki setiap ticket yang ada dan juga berikanlah laporan berupa solusi dari setiap ticket yang berhasil anda kerjakan !
+
+---
 
 ### Soal
 #### Ticket 1
