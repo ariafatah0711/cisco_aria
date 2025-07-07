@@ -193,3 +193,243 @@
 ---
 
 ### Jawaban
+#### Sawangan 22%- (tinggal ntp client)
+##### SAWANGAN (ROUTER)
+```bash
+hostname SAWANGAN
+int lo0
+ ip add 3.3.3.3 255.255.255.255
+int se0/0/0
+ ip add 10.10.10.1 255.255.255.252
+ no sh
+int gig 0/0
+ ip add 172.16.10.1 255.255.255.252
+ no sh
+int gig 0/1
+ ip add 172.16.20.1 255.255.255.252
+ no sh
+
+router ospf 10
+ network 10.10.10.0 0.0.0.3 area 0
+ network 172.16.10.0 0.0.0.3 area 0
+ network 172.16.20.0 0.0.0.3 area 0
+```
+
+##### DS1 (MLS)
+```bash
+hostname DS1
+ip routing
+vlan 10
+vlan 20
+
+int lo0
+ ip add 1.1.1.1 255.255.255.255
+int fa 0/1
+ no sw
+ ip add 172.16.10.2 255.255.255.252
+int vlan 10
+ ip add 192.168.10.10 255.255.255.0
+int vlan 20
+ ip add 192.168.20.20 255.255.255.0
+int ra fa 0/2-4
+ sw trunk encapsulation dot1q 
+ sw mode tr
+
+router ospf 10
+ network 172.16.10.0 0.0.0.3 area 0
+ network 192.168.10.0 0.0.0.255 area 0
+ network 192.168.20.0 0.0.0.255 area 0
+
+int vlan 10
+ standby 110 priority 110
+ standby 110 preempt 
+ standby 110 ip 192.168.10.1
+int vlan 20
+ standby 105 preempt 
+ standby 105 ip 192.168.20.1
+```
+
+##### DS2 (MLS)
+```bash
+hostname DS2
+ip routing
+vlan 10
+vlan 20
+
+int lo0
+ ip add 2.2.2.2 255.255.255.255
+int fa 0/1
+ no sw
+ ip add 172.16.20.2 255.255.255.252
+int vlan 10
+ ip add 192.168.10.11 255.255.255.0
+int vlan 20
+ ip add 192.168.20.21 255.255.255.0
+int ra fa 0/2-4
+ sw trunk encapsulation dot1q 
+ sw mode tr
+
+router ospf 10
+ network 172.16.10.0 0.0.0.3 area 0
+ network 192.168.10.0 0.0.0.255 area 0
+ network 192.168.20.0 0.0.0.255 area 0
+
+int vlan 20
+ standby 120 priority 110
+ standby 120 preempt 
+ standby 120 ip 192.168.20.1
+int vlan 10
+ standby 105 preempt 
+ standby 105 ip 192.168.10.1
+```
+
+##### SW_SAWANGAN_1
+```bash
+hostname SW_SAWANGAN_1
+vlan 10
+vlan 20
+
+int ra fa 0/1-2
+ sw mode tr
+int fa 0/3
+ sw acc vl 10
+```
+
+##### SW_SAWANGAN_2
+```bash
+hostname SW_SAWANGAN_2
+vlan 10
+vlan 20
+
+int ra fa 0/1-2
+ sw mode tr
+int fa 0/3
+ sw acc vl 20
+```
+
+##### HTTP (SERVER)
+- enable http, and https in services
+- setting ip
+  - ipv4            : 192.168.10.100/24
+  - default gateway : 192.168.10.1
+  - dns             : 192.168.20.200
+
+##### DNS (SERVER)
+- enable dns in serivices
+  - add record
+    | No | DNS            | Type     | IP Address     |
+    | -- | -------------- | -------- | -------------- |
+    | 1  | etime.pnj      | A Record | 192.168.10.100 |
+    | 2  | mail.etime.pnj | A Record | 192.168.40.40  |
+- setting ip
+  - ipv4            : 192.168.20.200/24
+  - default gateway : 192.168.20.1
+
+---
+
+#### Bojongsari (BELUM voip)
+##### BOJONGSARI (ROUTER)
+```bash
+hostname BOJONGSARI
+int lo0
+ ip add 4.4.4.4 255.255.255.255
+int se0/0/0
+ ip add 10.10.10.2 255.255.255.252
+ no sh
+int se0/0/1
+ ip add 10.10.10.5 255.255.255.252
+ no sh
+int gig0/0
+ ip add 172.16.1.1 255.255.255.0
+ no sh
+
+router ospf 10
+ network 10.10.10.0 0.0.0.3 area 0
+ network 10.10.10.4 0.0.0.3 area 0
+ network 172.16.1.0 0.0.0.255 area 0
+
+! config telepony service dilakukan ketika sudah mengconfigurasi ip seluruh router dan ospf, dan buat dhcp di cimanggis
+```
+
+#### CINERE (BELUM Config)
+##### CINERE (ROUTER)
+````bash
+hostname CINERE
+int lo0
+ ip add 5.5.5.5 255.255.255.255
+int se0/0/0
+ ip add 10.10.10.6 255.255.255.252
+ no sh
+int se0/0/1
+ ip add 10.10.10.9 255.255.255.252
+ no sh
+int gig0/0
+ ip add 192.168.1.1 255.255.255.0
+ no sh
+
+router ospf 10
+ network 10.10.10.4 0.0.0.3 area 0
+ network 10.10.10.8 0.0.0.3 area 0
+ network 192.168.1.0 0.0.0.255 area 0
+````
+
+#### CIPAYUNG (BELUM Config)
+##### CIPAYUNG (ROUTER)
+```bash
+hostname CIPAYUNG
+int lo0
+ ip add 6.6.6.6 255.255.255.255
+int se0/0/0
+ ip add 10.10.10.10 255.255.255.252
+ no sh
+int se0/0/1
+ ip add 10.10.10.13 255.255.255.252
+ no sh
+int gig0/0
+ no sh
+int gig0/0.40
+ encapsulation dot1Q 40
+ ip add 192.168.40.1 255.255.255.0
+int gig0/0.200
+ encapsulation dot1Q 200
+ ip add 200.200.200.1 255.255.255.0
+
+router ospf 10
+ network 10.10.10.8 0.0.0.3 area 0
+ network 192.168.40.0 0.0.0.255 area 0
+ network 200.200.200.0 0.0.0.255 area 0
+ redistribute eigrp 100 
+router eigrp 100
+ no auto-summary
+ network 10.10.10.12 0.0.0.3
+ redistribute ospf 10
+```
+
+#### CIMANGGIS (BELUM CONFIG)
+##### CIMANGGIS (ROUTER)
+```bash
+hostname CIMANGGIS
+int lo0
+ ip add 7.7.7.7 255.255.255.255
+int se0/0/0
+ ip add 10.10.10.14 255.255.255.252
+ no sh
+int se0/0/1
+ ip add 10.10.10.17 255.255.255.252
+ no sh
+int gig0/0
+ no sh
+int gig0/0.50
+ encapsulation dot1Q 50
+ ip add 192.168.50.1 255.255.255.0
+int gig0/0.100
+ encapsulation dot1Q 100
+ ip add 100.100.100.1 255.255.255.0
+
+router eigrp 100
+ no auto-summary
+ network 10.10.10.12 0.0.0.3
+ network 10.10.10.16 0.0.0.3
+ network 192.168.50.0 0.0.0.255
+ network 100.100.100.0 0.0.0.255
+```
