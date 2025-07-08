@@ -21,10 +21,10 @@ Ada laporan di OFFICE, tepatnya di HQ. Laporannya adalah seluruh client dijaring
 #### Ticket 5
 Info!!!, pada jaringan BRANCH terdapat layanan VoIP yang berjalan di router 2811. VoIP sudah bisa digunakan untuk komunikasi dari ALI ke ATHAYA. Namun pada jaringan HQ pada ip phone Deta dan Zeta belum bisa digunakan dengan baik. Tolong set up layanan VoIP pada router 2911 atau HQ agar Deta dan Zeta dapat berkomunikasi di number 1001 dan 1002.
 
-### #Ticket 6
+#### Ticket 6
 Setelah berhasil membangun layanan VoIP pada jaringan HQ. Ada permintaan dari atasan agar seluruh karyawan di OFFICE baik HQ dan BRANCH dapat berkomunikasi lewat ip phone yang tersedia. Tolong bantu setting VoIP agar Deta dapat menelpon Ali dan sebaliknya agar memudahkan komunikasi antar karyawan.
 
-### #Ticket 7
+#### Ticket 7
 Karyawan atas nama NISA minta dibuatkan akun email ke tim IT agar bisa mengirimkan berkas berkas kerjaannya ke karyawan atas nama TEGAR. Saat ini yang sudah memiliki akun email hanya karyawan TEGAR. Segera buatkan dan setup dilaptopnya dengan nama user nisa dan password 123
 
 #### Ticket 8

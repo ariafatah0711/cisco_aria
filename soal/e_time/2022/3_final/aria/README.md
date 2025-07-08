@@ -193,7 +193,7 @@
 ---
 
 ### Jawaban
-#### Sawangan 22%- (tinggal ntp client)
+#### A. Sawangan 22%- (tinggal ntp client)
 ##### SAWANGAN (ROUTER)
 ```bash
 hostname SAWANGAN
@@ -327,7 +327,7 @@ int fa 0/3
 
 ---
 
-#### Bojongsari (BELUM voip)
+#### B. Bojongsari (BELUM voip)
 ##### BOJONGSARI (ROUTER)
 ```bash
 hostname BOJONGSARI
@@ -349,9 +349,33 @@ router ospf 10
  network 172.16.1.0 0.0.0.255 area 0
 
 ! config telepony service dilakukan ketika sudah mengconfigurasi ip seluruh router dan ospf, dan buat dhcp di cimanggis
+telephony-service 
+ max-ephones 5
+ max-dn 5
+ ip source-address 172.16.1.1 port 2000
+ auto assign 1 to 5
+int gig0/0
+ ip helper-address 192.168.50.50
+
+ephone-dn 1
+ number 1001
+ephone-dn 2
+ number 1002
+ephone-dn 3
+ number 1003
 ```
 
-#### CINERE (BELUM Config)
+##### SW_BOJONGSARI
+```bash
+hostname SW_BOJONGSARI
+int fa 0/1
+ sw mode tr
+! int ra fa 0/2-3
+ ! sw mode acc
+ ! sw voice vlan 1
+```
+
+#### C. CINERE (BELUM Config)
 ##### CINERE (ROUTER)
 ````bash
 hostname CINERE
@@ -373,7 +397,14 @@ router ospf 10
  network 192.168.1.0 0.0.0.255 area 0
 ````
 
-#### CIPAYUNG (BELUM Config)
+#### D. CIPAYUNG (BELUM Config)
+```bash
+show ip route
+show ip proto
+
+clear ip route
+```
+
 ##### CIPAYUNG (ROUTER)
 ```bash
 hostname CIPAYUNG
@@ -402,10 +433,11 @@ router ospf 10
 router eigrp 100
  no auto-summary
  network 10.10.10.12 0.0.0.3
- redistribute ospf 10
+ ! redistribute ospf 10
+ redistribute ospf 10 metric 10000 100 255 1 1500
 ```
 
-#### CIMANGGIS (BELUM CONFIG)
+#### E. CIMANGGIS (BELUM CONFIG)
 ##### CIMANGGIS (ROUTER)
 ```bash
 hostname CIMANGGIS
@@ -422,6 +454,7 @@ int gig0/0
 int gig0/0.50
  encapsulation dot1Q 50
  ip add 192.168.50.1 255.255.255.0
+ ip helper-address 192.168.50.50
 int gig0/0.100
  encapsulation dot1Q 100
  ip add 100.100.100.1 255.255.255.0
@@ -432,4 +465,115 @@ router eigrp 100
  network 10.10.10.16 0.0.0.3
  network 192.168.50.0 0.0.0.255
  network 100.100.100.0 0.0.0.255
+```
+
+##### SW_CIMANGGIS_1
+```bash
+hostname SW_CIMANGGIS_1
+vlan 50
+vlan 100
+spanning-tree mode pvst
+spanning-tree vlan 50 root primary 
+spanning-tree vlan 100 root primary
+
+int fa 0/1
+ sw mode tr
+int ra fa 0/2-3
+ channel-group 1 mode active 
+ channel-protocol lacp
+int ra fa 0/4-5
+ channel-group 2 mode auto
+ channel-protocol pagp
+int port-channel 1
+ sw mode tr
+int port-channel 2
+ sw mode tr
+```
+
+##### SW_CIMANGGIS_2
+```bash
+hostname SW_CIMANGGIS_2
+vlan 50
+vlan 100
+spanning-tree mode pvst 
+spanning-tree vlan 50 root secondary 
+
+int ra fa 0/1-2
+ channel-group 1 mode active 
+ channel-protocol lacp
+int fa 0/3
+ sw mode tr
+int fa 0/4
+ sw acc vlan 50
+int port-channel 1
+ sw mode tr
+ spanning-tree vlan 100 cost 100
+```
+
+##### SW_CIMANGGIS_3
+```bash
+hostname SW_CIMANGGIS_3
+vlan 50
+vlan 100
+spanning-tree mode pvst 
+spanning-tree vlan 100 root secondary 
+
+int ra fa 0/1-2
+ channel-group 1 mode desirable
+ channel-protocol pagp
+int fa 0/3
+ sw mode tr
+int fa 0/4
+ sw acc vlan 100
+int port-channel 1
+ sw mode tr
+ spanning-tree vlan 50 cost 100
+```
+
+##### DHCP (SERVER)
+- setting ip
+  - ipv4: 192.168.50.50/24
+  - gateway: 192.168.50.1
+  - dns: 192.168.20.200
+- setting service dhcp, dan enable servicenya
+  | No | Name             | Start IP        | DNS            | TFTP       |
+  | -- | ---------------- | --------------- | -------------- | ---------- |
+  | 1  | Helpdesk1        | 100.100.100.100 | 192.168.20.200 | -          |
+  | 2  | Helpdesk2        | 200.200.200.200 | 192.168.20.200 | -          |
+  | 3  | VOIP\_TAPOS      | 172.16.2.2      | 192.168.20.200 | 172.16.2.1 |
+  | 4  | VOIP\_BOJONGSARI | 172.16.1.2      | 192.168.20.200 | 172.16.1.1 |
+  | 5  | CINERE           | 192.168.1.10    | 192.168.20.200 | -          |
+
+##### IT Helpdesk 1 (PC)
+- enable ip dhcp
+
+#### F. TAPOS (BELUM CONFIG)
+##### TAPOS1 (ROUTER)
+```bash
+hostname TAPOS1
+
+int lo0
+ ip add 8.8.8.8 255.255.255.255
+int se0/0/0
+ ip add 10.10.10.18 255.255.255.252
+ no sh
+int gig0/0
+ ip add 172.16.2.1 255.255.255.0
+ no sh
+int gig0/0.100
+ encapsulation dot1Q 100
+ ip add 80.80.80.1 255.255.255.0
+
+router eigrp 100
+ no auto-summary 
+ network 10.10.10.16 0.0.0.3
+ network 172.16.2.0 0.0.0.255
+ network 80.80.80.0 0.0.0.255
+```
+
+##### TAPOS2
+```bash
+hostname TAPOS2
+int lo0
+ ip add 9.9.9.9 255.255.255.255
 ```
