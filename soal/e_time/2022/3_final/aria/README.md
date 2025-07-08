@@ -193,10 +193,11 @@
 ---
 
 ### Jawaban
-#### A. Sawangan 22%- (tinggal ntp client)
+#### A. Sawangan 22%
 ##### SAWANGAN (ROUTER)
 ```bash
 hostname SAWANGAN
+ntp server 192.168.30.30
 int lo0
  ip add 3.3.3.3 255.255.255.255
 int se0/0/0
@@ -218,6 +219,7 @@ router ospf 10
 ##### DS1 (MLS)
 ```bash
 hostname DS1
+ntp server 192.168.30.30
 ip routing
 vlan 10
 vlan 20
@@ -252,6 +254,7 @@ int vlan 20
 ##### DS2 (MLS)
 ```bash
 hostname DS2
+ntp server 192.168.30.30
 ip routing
 vlan 10
 vlan 20
@@ -327,10 +330,11 @@ int fa 0/3
 
 ---
 
-#### B. Bojongsari (BELUM voip)
+#### B. Bojongsari
 ##### BOJONGSARI (ROUTER)
 ```bash
 hostname BOJONGSARI
+ntp server 192.168.30.30
 int lo0
  ip add 4.4.4.4 255.255.255.255
 int se0/0/0
@@ -368,17 +372,19 @@ ephone-dn 3
 ##### SW_BOJONGSARI
 ```bash
 hostname SW_BOJONGSARI
+ntp server 192.168.30.30
 int fa 0/1
  sw mode tr
-! int ra fa 0/2-3
- ! sw mode acc
- ! sw voice vlan 1
+int ra fa 0/2-3
+ sw voice vlan 1
+ sw mode acc
 ```
 
-#### C. CINERE (BELUM Config)
+#### C. CINERE
 ##### CINERE (ROUTER)
 ````bash
 hostname CINERE
+ntp server 192.168.30.30
 int lo0
  ip add 5.5.5.5 255.255.255.255
 int se0/0/0
@@ -388,14 +394,36 @@ int se0/0/1
  ip add 10.10.10.9 255.255.255.252
  no sh
 int gig0/0
+ ip add 192.168.30.1 255.255.255.0
+ no sh
+int gig0/1
  ip add 192.168.1.1 255.255.255.0
  no sh
+ ip helper-address 192.168.50.50
 
 router ospf 10
  network 10.10.10.4 0.0.0.3 area 0
  network 10.10.10.8 0.0.0.3 area 0
  network 192.168.1.0 0.0.0.255 area 0
+ network 192.168.30.0 0.0.0.255 area 0
 ````
+
+##### SW_CINERE
+```bash
+hostname SW_CINERE
+int fa 0/1
+ sw mode tr
+```
+
+##### NTP (SERVER)
+- setting ip
+  - ipv4: 192.168.30.30/24
+  - gateway: 192.168.30.1
+  - dns: 192.168.20.200
+- seting service ntp
+
+##### WIDI, TRIA, ZHAFIA
+- enable ipv4 ip dhcp
 
 #### D. CIPAYUNG (BELUM Config)
 ```bash
@@ -408,6 +436,7 @@ clear ip route
 ##### CIPAYUNG (ROUTER)
 ```bash
 hostname CIPAYUNG
+ntp server 192.168.30.30
 int lo0
  ip add 6.6.6.6 255.255.255.255
 int se0/0/0
@@ -441,6 +470,7 @@ router eigrp 100
 ##### CIMANGGIS (ROUTER)
 ```bash
 hostname CIMANGGIS
+ntp server 192.168.30.30
 int lo0
  ip add 7.7.7.7 255.255.255.255
 int se0/0/0
@@ -454,10 +484,10 @@ int gig0/0
 int gig0/0.50
  encapsulation dot1Q 50
  ip add 192.168.50.1 255.255.255.0
- ip helper-address 192.168.50.50
 int gig0/0.100
  encapsulation dot1Q 100
  ip add 100.100.100.1 255.255.255.0
+ ip helper-address 192.168.50.50
 
 router eigrp 100
  no auto-summary
@@ -543,6 +573,7 @@ int port-channel 1
   | 3  | VOIP\_TAPOS      | 172.16.2.2      | 192.168.20.200 | 172.16.2.1 |
   | 4  | VOIP\_BOJONGSARI | 172.16.1.2      | 192.168.20.200 | 172.16.1.1 |
   | 5  | CINERE           | 192.168.1.10    | 192.168.20.200 | -          |
+- jangan lupa subnetmasknya soalnya sering lupa :v
 
 ##### IT Helpdesk 1 (PC)
 - enable ip dhcp
@@ -551,6 +582,7 @@ int port-channel 1
 ##### TAPOS1 (ROUTER)
 ```bash
 hostname TAPOS1
+ntp server 192.168.30.30
 
 int lo0
  ip add 8.8.8.8 255.255.255.255
@@ -574,6 +606,8 @@ router eigrp 100
 ##### TAPOS2
 ```bash
 hostname TAPOS2
+ntp server 192.168.30.30
+
 int lo0
  ip add 9.9.9.9 255.255.255.255
 ```
