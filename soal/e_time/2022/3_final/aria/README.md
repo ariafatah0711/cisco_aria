@@ -1,4 +1,4 @@
-## E-Time Network Competition 2022 Final - Full Configuration
+## E-Time Network Competition 2022 Final (87%) - Full Configuration
 ### Topology
 ![alt text](images/README/image.png)
 
@@ -213,7 +213,7 @@
 ---
 
 ### Jawaban
-#### A. Sawangan 22%
+#### A. Sawangan
 ##### SAWANGAN (ROUTER)
 ```bash
 hostname SAWANGAN
