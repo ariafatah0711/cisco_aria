@@ -1,14 +1,17 @@
 ## E-Time Network Competition 2022 semifinal (100%) - Troubleshooting Challenge
 ### Topology
 ![alt text](images/README/image.png)
-Anda sebagai network engineer ditugaskan untuk membenahi permasalahan jaringan yang terdapat pada soal troubleshooting ini. Setiap permasalahan sudah dituangkan dalam bentuk laporan ticket. Berusahalah memperbaiki setiap ticket yang ada dan juga berikanlah laporan berupa solusi dari setiap ticket yang berhasil anda kerjakan !
 
 ---
 
 ### Soal
+#### Description
+Anda sebagai network engineer ditugaskan untuk membenahi permasalahan jaringan yang terdapat pada soal troubleshooting ini. Setiap permasalahan sudah dituangkan dalam bentuk laporan ticket. \
+Berusahalah memperbaiki setiap ticket yang ada dan juga berikanlah laporan berupa solusi dari setiap ticket yang berhasil anda kerjakan !
 
+#### List Of Ticket
 <details>
-<summary>Soal</summary>
+<summary>List Of Ticket</summary>
 
 #### Ticket 1
 Urgent!!!, layanan jaringan mengalami gangguan pada R1. gangguan mengakibatkan semua karyawan di OFFICE baik HQ dan BRANCH komplain karena layanan akses menuju jaringan CAMPUS unreachable atau tidak bisa diakses sama sekali. Segera ambil tindakan agar jaringan kembali normal hingga semua router dapat terhubung dengan baik.

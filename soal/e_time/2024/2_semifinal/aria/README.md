@@ -42,7 +42,7 @@ Setelah kamu mencoba memperbaiki semua ticket yang ada, kamu diminta bos untuk a
 
 ## Jawaban
 ### Ticket 1
-### Router R3
+#### Router R3
 ```bash
 int gig 0/0
  ip add 10.10.10.10 255.255.255.252
