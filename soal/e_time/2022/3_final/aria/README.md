@@ -41,6 +41,10 @@
 ---
 
 ### Soal
+
+<details>
+<summary>1 IP Address Loopback</summary>
+
 #### 1. IP Address Loopback
 | Node       | IP Address | Subnet Mask     |
 | ---------- | ---------- | --------------- |
@@ -53,6 +57,11 @@
 | CIMANGGIS  | 7.7.7.7    | 255.255.255.255 |
 | TAPOS1     | 8.8.8.8    | 255.255.255.255 |
 | TAPOS2     | 9.9.9.9    | 255.255.255.255 |
+
+</details>
+
+<details>
+<summary>2. Konfigurasi Router & Switch</summary>
 
 #### 2. Konfigurasi Router & Switch
 ##### Router SAWANGAN
@@ -113,6 +122,10 @@
 | 172.16.2.1/24  | Gig0/0     | EIGRP   | 100 |
 | 80.80.80.1/24  | Gig0/0.100 | EIGRP   | 100 |
 
+</details>
+
+<details>
+<summary>3. Konfigurasi IP dan Layanan</summary>
 
 #### 3. Konfigurasi IP dan Layanan
 ##### Tabel IP Wilayah dan Fungsional
@@ -168,6 +181,11 @@
 | 3  | TAPOS2  | EIGRP    | PERMIT | ANY       | ANY         |
 | 4  | TAPOS2  | IP       | DENY   | ANY       | ANY         |
 
+</details>
+
+<details>
+<summary>4. Berikut Point Point Pengerjaan</summary>
+
 #### 4. Berikut Point Point Pengerjaan
 1. Setiap Server Disetting IP Secara Statik
 2. SW L3 DS1 Menjalankan HSRP Pada VLAN 10 dengan group number 110 dan nilai priority 110 dan DS2 Menjadi Backup dengan group number 105
@@ -189,6 +207,8 @@
 18. Pada layanan VOIP Baik Bojongsari dan juga Tapos dapat berkomunikasi antar server VOIP
 19. Pada layanan VOIP Baik Bojongsari dan juga Tapos ephone-dn berjumlah 5
 20. Pada Router CIPAYUNG merupakan backbone router yang menjalankan resdistribusi routing
+
+</details>
 
 ---
 
@@ -367,6 +387,10 @@ ephone-dn 2
  number 1002
 ephone-dn 3
  number 1003
+
+dial-peer voice 1 voip 
+ destination-pattern 200*
+ session target ipv4:172.16.2.1
 ```
 
 ##### SW_BOJONGSARI
@@ -420,19 +444,12 @@ int fa 0/1
   - ipv4: 192.168.30.30/24
   - gateway: 192.168.30.1
   - dns: 192.168.20.200
-- seting service ntp
+- seting service ntp, enable ntp
 
 ##### WIDI, TRIA, ZHAFIA
 - enable ipv4 ip dhcp
 
-#### D. CIPAYUNG (BELUM Config)
-```bash
-show ip route
-show ip proto
-
-clear ip route
-```
-
+#### D. CIPAYUNG
 ##### CIPAYUNG (ROUTER)
 ```bash
 hostname CIPAYUNG
@@ -453,12 +470,14 @@ int gig0/0.40
 int gig0/0.200
  encapsulation dot1Q 200
  ip add 200.200.200.1 255.255.255.0
+ ip helper-address 192.168.50.50
 
 router ospf 10
  network 10.10.10.8 0.0.0.3 area 0
  network 192.168.40.0 0.0.0.255 area 0
  network 200.200.200.0 0.0.0.255 area 0
- redistribute eigrp 100 
+ ! redistribute eigrp 100 
+ redistribute eigrp 100 subnets
 router eigrp 100
  no auto-summary
  network 10.10.10.12 0.0.0.3
@@ -466,7 +485,88 @@ router eigrp 100
  redistribute ospf 10 metric 10000 100 255 1 1500
 ```
 
-#### E. CIMANGGIS (BELUM CONFIG)
+##### SW_CIPAYUNG_1
+```bash
+hostname SW_CIPAYUNG_1
+vlan 40
+vlan 200
+spanning-tree mode rapid-pvst
+spanning-tree vlan 40 root primary 
+spanning-tree vlan 200 root primary
+
+int fa0/1
+ sw mode tr
+int ra fa 0/2-3
+ channel-group 1 mode active
+ channel-protocol lacp
+int ra fa 0/4-5
+ channel-group 1 mode auto
+ channel-protocol pagp
+int port-channel 1
+ sw mode tr
+int port-channel 2
+ sw mode tr
+```
+
+##### SW_CIPAYUNG_2
+```bash
+hostname SW_CIPAYUNG_2
+vlan 40
+vlan 200
+spanning-tree mode rapid-pvst
+spanning-tree vlan 40 root secondary 
+
+int ra fa 0/1-2
+ channel-group 1 mode passive
+ channel-protocol lacp
+int fa 0/3
+ sw mode tr
+int fa 0/4
+ sw acc vlan 40
+int port-channel 1
+ sw mode tr
+ spanning-tree vlan 200 cost 100
+```
+
+##### SW_CIPAYUNG_3
+```bash
+hostname SW_CIPAYUNG_3
+vlan 40
+vlan 200
+spanning-tree mode rapid-pvst
+spanning-tree vlan 200 root secondary 
+
+int ra fa 0/1-2
+ channel-group 1 mode desirable
+ channel-protocol pagp
+int fa 0/3
+ sw mode tr
+int fa 0/4
+ sw acc vlan 200
+int port-channel 1
+ sw mode tr
+ spanning-tree vlan 40 cost 100
+```
+
+##### EMAIL (SERVER)
+- setting ip
+  - ipv4: 192.168.40.40/24
+  - gateway: 192.168.40.1
+  - dns: 192.168.20.200
+- setting mail server
+  - enable the mail server, SMTP, and POP3 service enable
+  - setting domain name with: **mail.etime.pnj**
+  - add the user
+    | No | User  | Password | E-Mail                                              | PC            |
+    | -- | ----- | -------- | --------------------------------------------------- | ------------- |
+    | 1  | NISA  | 123      | [nisa@mail.etime.pnj](mailto:nisa@mail.etime.pnj)   | IT Helpdesk 1 |
+    | 2  | TEGAR | 123      | [tegar@mail.etime.pnj](mailto:tegar@mail.etime.pnj) | IT Helpdesk 2 |
+
+##### IT Helpdesk 2 (PC)
+- enable ipv4 ip dhcp
+- setting name=tegar, email=tegar@mail.etime.pnj, server=mail.etime.pnj cred=tegar:123
+
+#### E. CIMANGGIS
 ##### CIMANGGIS (ROUTER)
 ```bash
 hostname CIMANGGIS
@@ -576,7 +676,8 @@ int port-channel 1
 - jangan lupa subnetmasknya soalnya sering lupa :v
 
 ##### IT Helpdesk 1 (PC)
-- enable ip dhcp
+- enable ipv4 ip dhcp
+- setting name=nisa, email=nisa@mail.etime.pnj, server=mail.etime.pnj cred=nisa:123
 
 #### F. TAPOS (BELUM CONFIG)
 ##### TAPOS1 (ROUTER)
@@ -592,15 +693,38 @@ int se0/0/0
 int gig0/0
  ip add 172.16.2.1 255.255.255.0
  no sh
-int gig0/0.100
- encapsulation dot1Q 100
+! int gig0/0.100
+ ! encapsulation dot1Q 100
+ ! ip add 80.80.80.1 255.255.255.0
+int gig0/1
  ip add 80.80.80.1 255.255.255.0
+ no sh
 
 router eigrp 100
  no auto-summary 
  network 10.10.10.16 0.0.0.3
  network 172.16.2.0 0.0.0.255
  network 80.80.80.0 0.0.0.255
+
+! config telepony service dilakukan ketika sudah mengconfigurasi ip seluruh router dan ospf, dan buat dhcp di cimanggis
+telephony-service 
+ max-ephones 5
+ max-dn 5
+ ip source-address 172.16.2.1 port 2000
+ auto assign 1 to 5
+int gig0/0
+ ip helper-address 192.168.50.50
+
+ephone-dn 1
+ number 2001
+ephone-dn 2
+ number 2002
+ephone-dn 3
+ number 2003
+
+dial-peer voice 1 voip 
+ destination-pattern 100*
+ session target ipv4:172.16.1.1
 ```
 
 ##### TAPOS2
@@ -610,4 +734,51 @@ ntp server 192.168.30.30
 
 int lo0
  ip add 9.9.9.9 255.255.255.255
+int gig0/0
+ ip add 80.80.80.2 255.255.255.0
+ no sh
+int gig0/1
+ ip add 192.168.60.1 255.255.255.0
+ no sh
+
+router eigrp 100
+ no auto-summary 
+ network 80.80.80.80 0.0.0.255
+ network 192.168.60.0 0.0.0.255
+
+ip access-list extended ACL_FTP
+ permit ip 100.100.100.100 0.0.0.0 192.168.60.60 0.0.0.0
+ permit ip 200.200.200.200 0.0.0.0 192.168.60.60 0.0.0.0
+ permit eigrp any any
+ deny ip any any
+
+int gig0/1
+ ip access-group ACL_FTP out
+```
+
+##### SW_TAPOS
+```bash
+hostname SW_TAPOS
+int fa0/1
+ sw mode tr
+int ra fa 0/2-4
+ sw mode acc
+ sw voice vlan 1
+```
+
+##### FTP (SERVER)
+- setting ip
+  - ipv4: 192.168.60.60/24
+  - gateway: 192.168.60.1
+  - dns: 192.168.20.200
+- enable ftp server
+  - add user: ali, pass: 123, perm: RWNL
+
+---
+
+##### debugging
+```bash
+show ip route
+show ip proto
+clear ip route
 ```
