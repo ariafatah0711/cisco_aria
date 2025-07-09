@@ -777,6 +777,7 @@ int ra fa 0/2-4
 ---
 
 ##### debugging
+
 ```bash
 show ip route
 show ip proto

@@ -1,4 +1,4 @@
-## E-Time Network Competition 2023 semifinal (0%) - Troubleshooting Challenge
+## E-Time Network Competition 2023 semifinal (85%) - Troubleshooting Challenge
 ### Topology
 #### Logical View
 ![alt text](images/README/image.png)
@@ -117,7 +117,7 @@ router ospf 10
 ##### Router R2
 ```bash
 router ospf 10
-area 10 virtual-link 172.16.0.2
+ area 10 virtual-link 172.16.0.2
 ```
 
 #### Ticket 3
@@ -126,7 +126,14 @@ area 10 virtual-link 172.16.0.2
 router ospf 10
  redistribute eigrp 10 subnets 
 router eigrp 10
- redistribute ospf 10
+ ! redistribute ospf 10
+ redistribute ospf 10 metric 10000 100 255 1 1500
+
+! entah kenapa ada bug gitu ketika tegar ping ke R3 dia intermitent 1/2 gitu dan ini test aja tapi masih blm bisa :v
+! router ospf 10
+ ! passive-interface fa0/1
+! router eigrp 10
+ ! passive-interface fa0/0
 ```
 
 #### Ticket 4
@@ -134,34 +141,58 @@ router eigrp 10
 ```bash
 ip route 0.0.0.0 0.0.0.0 103.81.134.2
 router ospf 10
- default-information ORiginate 
+ default-information ORiginate
 ```
 
 #### Ticket 5 (gak nambah njir persentasenya)
-##### SW2
+##### SITE A
+###### SW1
 ```bash
-int ra fa 0/2-3
- channel-group 1 mode active 
+int port-channel 1
+ sw trunk encap dot1q
+ sw mode tr
+int port-channel 2
+ sw trunk encap dot1q
+ sw mode tr
 ```
 
-##### S2
+###### S1-S2
 ```bash
 int port-channel 1
  sw mode tr
 ```
 
-> masih ada maslaah antara SW2 ke R5 karena si pc tegar tidak bisa melakukan ping ke R5
+- verifikasi client NISA ping ke gateway ```ping 192.168.1.1```, dan ```ping 103.81.134.1```
+- jika di port switchnya masih orange bisas lkaukan ```do wr```, lalu ```do reload```
 
-#### Ticket 6 (gak nambah njir persentasenya)
+##### SITE B
+###### SW2
+```bash
+int ra fa 0/2-3
+ channel-group 1 mode active 
+```
+
+###### S3, S4
+```bash
+int ra fa 0/1-2
+ channel-group 1 mode active
+ channel-protocol lacp
+```
+
+- ubah alamat ip client TEGAR karena ipnya belum sesuai: 192.168.2.10
+- verifikasi client NISA ping ke gateway ```ping 192.168.1.1```, dan ```ping 103.81.134.1```
+
+> jika si SW2 belum dpt route ke ospf pastikan di R5 redistribute ospf di route eigrp sudah pake metric
+
+#### Ticket 6
 ##### Router R1, R2, R3
 ```bash
-ip domain-name etime.pnj
-crypto key generate rsa
+ip domain-name etime.com
 ! if want version 2 use 1024, if version 1 use 512
+! ip ssh version 2 only if u alrdey create key rsa with > 768 bit
+crypto key generate rsa
 
-! only if u use rsa > 768
-ip ssh version 2 
-
+ip ssh version 2
 username tegar privilege 15 secret 123
 
 line vty 0 15
@@ -169,22 +200,22 @@ line vty 0 15
  login local
 ```
 
-##### verifikasi with PC NISA
+##### verifikasi with PC NISA, TEGAR
 ```bash
 ssh -l tegar 172.16.1.1
-# pass 123
 ssh -l tegar 172.16.0.1
-# pass 123
 ssh -l tegar 103.81.134.1
-# pass 123
 ```
 
 #### Ticket 7
 ##### HTTP & DNS (SERVER)
 - add record
   - TYPE: A Record, Address: 192.168.10.10, name: etime.com
-  - TYPE: CNAME Record, Host: etime.com, name: www.etime.com
+  - TYPE: CNAME Record, Host: etime.com, name: www
+  - TYPE: CNAME Record, Host: etime.com, name: mail
+
   - TYPE: A Record, Address: 192.168.20.10, name: mail.etime.com
+  - TYPE: CNAME Record, Host: etime.com, name: www.etime.com
   - TYPE: CNAME Record, Host: etime.com, name: mail.etime.com
 
 ![alt text](images/README/image-2.png)
@@ -198,14 +229,48 @@ ssh -l tegar 103.81.134.1
   - NISA - nisa@mail.etime.com - mail.etime.com - nisa:123
   - TEGAR - tegar@mail.etime.com - mail.etime.com - tegar:123
 
+![alt text](images/README/image-3.png)
+
+#### Ticket 9
+##### ROUTER R5
+```bash
+telephony-service
+ ip source-address 200.200.200.1 port 2000
+ephone-dn 1
+ number 2001
+ephone-dn 2
+ number 2002
+ephone-dn 3
+ number 2003
+```
+
+![alt text](images/README/image-4.png)
+
+#### Ticket 10
+##### ROUTER R5
+```bash
+dial-peer voice 1 voip
+ destination-pattern 100*
+ session target ipv4:100.100.100.1
+```
+
+##### ROUTER R4
+```bash
+dial-peer voice 1 voip
+ destination-pattern 200*
+ session target ipv4:200.200.200.1
+```
+
 ---
 
-#### Debug
+##### debugging
+
 ```bash
+sh eth sum
+
 # checkthe router id
 show ip ospf 
 
 clear ip ospf proc
-
-sh eth sum
+clear ip route *
 ```
