@@ -1,4 +1,4 @@
-## E-Time Network Competition 2023 Final (85%) - Full Configuration
+## E-Time Network Competition 2023 Final (94%) - Full Configuration
 ### Topology
 ![alt text](images/README/image.png)
 
@@ -63,6 +63,18 @@ router ospf 10
  network 1.1.1.1 0.0.0.0 area 0
  network 10.10.10.4 0.0.0.3 area 0
  network 10.10.10.16 0.0.0.3 area 0
+ redistribute bgp 100 subnets 
+
+router bgp 100
+ neighbor 103.81.134.2 remote-as 200
+ redistribute ospf 10
+
+! mengatasi SW1, atau SW2 tidak mendapatkan External LSA Type 5, btw route ini enaknya taruh di backbhone takutnya loop njir
+ip route 0.0.0.0 0.0.0.0 103.81.134.2
+router ospf 10
+ default-information originate
+ ! atau gunakan
+ ! redistribute ospf 10 subnets
 ```
 
 ##### R2
@@ -81,6 +93,7 @@ int gig0/2
  no sh
 
 router ospf 10
+ network 2.2.2.2 0.0.0.0 0.0.0.0 area 0
  network 10.10.10.4 0.0.0.3 area 0
  network 10.10.10.8 0.0.0.3 area 0
  network 172.16.2.0 0.0.0.7 area 10
@@ -103,6 +116,8 @@ int gig0/2
  no sh
 
 router ospf 10
+ router-id 3.3.3.3
+ network 3.3.3.3 0.0.0.0 area 0
  network 10.10.10.8 0.0.0.3 area 0
  network 10.10.10.12 0.0.0.3 area 0
  network 172.16.1.0 0.0.0.7 area 20
@@ -124,6 +139,8 @@ int gig0/2
  no sh
 
 router ospf 10
+ router-id 4.4.4.4
+ network 4.4.4.4 0.0.0.0 area 0
  network 10.10.10.16 0.0.0.3 area 0
  network 10.10.10.12 0.0.0.3 area 0
  network 172.16.0.0 0.0.0.7 area 30
@@ -138,14 +155,36 @@ router ospf 10
   - 192.168.140.10 /24 -> 192.168.140.1
 
 ##### DHCP
-- configurasi DHCP (dns ke 192.168.130.1)
-  - VoIP-Site-A - 192.168.50.1 /24 - 192.168.50.5
-  - PC-Site-A - 192.168.60.1 /24 - 192.168.60.5 - 7.7.7.7
+- configurasi DHCP (dns ke 192.168.130.10)
+  - VoIP-Site-A - 192.168.50.1 /24 - 192.168.50.5 - 172.16.2.2
+  - PC-Site-A - 192.168.60.1 /24 - 192.168.60.5
   - VoIP-Site-B - 192.168.70.1 /24 - 192.168.70.5
-  - PC-Site-B - 192.168.80.1 /24 - 192.168.80.5 - 5.5.5.5
+  - PC-Site-B - 192.168.80.1 /24 - 192.168.80.5 - 172.16.0.2
   - Branch-PC-1 - 192.168.90.1 /24 - 192.168.90.5
   - Branch-PC-2 - 192.168.91.1 /24 - 192.168.91.5
 
+##### DNS
+- add record dns
+  - A - web1.etime.com - 192.168.120.10
+  - A - web2.etime.com - 33.33.33.2
+  - A - mail.etime.com - 192.168.140.10
+
+##### EMAIL
+- setup domain name to ```mail.etime.com```
+- create user email
+  - nisa:123
+  - tegar:123
+  - isal:123
+  - widi:123
+
+##### CLIENT PC
+- configure setup email with
+  - NISA - nisa@mail.etime.com - mail.etime.com - nisa:123
+  - TEGAR - tegar@mail.etime.com - mail.etime.com - tegar:123
+  - ISAL - isal@mail.etime.com - mail.etime.com - isal:123
+  - WIDI - widi@mail.etime.com - mail.etime.com - widi:123
+
+ 
 ##### R7
 ```bash
 hostname R7
@@ -162,23 +201,20 @@ int gig0/2
  no sh
 
 router ospf 10
+ router-id 7.7.7.7
+ network 7.7.7.7 0.0.0.0 area 10
  network 172.16.2.0 0.0.0.7 area 10
  network 50.50.50.0 0.0.0.255 area 100
  network 100.100.100.0 0.0.0.255 area 100
  area 10 virtual-link 2.2.2.2
-
-! mengatasi SW1, atau SW2 tidak mendapatkan External LSA Type 5, btw route ini enaknya taruh di backbhone takutnya loop njir
-! ip route 0.0.0.0 0.0.0.0 172.16.2.1
-! router ospf 10
- ! default-information originate
- ! atau gunakan
- ! redistribute ospf 10 subnets
 ```
 
 ##### SW1
 ```bash
 hostname SW1
 ip routing
+spanning-tree mode rapid-pvst 
+
 vlan 100
  name HQ-Server-A
 vlan 200
@@ -187,6 +223,8 @@ vlan 300
  name HQ-Server-C
 vlan 400
  name HQ-Server-D
+vlan 99
+ name Management 
 
 int lo0
  ip add 11.11.11.11 255.255.255.255
@@ -220,6 +258,8 @@ int vlan 400
  standby 140 preempt
 
 router ospf 10
+ router-id 11.11.11.11
+ network 11.11.11.11 0.0.0.0 area 100
  network 50.50.50.0 0.0.0.255 area 100
  network 192.168.100.0 0.0.0.255 area 100
  network 192.168.120.0 0.0.0.255 area 100
@@ -231,6 +271,8 @@ router ospf 10
 ```bash
 hostname SW2
 ip routing
+spanning-tree mode rapid-pvst
+
 vlan 100
  name HQ-Server-A
 vlan 200
@@ -239,6 +281,8 @@ vlan 300
  name HQ-Server-C
 vlan 400
  name HQ-Server-D
+vlan 99
+ name Management 
 
 int lo0
  ip add 22.22.22.22 255.255.255.255
@@ -272,6 +316,8 @@ int vlan 400
  standby 140 preempt
 
 router ospf 10
+ router-id 22.22.22.22
+ network 22.22.22.22 0.0.0.0 area 100
  network 50.50.50.0 0.0.0.255 area 100
  network 192.168.100.0 0.0.0.255 area 100
  network 192.168.120.0 0.0.0.255 area 100
@@ -348,11 +394,55 @@ int gig0/2.80
  ip helper-address 192.168.100.10
 
 router ospf 10
+ router-id 6.6.6.6
+ network 6.6.6.6 0.0.0.0 area 20
  network 172.16.1.0 0.0.0.7 area 20
  network 192.168.50.0 0.0.0.255 area 20
  network 192.168.60.0 0.0.0.255 area 20
  network 192.168.70.0 0.0.0.255 area 20
  network 192.168.80.0 0.0.0.255 area 20
+ passive-interface gig 0/1
+ passive-interface gig 0/2
+```
+
+##### S3
+```bash
+hostname S3
+vlan 50
+ name VoIP-Site-A
+vlan 60
+ name PC-Site-A
+vlan 99
+ name Management 
+
+int fa0/1
+ sw mode tr
+int fa 0/2
+ sw acc vlan 60
+int ra fa 0/3-4
+ sw voice vlan 50
+int ra fa 0/2-4
+ sw mode acc
+```
+
+##### S4
+```bash
+hostname S4
+vlan 70
+ name VoIP-Site-B
+vlan 80
+ name PC-Site-B
+vlan 99
+ name Management 
+
+int fa0/1
+ sw mode tr
+int fa 0/2
+ sw acc vlan 80
+int ra fa 0/3-4
+ sw voice vlan 70
+int ra fa 0/2-4
+ sw mode acc
 ```
 
 ##### VOIP - R7
@@ -413,42 +503,6 @@ ephone-dn 5
 #  session target ipv4:192.168.50.1
 ```
 
-##### S3
-```bash
-hostname S3
-vlan 50
- name VoIP-Site-A
-vlan 60
- name PC-Site-A
-
-int fa0/1
- sw mode tr
-int fa 0/2
- sw acc vlan 60
-int ra fa 0/3-4
- sw voice vlan 50
-int ra fa 0/2-4
- sw mode acc
-```
-
-##### S4
-```bash
-hostname S4
-vlan 70
- name VoIP-Site-B
-vlan 80
- name PC-Site-B
-
-int fa0/1
- sw mode tr
-int fa 0/2
- sw acc vlan 80
-int ra fa 0/3-4
- sw voice vlan 70
-int ra fa 0/2-4
- sw mode acc
-```
-
 #### D. BRANCH
 ##### R5
 ```bash
@@ -463,6 +517,8 @@ int gig0/1
  no sh
 
 router ospf 10
+ router-id 5.5.5.5
+ network 5.5.5.5 0.0.0.0 area 30
  network 172.16.0.2 0.0.0.7 area 30
  network 150.150.150.0 0.0.0.255 area 30
 ```
@@ -471,10 +527,14 @@ router ospf 10
 ```bash
 hostname SW3
 ip routing
+spanning-tree mode rapid-pvst
+
 vlan 90
  name Branch-PC-1
 vlan 91
  name Branch-PC-2
+vlan 99
+ name Management 
 
 int lo0
  ip add 33.33.33.33 255.255.255.255
@@ -486,7 +546,7 @@ int ra fa 0/2-3
  channel-group 1 mode active 
  channel-protocol lacp
 int ra fa 0/4-5
- channel-group 2 mode desirable 
+ channel-group 2 mode auto
  channel-protocol pagp
 int po 1
  sw tr encap dot1q
@@ -503,6 +563,8 @@ int vlan 91
  ip helper-address 192.168.100.10
 
 router ospf 10
+ router-id 33.33.33.33
+ network 33.33.33.33 0.0.0.0 area 30
  network 150.150.150.0 0.0.0.255 area 30
  network 192.168.90.0 0.0.0.255 area 30
  network 192.168.91.0 0.0.0.255 area 30
@@ -511,10 +573,17 @@ router ospf 10
 ##### S5
 ```bash
 hostname S5
+spanning-tree mode rapid-pvst
+
 vlan 90
  name Branch-PC-1
 vlan 91
  name Branch-PC-2
+vlan 99
+ name Management 
+
+spanning-tree vlan 90 root primary 
+spanning-tree vlan 91 root secondary 
 
 int ra fa 0/1-2
  channel-group 1 mode active 
@@ -532,10 +601,17 @@ int fa 0/4
 ##### S6
 ```bash
 hostname S6
+spanning-tree mode rapid-pvst
+
 vlan 90
  name Branch-PC-1
 vlan 91
  name Branch-PC-2
+vlan 99
+ name Management 
+
+spanning-tree vlan 91 root primary 
+spanning-tree vlan 90 root secondary 
 
 int ra fa 0/1-2
  channel-group 2 mode desirable 
@@ -548,6 +624,81 @@ int po 2
  sw mode tr
 int fa 0/4
  sw acc vlan 91
+```
+
+#### E. EXTERNAL
+##### Server
+- add ip for server
+  - 33.33.33.2/24 - 33.33.33.1 - 192.168.130.10
+  - 44.44.44.2/24 - 44.44.44.1 - 192.168.130.10
+
+##### R8
+```bash
+hostname R8
+int lo0
+ ip add 8.8.8.8 255.255.255.255
+int gig0/0
+ ip add 103.81.134.2 255.255.255.252
+ no sh
+int gig0/1
+ ip add 192.168.33.1 255.255.255.0
+ no sh
+
+router eigrp 10
+ eigrp router-id 8.8.8.8
+ no auto-summary 
+ network 192.168.33.0 0.0.0.255
+ ! network 8.8.8.8 0.0.0.0
+ ! redistribute bgp 200 metric 1000000 10 255 1 1500 
+ redistribute bgp 200 metric 1 1 1 1 1
+
+router bgp 200
+ neighbor 103.81.134.1 remote-as 100
+ redistribute eigrp 10
+```
+
+##### R9
+```bash
+hostname R9
+int lo0
+ ip add 9.9.9.9 255.255.255.255
+int gig0/0
+ ip add 192.168.33.2 255.255.255.0
+ no sh
+int gig0/1
+ ip add 192.168.44.1 255.255.255.0
+ no sh
+int gig0/2
+ ip add 33.33.33.1 255.255.255.0
+ no sh
+
+router eigrp 10
+ eigrp router-id 9.9.9.9
+ no auto-summary 
+ network 192.168.33.0 0.0.0.255
+ network 192.168.44.0 0.0.0.255
+ network 33.33.33.0 0.0.0.255
+ ! network 9.9.9.9 0.0.0.0
+```
+
+##### R10
+```bash
+hostname R10
+int lo0
+ ip add 10.10.10.10 255.255.255.255
+int gig0/0
+ ip add 192.168.44.2 255.255.255.0
+ no sh
+int gig0/1
+ ip add 44.44.44.1 255.255.255.0
+ no sh
+
+router eigrp 10
+ eigrp router-id 10.10.10.10
+ no auto-summary 
+ network 192.168.44.0 0.0.0.255
+ network 44.44.44.0 0.0.0.255
+ ! network 10.10.10.10 0.0.0.0
 ```
 
 ---
