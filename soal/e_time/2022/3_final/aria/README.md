@@ -231,6 +231,8 @@ int gig 0/1
  no sh
 
 router ospf 10
+ router-id 3.3.3.3
+ network 3.3.3.3 0.0.0.0 area 0
  network 10.10.10.0 0.0.0.3 area 0
  network 172.16.10.0 0.0.0.3 area 0
  network 172.16.20.0 0.0.0.3 area 0
@@ -258,6 +260,8 @@ int ra fa 0/2-4
  sw mode tr
 
 router ospf 10
+ router-id 1.1.1.1
+ network 1.1.1.1 0.0.0.0 area 0
  network 172.16.10.0 0.0.0.3 area 0
  network 192.168.10.0 0.0.0.255 area 0
  network 192.168.20.0 0.0.0.255 area 0
@@ -293,6 +297,8 @@ int ra fa 0/2-4
  sw mode tr
 
 router ospf 10
+ router-id 2.2.2.2
+ network 2.2.2.2 0.0.0.0 area 0
  network 172.16.10.0 0.0.0.3 area 0
  network 192.168.10.0 0.0.0.255 area 0
  network 192.168.20.0 0.0.0.255 area 0
@@ -302,7 +308,7 @@ int vlan 20
  standby 120 preempt 
  standby 120 ip 192.168.20.1
 int vlan 10
- standby 105 preempt 
+ standby 105 preempt
  standby 105 ip 192.168.10.1
 ```
 
@@ -368,6 +374,8 @@ int gig0/0
  no sh
 
 router ospf 10
+ router-id 4.4.4.4
+ network 4.4.4.4 0.0.0.0 area 0
  network 10.10.10.0 0.0.0.3 area 0
  network 10.10.10.4 0.0.0.3 area 0
  network 172.16.1.0 0.0.0.255 area 0
@@ -399,7 +407,7 @@ hostname SW_BOJONGSARI
 ntp server 192.168.30.30
 int fa 0/1
  sw mode tr
-int ra fa 0/2-3
+int ra fa 0/2-4
  sw voice vlan 1
  sw mode acc
 ```
@@ -426,6 +434,8 @@ int gig0/1
  ip helper-address 192.168.50.50
 
 router ospf 10
+ router-id 5.5.5.5
+ network 5.5.5.5 0.0.0.0 area 0
  network 10.10.10.4 0.0.0.3 area 0
  network 10.10.10.8 0.0.0.3 area 0
  network 192.168.1.0 0.0.0.255 area 0
@@ -473,6 +483,8 @@ int gig0/0.200
  ip helper-address 192.168.50.50
 
 router ospf 10
+ router-id 6.6.6.6
+ network 6.6.6.6 0.0.0.0 area 0
  network 10.10.10.8 0.0.0.3 area 0
  network 192.168.40.0 0.0.0.255 area 0
  network 200.200.200.0 0.0.0.255 area 0
@@ -590,6 +602,7 @@ int gig0/0.100
  ip helper-address 192.168.50.50
 
 router eigrp 100
+ eigrp router-id 7.7.7.7
  no auto-summary
  network 10.10.10.12 0.0.0.3
  network 10.10.10.16 0.0.0.3
@@ -701,6 +714,7 @@ int gig0/1
  no sh
 
 router eigrp 100
+ eigrp router-id 8.8.8.8
  no auto-summary 
  network 10.10.10.16 0.0.0.3
  network 172.16.2.0 0.0.0.255
@@ -742,6 +756,7 @@ int gig0/1
  no sh
 
 router eigrp 100
+ eigrp router-id 9.9.9.9
  no auto-summary 
  network 80.80.80.80 0.0.0.255
  network 192.168.60.0 0.0.0.255
