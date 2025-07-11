@@ -1,4 +1,4 @@
-## E-Time Network Competition 2023 semifinal (85%) - Troubleshooting Challenge
+## E-Time Network Competition 2023 semifinal (100%) - Troubleshooting Challenge
 ### Topology
 #### Logical View
 ![alt text](images/README/image.png)
@@ -250,14 +250,15 @@ ephone-dn 3
 ##### ROUTER R5
 ```bash
 dial-peer voice 1 voip
- destination-pattern 100*
+ ! destination-pattern 100*
+  destination-pattern 1...
  session target ipv4:100.100.100.1
 ```
 
 ##### ROUTER R4
 ```bash
 dial-peer voice 1 voip
- destination-pattern 200*
+ ! destination-pattern 2...
  session target ipv4:200.200.200.1
 ```
 
