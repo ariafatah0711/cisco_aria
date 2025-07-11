@@ -1,4 +1,4 @@
-## E-Time Network Competition 2024 semifinal (77%) - Troubleshooting Challenge
+## E-Time Network Competition 2024 semifinal (88%) - Troubleshooting Challenge
 ### topology
 ### Topology
 #### Logical View
@@ -136,6 +136,7 @@ router ospf 10
 ##### Router 1
 ```bash
 do ping 202.162.200.242
+ip default-gateway 202.162.200.242
 ip route 0.0.0.0 0.0.0.0 202.162.200.242
 router ospf 10
  default-information originate
@@ -236,14 +237,16 @@ ephone-dn 3
 ##### R4
 ```bash
 dial-peer voice 1 voip 
- destination-pattern 200*
+ ! destination-pattern 200*
+ destination-pattern 2...
  session target ipv4:200.200.200.1
 ```
 
 ##### R5
 ```bash
 dial-peer voice 1 voip 
- destination-pattern 100*
+ ! destination-pattern 100*
+ destination-pattern 1...
  session target ipv4:100.100.100.1
 ```
 
