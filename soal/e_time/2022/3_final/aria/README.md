@@ -494,7 +494,7 @@ router ospf 10
 router eigrp 100
  eigrp router-id 6.6.6.6
  no auto-summary
- network 6.6.6.6 0.0.0.0
+ ! network 6.6.6.6 0.0.0.0
  network 10.10.10.12 0.0.0.3
  ! redistribute ospf 10
  redistribute ospf 10 metric 10000 100 255 1 1500
@@ -768,14 +768,20 @@ router eigrp 100
  network 80.80.80.80 0.0.0.255
  network 192.168.60.0 0.0.0.255
 
-ip access-list extended ACL_FTP
- permit ip 100.100.100.100 0.0.0.0 192.168.60.60 0.0.0.0
- permit ip 200.200.200.200 0.0.0.0 192.168.60.60 0.0.0.0
- permit eigrp any any
- deny ip any any
+! ip access-list extended ACL_FTP
+ ! permit ip 100.100.100.100 0.0.0.0 192.168.60.60 0.0.0.0
+ ! permit ip 200.200.200.200 0.0.0.0 192.168.60.60 0.0.0.0
+ ! permit eigrp any any
+ ! deny ip any any
+
+access-list 100 permit ip 100.100.100.100 0.0.0.0 192.168.60.60 0.0.0.0
+access-list 100 permit ip 200.200.200.200 0.0.0.0 192.168.60.60 0.0.0.0
+access-list 100 permit eigrp any any 
+access-list 100 deny ip any any 
 
 int gig0/1
- ip access-group ACL_FTP out
+ ! ip access-group ACL_FTP out
+ ip access-group 100 out
 ```
 
 ##### SW_TAPOS
