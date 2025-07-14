@@ -397,7 +397,8 @@ ephone-dn 3
  number 1003
 
 dial-peer voice 1 voip 
- destination-pattern 200*
+ ! destination-pattern 200*
+ destination-pattern 2...
  session target ipv4:172.16.2.1
 ```
 
@@ -491,7 +492,9 @@ router ospf 10
  ! redistribute eigrp 100 
  redistribute eigrp 100 subnets
 router eigrp 100
+ eigrp router-id 6.6.6.6
  no auto-summary
+ network 6.6.6.6 0.0.0.0
  network 10.10.10.12 0.0.0.3
  ! redistribute ospf 10
  redistribute ospf 10 metric 10000 100 255 1 1500
@@ -526,7 +529,7 @@ hostname SW_CIPAYUNG_2
 vlan 40
 vlan 200
 spanning-tree mode rapid-pvst
-spanning-tree vlan 40 root secondary 
+! spanning-tree vlan 40 root secondary 
 
 int ra fa 0/1-2
  channel-group 1 mode passive
@@ -546,7 +549,7 @@ hostname SW_CIPAYUNG_3
 vlan 40
 vlan 200
 spanning-tree mode rapid-pvst
-spanning-tree vlan 200 root secondary 
+! spanning-tree vlan 200 root secondary 
 
 int ra fa 0/1-2
  channel-group 1 mode desirable
@@ -604,6 +607,7 @@ int gig0/0.100
 router eigrp 100
  eigrp router-id 7.7.7.7
  no auto-summary
+ network 7.7.7.7 0.0.0.0
  network 10.10.10.12 0.0.0.3
  network 10.10.10.16 0.0.0.3
  network 192.168.50.0 0.0.0.255
@@ -716,6 +720,7 @@ int gig0/1
 router eigrp 100
  eigrp router-id 8.8.8.8
  no auto-summary 
+ network 8.8.8.8 0.0.0.0
  network 10.10.10.16 0.0.0.3
  network 172.16.2.0 0.0.0.255
  network 80.80.80.0 0.0.0.255
@@ -737,7 +742,8 @@ ephone-dn 3
  number 2003
 
 dial-peer voice 1 voip 
- destination-pattern 100*
+ ! destination-pattern 100*
+ destination-pattern 1...
  session target ipv4:172.16.1.1
 ```
 
@@ -758,6 +764,7 @@ int gig0/1
 router eigrp 100
  eigrp router-id 9.9.9.9
  no auto-summary 
+ network 9.9.9.9 0.0.0.0
  network 80.80.80.80 0.0.0.255
  network 192.168.60.0 0.0.0.255
 
