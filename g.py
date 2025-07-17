@@ -101,7 +101,7 @@ git clone https://github.com/ariafatah0711/cisco_aria.git
 
 def generate_file_list_simple(path, output_type="md"):
     output = ""
-    exclude_dirs = {"tmp", ".git"}
+    exclude_dirs = {"tmp", ".git", "CCNA_learn"}
 
     for dirpath, dirnames, filenames in os.walk(path):
         dirnames[:] = [d for d in dirnames if d not in exclude_dirs]  # Exclude directories
@@ -112,7 +112,8 @@ def generate_file_list_simple(path, output_type="md"):
         markdown_files = sorted([f for f in filenames if f.endswith('.md')])
         if markdown_files:
             relative_path = os.path.relpath(dirpath, path)
-            folder_name = os.path.basename(relative_path)
+            # folder_name = os.path.basename(relative_path)
+            folder_name = relative_path.replace("\\", "/")
 
             if output_type == "md":
                 # Tambahkan folder ke output Markdown

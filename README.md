@@ -37,12 +37,9 @@ This file is what I studied while learning Cisco and networking, and it contains
 <p id="file-list"></p>
 
 # 📄 File List
-- 2
-   - [20 - stp](CCNA_learn/2/20%20-%20stp.md)
-   - [21 - stp toolkit_portfast](CCNA_learn/2/21%20-%20stp%20toolkit_portfast.md)
 - cisco_academy
    - [readme](cisco_academy/readme.md)
-- 01_dasar
+- cisco_docs/01_dasar
    - [01 - pengenalan](cisco_docs/01_dasar/01%20-%20pengenalan.md)
    - [02 - configuration terminal](cisco_docs/01_dasar/02%20-%20configuration%20terminal.md)
    - [03 - interface mode](cisco_docs/01_dasar/03%20-%20interface%20mode.md)
@@ -50,14 +47,14 @@ This file is what I studied while learning Cisco and networking, and it contains
    - [05 - dhcp](cisco_docs/01_dasar/05%20-%20dhcp.md)
    - [06 - ipv6 un](cisco_docs/01_dasar/06%20-%20ipv6%20un.md)
    - [07 - dhcp relay](cisco_docs/01_dasar/07%20-%20dhcp%20relay.md)
-- 02_routing
+- cisco_docs/02_routing
    - [01 - static routing](cisco_docs/02_routing/01%20-%20static%20routing.md)
    - [02 - rip](cisco_docs/02_routing/02%20-%20rip.md)
    - [03 - ospf](cisco_docs/02_routing/03%20-%20ospf.md)
    - [04 - bgp](cisco_docs/02_routing/04%20-%20bgp.md)
    - [05 - ibgp un](cisco_docs/02_routing/05%20-%20ibgp%20un.md)
    - [06 - eigrp](cisco_docs/02_routing/06%20-%20eigrp.md)
-- 03_switching
+- cisco_docs/03_switching
    - [01 - vlan](cisco_docs/03_switching/01%20-%20vlan.md)
    - [02 - vtp vlan](cisco_docs/03_switching/02%20-%20vtp%20vlan.md)
    - [03 - server](cisco_docs/03_switching/03%20-%20server.md)
@@ -67,24 +64,51 @@ This file is what I studied while learning Cisco and networking, and it contains
    - [07 - stp](cisco_docs/03_switching/07%20-%20stp.md)
    - [08 - pvst rpvst](cisco_docs/03_switching/08%20-%20pvst%20rpvst.md)
    - [09 - svi](cisco_docs/03_switching/09%20-%20svi.md)
-- 04_phone
+- cisco_docs/04_phone
    - [01 - voip](cisco_docs/04_phone/01%20-%20voip.md)
    - [02 - pbx un](cisco_docs/04_phone/02%20-%20pbx%20un.md)
-- 05_firewall
+- cisco_docs/05_firewall
    - [01 - acl](cisco_docs/05_firewall/01%20-%20acl.md)
    - [02 - static nat](cisco_docs/05_firewall/02%20-%20static%20nat.md)
    - [03 - dynamic nat](cisco_docs/05_firewall/03%20-%20dynamic%20nat.md)
    - [04 - pat](cisco_docs/05_firewall/04%20-%20pat.md)
-- 06_routing_advance
-   - [01 - hsrp](cisco_docs/06_routing_advance/01%20-%20hsrp.md)
-   - [02 - vrrp](cisco_docs/06_routing_advance/02%20-%20vrrp.md)
-   - [03 - glbp](cisco_docs/06_routing_advance/03%20-%20glbp.md)
-- jarvis
+   - [05 - asa firewall](cisco_docs/05_firewall/05%20-%20asa%20firewall.md)
+   - [06 - radius_server](cisco_docs/05_firewall/06%20-%20radius_server.md)
+- cisco_docs/06 - routing_advance
+   - [01 - hsrp](cisco_docs/06%20-%20routing_advance/01%20-%20hsrp.md)
+   - [02 - vrrp](cisco_docs/06%20-%20routing_advance/02%20-%20vrrp.md)
+   - [03 - glbp](cisco_docs/06%20-%20routing_advance/03%20-%20glbp.md)
+- cisco_docs/07 - tunnel
+   - [00 - wan architehcture](cisco_docs/07%20-%20tunnel/00%20-%20wan%20architehcture.md)
+   - [01 - site to site vs remote access](cisco_docs/07%20-%20tunnel/01%20-%20site%20to%20site%20vs%20remote%20access.md)
+   - [02 - gre](cisco_docs/07%20-%20tunnel/02%20-%20gre.md)
+   - [03 - gre over ipsec](cisco_docs/07%20-%20tunnel/03%20-%20gre%20over%20ipsec.md)
+   - [99 - mpls](cisco_docs/07%20-%20tunnel/99%20-%20mpls.md)
+- soal/aria/1
+   - [cat](soal/aria/1/cat.md)
+- soal/e_time/2022/2_semifinal/aria
+   - [README](soal/e_time/2022/2_semifinal/aria/README.md)
+   - [audit](soal/e_time/2022/2_semifinal/aria/audit.md)
+- soal/e_time/2022/3_final/aria
+   - [README](soal/e_time/2022/3_final/aria/README.md)
+- soal/e_time/2023/2_semifinal/aria
+   - [README](soal/e_time/2023/2_semifinal/aria/README.md)
+- soal/e_time/2023/3_final/aria
+   - [README](soal/e_time/2023/3_final/aria/README.md)
+- soal/e_time/2024/2_semifinal/aria
+   - [README](soal/e_time/2024/2_semifinal/aria/README.md)
+- soal/idn/idn_2017/aria
+   - [README](soal/idn/idn_2017/aria/README.md)
+- soal/jarvis
    - [readme](soal/jarvis/readme.md)
-- 1
+- soal/jarvis/TUGAS-JARVIS/1
    - [solve_UTS A 2025_version2](soal/jarvis/TUGAS-JARVIS/1/solve_UTS%20A%202025_version2.md)
-- superlab
+- soal/netcomp/netcomp3.0/semifinal/aria
+   - [README](soal/netcomp/netcomp3.0/semifinal/aria/README.md)
+- soal/superlab
    - [README](soal/superlab/README.md)
+- soal/superlab/1
+   - [readme](soal/superlab/1/readme.md)
 <p id="download"></p>
 
 ## 🔨 download

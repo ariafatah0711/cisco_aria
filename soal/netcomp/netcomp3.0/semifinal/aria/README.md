@@ -4,9 +4,8 @@
 - https://docs.google.com/spreadsheets/d/1f2KATyoiJ02d7In1hCDQwvCDdN6rx92E5DOc6yr_Q-Q/edit?gid=0#gid=0
 
 <details>
-<summary>List Of Ticket</summary>
+<summary>List Network</summary>
 
-## Data Port Bundling Network Arjuna
 ### CORE-ARJUNA-1
 #### R-Border-INTERNET
 * **Lo0:** 10.1.1.1/32

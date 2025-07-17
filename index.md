@@ -37,16 +37,11 @@ This file is what I studied while learning Cisco and networking, and it contains
 <p id="file-list"></p>
 
 # 📄 File List
-<ul><li><b>2</b>
-<ul>
-   <li><a href='CCNA_learn/2/20 - stp.html'>20 - stp</a></li>
-   <li><a href='CCNA_learn/2/21 - stp toolkit_portfast.html'>21 - stp toolkit_portfast</a></li>
-</ul></li></ul>
 <ul><li><b>cisco_academy</b>
 <ul>
    <li><a href='cisco_academy/readme.html'>readme</a></li>
 </ul></li></ul>
-<ul><li><b>01_dasar</b>
+<ul><li><b>cisco_docs/01_dasar</b>
 <ul>
    <li><a href='cisco_docs/01_dasar/01 - pengenalan.html'>01 - pengenalan</a></li>
    <li><a href='cisco_docs/01_dasar/02 - configuration terminal.html'>02 - configuration terminal</a></li>
@@ -56,7 +51,7 @@ This file is what I studied while learning Cisco and networking, and it contains
    <li><a href='cisco_docs/01_dasar/06 - ipv6 un.html'>06 - ipv6 un</a></li>
    <li><a href='cisco_docs/01_dasar/07 - dhcp relay.html'>07 - dhcp relay</a></li>
 </ul></li></ul>
-<ul><li><b>02_routing</b>
+<ul><li><b>cisco_docs/02_routing</b>
 <ul>
    <li><a href='cisco_docs/02_routing/01 - static routing.html'>01 - static routing</a></li>
    <li><a href='cisco_docs/02_routing/02 - rip.html'>02 - rip</a></li>
@@ -65,7 +60,7 @@ This file is what I studied while learning Cisco and networking, and it contains
    <li><a href='cisco_docs/02_routing/05 - ibgp un.html'>05 - ibgp un</a></li>
    <li><a href='cisco_docs/02_routing/06 - eigrp.html'>06 - eigrp</a></li>
 </ul></li></ul>
-<ul><li><b>03_switching</b>
+<ul><li><b>cisco_docs/03_switching</b>
 <ul>
    <li><a href='cisco_docs/03_switching/01 - vlan.html'>01 - vlan</a></li>
    <li><a href='cisco_docs/03_switching/02 - vtp vlan.html'>02 - vtp vlan</a></li>
@@ -77,35 +72,82 @@ This file is what I studied while learning Cisco and networking, and it contains
    <li><a href='cisco_docs/03_switching/08 - pvst rpvst.html'>08 - pvst rpvst</a></li>
    <li><a href='cisco_docs/03_switching/09 - svi.html'>09 - svi</a></li>
 </ul></li></ul>
-<ul><li><b>04_phone</b>
+<ul><li><b>cisco_docs/04_phone</b>
 <ul>
    <li><a href='cisco_docs/04_phone/01 - voip.html'>01 - voip</a></li>
    <li><a href='cisco_docs/04_phone/02 - pbx un.html'>02 - pbx un</a></li>
 </ul></li></ul>
-<ul><li><b>05_firewall</b>
+<ul><li><b>cisco_docs/05_firewall</b>
 <ul>
    <li><a href='cisco_docs/05_firewall/01 - acl.html'>01 - acl</a></li>
    <li><a href='cisco_docs/05_firewall/02 - static nat.html'>02 - static nat</a></li>
    <li><a href='cisco_docs/05_firewall/03 - dynamic nat.html'>03 - dynamic nat</a></li>
    <li><a href='cisco_docs/05_firewall/04 - pat.html'>04 - pat</a></li>
+   <li><a href='cisco_docs/05_firewall/05 - asa firewall.html'>05 - asa firewall</a></li>
+   <li><a href='cisco_docs/05_firewall/06 - radius_server.html'>06 - radius_server</a></li>
 </ul></li></ul>
-<ul><li><b>06_routing_advance</b>
+<ul><li><b>cisco_docs/06 - routing_advance</b>
 <ul>
-   <li><a href='cisco_docs/06_routing_advance/01 - hsrp.html'>01 - hsrp</a></li>
-   <li><a href='cisco_docs/06_routing_advance/02 - vrrp.html'>02 - vrrp</a></li>
-   <li><a href='cisco_docs/06_routing_advance/03 - glbp.html'>03 - glbp</a></li>
+   <li><a href='cisco_docs/06 - routing_advance/01 - hsrp.html'>01 - hsrp</a></li>
+   <li><a href='cisco_docs/06 - routing_advance/02 - vrrp.html'>02 - vrrp</a></li>
+   <li><a href='cisco_docs/06 - routing_advance/03 - glbp.html'>03 - glbp</a></li>
 </ul></li></ul>
-<ul><li><b>jarvis</b>
+<ul><li><b>cisco_docs/07 - tunnel</b>
+<ul>
+   <li><a href='cisco_docs/07 - tunnel/00 - wan architehcture.html'>00 - wan architehcture</a></li>
+   <li><a href='cisco_docs/07 - tunnel/01 - site to site vs remote access.html'>01 - site to site vs remote access</a></li>
+   <li><a href='cisco_docs/07 - tunnel/02 - gre.html'>02 - gre</a></li>
+   <li><a href='cisco_docs/07 - tunnel/03 - gre over ipsec.html'>03 - gre over ipsec</a></li>
+   <li><a href='cisco_docs/07 - tunnel/99 - mpls.html'>99 - mpls</a></li>
+</ul></li></ul>
+<ul><li><b>soal/aria/1</b>
+<ul>
+   <li><a href='soal/aria/1/cat.html'>cat</a></li>
+</ul></li></ul>
+<ul><li><b>soal/e_time/2022/2_semifinal/aria</b>
+<ul>
+   <li><a href='soal/e_time/2022/2_semifinal/aria/README.html'>README</a></li>
+   <li><a href='soal/e_time/2022/2_semifinal/aria/audit.html'>audit</a></li>
+</ul></li></ul>
+<ul><li><b>soal/e_time/2022/3_final/aria</b>
+<ul>
+   <li><a href='soal/e_time/2022/3_final/aria/README.html'>README</a></li>
+</ul></li></ul>
+<ul><li><b>soal/e_time/2023/2_semifinal/aria</b>
+<ul>
+   <li><a href='soal/e_time/2023/2_semifinal/aria/README.html'>README</a></li>
+</ul></li></ul>
+<ul><li><b>soal/e_time/2023/3_final/aria</b>
+<ul>
+   <li><a href='soal/e_time/2023/3_final/aria/README.html'>README</a></li>
+</ul></li></ul>
+<ul><li><b>soal/e_time/2024/2_semifinal/aria</b>
+<ul>
+   <li><a href='soal/e_time/2024/2_semifinal/aria/README.html'>README</a></li>
+</ul></li></ul>
+<ul><li><b>soal/idn/idn_2017/aria</b>
+<ul>
+   <li><a href='soal/idn/idn_2017/aria/README.html'>README</a></li>
+</ul></li></ul>
+<ul><li><b>soal/jarvis</b>
 <ul>
    <li><a href='soal/jarvis/readme.html'>readme</a></li>
 </ul></li></ul>
-<ul><li><b>1</b>
+<ul><li><b>soal/jarvis/TUGAS-JARVIS/1</b>
 <ul>
    <li><a href='soal/jarvis/TUGAS-JARVIS/1/solve_UTS A 2025_version2.html'>solve_UTS A 2025_version2</a></li>
 </ul></li></ul>
-<ul><li><b>superlab</b>
+<ul><li><b>soal/netcomp/netcomp3.0/semifinal/aria</b>
+<ul>
+   <li><a href='soal/netcomp/netcomp3.0/semifinal/aria/README.html'>README</a></li>
+</ul></li></ul>
+<ul><li><b>soal/superlab</b>
 <ul>
    <li><a href='soal/superlab/README.html'>README</a></li>
+</ul></li></ul>
+<ul><li><b>soal/superlab/1</b>
+<ul>
+   <li><a href='soal/superlab/1/readme.html'>readme</a></li>
 </ul></li></ul>
 <p id="download"></p>
 
