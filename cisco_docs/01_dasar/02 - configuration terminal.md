@@ -58,6 +58,13 @@
   ```
   # write erase
   ```
+- remove / reset config for switch
+  ```bash
+  # dir
+
+  # erase startup-config
+  # delete vlan.dat
+  ```
 
 # global configuration mode
 - mengubah hostname
